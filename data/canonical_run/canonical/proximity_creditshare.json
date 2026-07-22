@@ -1,0 +1,66 @@
+{
+ "prox_diff": -0.0114,
+ "prox_lo": -0.0352,
+ "prox_hi": 0.0136,
+ "credit_share": {
+  "distemist": {
+   "sibling_credit_share": 0.582,
+   "anc_desc_credit_share": 0.418,
+   "sibling_mean_wup": 0.312
+  },
+  "medprocner": {
+   "sibling_credit_share": 0.56,
+   "anc_desc_credit_share": 0.44,
+   "sibling_mean_wup": 0.399
+  },
+  "symptemist": {
+   "sibling_credit_share": 0.673,
+   "anc_desc_credit_share": 0.327,
+   "sibling_mean_wup": 0.274
+  }
+ },
+ "convention": "conditional Wu-Palmer difference is NARROW minus EXACT (positive = NARROW errors closer to gold)",
+ "prox_diff_NARROW_minus_EXACT": 0.0114,
+ "prox_ci_NARROW_minus_EXACT": [
+  -0.0136,
+  0.0352
+ ],
+ "_note_prox_diff_legacy": "prox_diff below is the legacy EXACT-minus-NARROW value (-0.0114); use prox_diff_NARROW_minus_EXACT",
+ "narrow_credit_share": {
+  "distemist": {
+   "sibling_credit_share": 0.62,
+   "anc_desc_credit_share": 0.38
+  },
+  "medprocner": {
+   "sibling_credit_share": 0.637,
+   "anc_desc_credit_share": 0.363
+  },
+  "symptemist": {
+   "sibling_credit_share": 0.665,
+   "anc_desc_credit_share": 0.335
+  }
+ },
+ "narrow_sibling_credit_share_per_system": {
+  "distemist": {
+   "lexical": 0.67,
+   "sapbert": 0.51,
+   "sapbert_ft": 0.47,
+   "llm_rerank": 0.52,
+   "llm_gen": 0.71
+  },
+  "medprocner": {
+   "lexical": 0.58,
+   "sapbert": 0.73,
+   "llm_rerank": 0.59,
+   "llm_gen": 0.68
+  },
+  "symptemist": {
+   "lexical": 0.75,
+   "sapbert": 0.7,
+   "sapbert_ft": 0.66,
+   "llm_rerank": 0.57,
+   "llm_gen": 0.77
+  }
+ },
+ "_note_persystem": "within-NARROW sibling credit share (wup-weighted) per system; the pooled-LLM narrow_credit_share (0.62/0.64/0.66) is rerank+gen; SapBERT/fine-tuned SapBERT are ~0.47-0.51 on DisTEMIST (around half, not a clear majority) but 0.66-0.73 on MedProcNER/SympTEMIST"
+}

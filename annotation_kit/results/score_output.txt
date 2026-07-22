@@ -1,0 +1,23 @@
+annotators (3): R1, R2, R3
+
+[R1] vs reference  n=150  kappa=0.613 [0.480,0.734]  agree=80.7%
+      DisTEMIST: n=50 kappa=0.520 [0.276,0.757] agree=76.0%
+      MedProcNER: n=50 kappa=0.760 [0.564,0.920] agree=88.0%
+      SympTEMIST: n=50 kappa=0.560 [0.339,0.767] agree=78.0%
+
+[R2] vs reference  n=150  kappa=0.627 [0.501,0.742]  agree=81.3%
+      DisTEMIST: n=50 kappa=0.600 [0.398,0.795] agree=80.0%
+      MedProcNER: n=50 kappa=0.640 [0.419,0.839] agree=82.0%
+      SympTEMIST: n=50 kappa=0.640 [0.411,0.838] agree=82.0%
+
+[R3] vs reference  n=150  kappa=0.667 [0.544,0.785]  agree=83.3%
+      DisTEMIST: n=50 kappa=0.640 [0.407,0.840] agree=82.0%
+      MedProcNER: n=50 kappa=0.720 [0.511,0.880] agree=86.0%
+      SympTEMIST: n=50 kappa=0.640 [0.419,0.839] agree=82.0%
+
+=== human-human agreement (n=150 rows all raters answered) ===
+  pairwise Cohen  R1 vs R2: kappa=0.408 [0.282,0.538]
+  pairwise Cohen  R1 vs R3: kappa=0.630 [0.502,0.745]
+  pairwise Cohen  R2 vs R3: kappa=0.555 [0.421,0.683]
+  Fleiss' kappa (all 3 raters): 0.519
+  majority-vote consensus vs reference: kappa=0.733 [0.613,0.840]  (n=150)

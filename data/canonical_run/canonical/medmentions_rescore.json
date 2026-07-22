@@ -1,0 +1,49 @@
+{
+ "table2_medmentions": true,
+ "depth_gap": {
+  "lexical": {
+   "deep(\u22654)": 0.191,
+   "mid(3)": 0.174,
+   "shallow(\u22642)": 0.058
+  },
+  "sapbert": {
+   "deep(\u22654)": 0.089,
+   "mid(3)": 0.07,
+   "shallow(\u22642)": 0.032
+  },
+  "llm_rerank": {
+   "deep(\u22654)": 0.176,
+   "mid(3)": 0.152,
+   "shallow(\u22642)": 0.053
+  },
+  "llm_gen": {
+   "deep(\u22654)": 0.0,
+   "mid(3)": 0.0,
+   "shallow(\u22642)": 0.0
+  }
+ },
+ "table2_medmentions_scores": {
+  "lexical": {
+   "exact": 0.635,
+   "isa": 0.708,
+   "wup": 0.772,
+   "r5": 0.756,
+   "n": 800
+  },
+  "sapbert": {
+   "exact": 0.851,
+   "isa": 0.896,
+   "wup": 0.915,
+   "r5": 0.943,
+   "n": 800
+  },
+  "llm_rerank": {
+   "exact": 0.688,
+   "isa": 0.757,
+   "wup": 0.812,
+   "r5": 0.769,
+   "n": 800
+  }
+ },
+ "_provenance_note": "MedMentions is a separate depth-proxy cross-check. table2_medmentions_scores are the canonical Table 2 values as reported. The release deposits the canonical aggregate for this cross-check; it does not claim per-example reproduction of the MedMentions LLM reranker value."
+}

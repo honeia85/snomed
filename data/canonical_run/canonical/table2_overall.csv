@@ -1,0 +1,15 @@
+benchmark,system,n,exact,isa,wup,recall5
+DisTEMIST,lexical,678,0.488,0.606,0.732,0.671
+DisTEMIST,sapbert,678,0.637,0.736,0.826,0.816
+DisTEMIST,sapbert_ft,678,0.677,0.785,0.857,0.873
+DisTEMIST,llm_rerank,678,0.633,0.742,0.823,0.763
+DisTEMIST,llm_gen,678,0.301,0.422,0.559,
+MedProcNER,lexical,625,0.443,0.603,0.761,0.691
+MedProcNER,sapbert,625,0.642,0.747,0.847,0.845
+MedProcNER,llm_rerank,625,0.602,0.746,0.838,0.755
+MedProcNER,llm_gen,625,0.25,0.429,0.602,
+SympTEMIST,lexical,800,0.409,0.502,0.611,0.55
+SympTEMIST,sapbert,800,0.584,0.639,0.741,0.748
+SympTEMIST,sapbert_ft,800,0.659,0.706,0.786,0.878
+SympTEMIST,llm_rerank,800,0.551,0.621,0.7,0.634
+SympTEMIST,llm_gen,800,0.254,0.341,0.462,

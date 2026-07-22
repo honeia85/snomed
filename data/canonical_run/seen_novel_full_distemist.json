@@ -1,0 +1,17 @@
+{
+  "n": 2507,
+  "buckets": {
+    "2_novel_ancestor_seen": 825,
+    "1_code_seen": 1525,
+    "3_novel_isolated": 157
+  },
+  "bands": {
+    "2_edges": 241,
+    "0_code_seen": 1525,
+    "3+_edges": 220,
+    "1_edge": 364,
+    "none_isolated": 157
+  },
+  "reach_in_trainspace_frac": 1.0,
+  "best_wup_ancestor_seen_mean": 0.8365869095213221
+}

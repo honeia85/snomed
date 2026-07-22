@@ -1,0 +1,6 @@
+run,coverage,Exact_int,WuP_int,LCA_int,CoPHE_int,Exact_e2e,WuP_e2e,n_int
+run0-lc-dense-5-wVal,0.8,0.42,0.467,0.482,0.462,0.336,0.374,640
+run1-lc-dense-5-full,0.797,0.422,0.467,0.481,0.461,0.336,0.372,638
+run2-lc-bilstm-all-wVal,0.797,0.415,0.463,0.479,0.457,0.331,0.369,638
+run3-PlanTL-dense-bilstm-all-wVal,0.804,0.411,0.458,0.474,0.453,0.33,0.368,643
+run4-everything,0.806,0.417,0.462,0.476,0.456,0.336,0.372,645

@@ -1,0 +1,21 @@
+# Core analysis compatibility minima for the included analysis scripts.
+# These lower bounds are not an exact environment lock and do not regenerate
+# every manuscript table/figure or bit-exact model inference.
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+statsmodels>=0.14
+
+# Ontology rebuild only (code/build_ontology_ols4.py). Standard library urllib
+# is used for the OLS4 calls, so nothing extra is required.
+
+# Encoder re-run only. NOT needed for any analysis in the paper.
+# Uncomment if you want to re-run SapBERT retrieval or the fine-tuning probe.
+# torch>=2.0
+# transformers>=4.35
+
+# Note on pinning: the versions above are lower bounds, not the exact versions
+# used for the published run. To pin your own environment exactly, run
+#   pip freeze > requirements.lock.txt
+# and record it alongside your results.

@@ -1,0 +1,90 @@
+{
+  "rank_check": {
+    "DisTEMIST": {
+      "exact": [
+        "sapbert_ft",
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ],
+      "wup": [
+        "sapbert_ft",
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ],
+      "lca": [
+        "sapbert_ft",
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ],
+      "jac": [
+        "sapbert_ft",
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ]
+    },
+    "MedProcNER": {
+      "exact": [
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ],
+      "wup": [
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ],
+      "lca": [
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ],
+      "jac": [
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ]
+    },
+    "SympTEMIST": {
+      "exact": [
+        "sapbert_ft",
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ],
+      "wup": [
+        "sapbert_ft",
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ],
+      "lca": [
+        "sapbert_ft",
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ],
+      "jac": [
+        "sapbert_ft",
+        "sapbert",
+        "llm_rerank",
+        "lexical",
+        "llm_gen"
+      ]
+    }
+  }
+}

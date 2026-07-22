@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Granularity Annotation — EXACT vs NARROW</title>
+<style>
+  :root{--bg:#0f1220;--card:#191d2e;--ink:#e8eaf2;--mut:#9aa0b4;--line:#2b3048;
+        --exact:#0072B2;--narrow:#E69F00;--ok:#009E73;--accent:#7aa2ff}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.5}
+  .wrap{max-width:760px;margin:0 auto;padding:20px 18px 80px}
+  h1{font-size:19px;margin:4px 0 2px} .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:14px 0}
+  .pill{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+        color:var(--mut);border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin-bottom:14px}
+  .mention{font-size:26px;font-weight:700;margin:2px 0 4px}
+  .es{color:var(--mut);font-size:15px;font-style:italic;margin-bottom:18px}
+  .rel{display:flex;align-items:center;gap:10px;margin:16px 0 6px;color:var(--mut);font-size:13px}
+  .arrow{font-size:20px;color:var(--accent)}
+  .concept{font-size:21px;font-weight:600}
+  .code{color:var(--mut);font-size:13px;margin-top:2px}
+  .q{margin:22px 0 8px;font-size:15px;color:var(--ink)}
+  .btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+  button.opt{font-size:17px;font-weight:700;padding:20px 12px;border-radius:14px;border:2px solid var(--line);
+             background:#12172a;color:var(--ink);cursor:pointer;transition:.12s;text-align:left}
+  button.opt .k{float:right;font-size:12px;color:var(--mut);border:1px solid var(--line);border-radius:6px;padding:1px 7px}
+  button.opt .d{display:block;font-size:12px;font-weight:400;color:var(--mut);margin-top:6px}
+  button.opt:hover{transform:translateY(-1px)}
+  #bExact:hover,#bExact.sel{border-color:var(--exact);box-shadow:0 0 0 2px rgba(0,114,178,.25)}
+  #bNarrow:hover,#bNarrow.sel{border-color:var(--narrow);box-shadow:0 0 0 2px rgba(230,159,0,.25)}
+  .nav{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+  .nav button{background:transparent;border:1px solid var(--line);color:var(--mut);border-radius:10px;
+              padding:9px 14px;cursor:pointer;font-size:13px}
+  .nav button:disabled{opacity:.35;cursor:default}
+  .note{width:100%;margin-top:12px;background:#12172a;border:1px solid var(--line);color:var(--ink);
+        border-radius:10px;padding:10px;font-size:13px;resize:vertical;min-height:0;height:38px}
+  .bar{height:8px;background:#12172a;border-radius:999px;overflow:hidden;margin:4px 0 2px}
+  .bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--ok));width:0}
+  .meta{display:flex;justify-content:space-between;color:var(--mut);font-size:12px;margin-bottom:14px}
+  input[type=text]{background:#12172a;border:1px solid var(--line);color:var(--ink);border-radius:10px;
+                   padding:11px 12px;font-size:15px;width:100%}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .btn-primary{background:var(--accent);color:#0b0e1a;border:none;border-radius:10px;padding:12px 18px;
+               font-weight:700;font-size:15px;cursor:pointer}
+  .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:12px 16px;cursor:pointer}
+  .hide{display:none} .center{text-align:center}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+  .stat{background:#12172a;border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+  .stat b{font-size:26px;display:block} .stat span{color:var(--mut);font-size:12px}
+  code.inl{background:#12172a;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:12px}
+  details{margin:14px 0;color:var(--mut);font-size:13px} details summary{cursor:pointer;color:var(--accent)}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#12172a;border:1px solid var(--line);
+         padding:10px 16px;border-radius:10px;font-size:13px;opacity:0;transition:.2s}
+  .toast.on{opacity:1}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- LOGIN -->
+  <section id="login">
+    <h1>Granularity Annotation Study</h1>
+    <p class="sub">Generic EXACT vs NARROW template · synthetic demonstration rows only</p>
+    <div class="card">
+      <p style="margin-top:0">Enter a study-issued rater ID. This lets you pause and resume, and labels your local submission.</p>
+      <input type="text" id="who" placeholder="e.g. R1" autocomplete="off"/>
+      <div class="row" style="margin-top:14px">
+        <button class="btn-primary" id="start">Start &rarr;</button>
+        <span id="resumeNote" class="sub" style="margin:0"></span>
+      </div>
+      <details>
+        <summary>What am I judging? (read once)</summary>
+        <div id="rubricBox"></div>
+      </details>
+    </div>
+    <p class="sub center">This tool never shows any "correct" answer — that is by design, so your judgement stays independent.</p>
+  </section>
+
+  <!-- TASK -->
+  <section id="task" class="hide">
+    <div class="meta"><span id="whoTag"></span><span id="counter"></span></div>
+    <div class="bar"><i id="fill"></i></div>
+    <div class="card">
+      <span class="pill" id="bench"></span>
+      <div class="q" style="margin-top:0;color:var(--mut);font-size:12px">CLINICAL MENTION (as written)</div>
+      <div class="mention" id="mention"></div>
+      <div class="es" id="es"></div>
+      <div class="rel"><span>was linked to the target clinical concept</span></div>
+      <div class="concept" id="concept"></div>
+      <div class="code" id="code"></div>
+      <div class="q"><b>Is the mention more specific than this concept?</b></div>
+      <div class="btns">
+        <button class="opt" id="bExact">EXACT <span class="k">E</span>
+          <span class="d">same level of specificity (synonym / equivalent)</span></button>
+        <button class="opt" id="bNarrow">NARROW <span class="k">N</span>
+          <span class="d">mention is MORE specific than the concept</span></button>
+      </div>
+      <textarea class="note" id="note" placeholder="optional note (only if unsure) — press Enter-free, click a button to continue"></textarea>
+      <div class="nav">
+        <button id="prev">&larr; Back</button>
+        <button id="skip">Jump to first unanswered</button>
+      </div>
+    </div>
+    <details>
+      <summary>Show rubric</summary><div id="rubricBox2"></div>
+    </details>
+  </section>
+
+  <!-- DONE -->
+  <section id="done" class="hide">
+    <h1>All items answered ✓</h1>
+    <p class="sub" id="doneWho"></p>
+    <div class="grid2">
+      <div class="stat"><b id="nE">0</b><span>labelled EXACT</span></div>
+      <div class="stat"><b id="nN">0</b><span>labelled NARROW</span></div>
+    </div>
+    <div class="card">
+      <p style="margin-top:0" id="submitLead"></p>
+      <div class="row">
+        <button class="btn-primary" id="submit">Submit to study database</button>
+        <button class="btn-ghost" id="dl">Download my answers (CSV)</button>
+      </div>
+      <p class="sub" id="submitMsg" style="margin-bottom:0"></p>
+    </div>
+    <p class="sub center">Thank you. You can close this tab once submission is confirmed.</p>
+  </section>
+
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const CONFIG = {
+  // ── BACKEND (optional) ─────────────────────────────────────────────
+  // Leave "" to run download-only (each annotator sends you their CSV).
+  // To auto-collect into Google Sheets: deploy the Apps Script Web App
+  // (see COLLECTION_SETUP.md), paste its /exec URL here, re-share the file.
+  SHEETS_WEBAPP_URL: "",
+  STUDY: "granularity_template_v1"
+};
+const ITEMS = [
+  {"r":"DEMO001","b":"DEMO","es":"replace with source-language mention","en":"example mention with added detail","code":"LOCAL-C001","concept":"example target concept"},
+  {"r":"DEMO002","b":"DEMO","es":"","en":"example equivalent mention","code":"LOCAL-C002","concept":"example equivalent target"}
+];
+const RUBRIC = `<p><b>NARROW</b> — the clinical mention is <b>MORE specific</b> than the assigned target concept (the target is broader; the mention adds detail it lacks, such as laterality, subtype, site, severity, acuity, or etiology).</p><p><b>EXACT</b> — the mention and target concept are at the <b>same level of specificity</b> (synonyms or clinically equivalent).</p><p style='color:#7aa2ff'>Shortcut: if the mention is not more specific than the target concept, choose EXACT. Judge specificity only, not whether another target would be better.</p><p style='font-size:12px'>The two embedded rows are synthetic demonstrations. Replace <code>ITEMS</code> with locally licensed study items before use.</p>`;
+
+const $=s=>document.querySelector(s);
+const LS=k=>"gran_"+CONFIG.STUDY+"_"+k;
+let who="", order=[], ans={}, idx=0;
+
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");setTimeout(()=>e.classList.remove("on"),1800);}
+document.querySelectorAll("#rubricBox,#rubricBox2").forEach(e=>e.innerHTML=RUBRIC);
+
+// resume?
+(function(){
+  const last=localStorage.getItem(LS("who"));
+  if(last){$("#who").value=last;
+    const saved=JSON.parse(localStorage.getItem(LS("ans_"+last))||"{}");
+    const n=Object.keys(saved).length;
+    if(n>0)$("#resumeNote").textContent=`(resume — ${n}/${ITEMS.length} saved)`;}
+})();
+
+$("#start").onclick=()=>{
+  who=$("#who").value.trim(); if(!who){toast("Enter an ID first");return;}
+  localStorage.setItem(LS("who"),who);
+  ans=JSON.parse(localStorage.getItem(LS("ans_"+who))||"{}");
+  // stable per-annotator shuffle (seeded by name) to spread order effects
+  order=ITEMS.map((_,i)=>i);
+  let seed=[...who].reduce((a,c)=>a+c.charCodeAt(0),0)||7;
+  for(let i=order.length-1;i>0;i--){seed=(seed*9301+49297)%233280;const j=Math.floor(seed/233280*(i+1));[order[i],order[j]]=[order[j],order[i]];}
+  $("#login").classList.add("hide");$("#task").classList.remove("hide");
+  $("#whoTag").textContent="Annotator: "+who;
+  idx=firstUnanswered(); render();
+};
+function firstUnanswered(){for(let p=0;p<order.length;p++){if(!ans[ITEMS[order[p]].r])return p;}return order.length-1;}
+function render(){
+  const it=ITEMS[order[idx]];
+  $("#bench").textContent=it.b;
+  $("#mention").textContent=it.en||it.es;
+  $("#es").textContent=it.en&&it.es?("original: "+it.es):"";
+  $("#concept").textContent=it.concept;
+  $("#code").textContent="Release-local target ID: "+it.code;
+  $("#counter").textContent=(idx+1)+" / "+ITEMS.length;
+  $("#fill").style.width=(Object.keys(ans).length/ITEMS.length*100)+"%";
+  const a=ans[it.r];
+  $("#bExact").classList.toggle("sel",a&&a.label==="EXACT");
+  $("#bNarrow").classList.toggle("sel",a&&a.label==="NARROW");
+  $("#note").value=a&&a.note?a.note:"";
+  $("#prev").disabled=idx===0;
+}
+function choose(label){
+  const it=ITEMS[order[idx]];
+  ans[it.r]={item_id:it.r,benchmark:it.b,label:label,note:$("#note").value.trim(),
+             rater_id:who,ts:new Date().toISOString()};
+  localStorage.setItem(LS("ans_"+who),JSON.stringify(ans));
+  if(Object.keys(ans).length===ITEMS.length && idx===ITEMS.length-1){finish();return;}
+  // advance to next unanswered, else next
+  let p=idx+1; while(p<order.length && ans[ITEMS[order[p]].r]) p++;
+  idx = p<order.length ? p : Math.min(idx+1,order.length-1);
+  render();
+  if(Object.keys(ans).length===ITEMS.length) finish();
+}
+$("#bExact").onclick=()=>choose("EXACT");
+$("#bNarrow").onclick=()=>choose("NARROW");
+$("#prev").onclick=()=>{if(idx>0){idx--;render();}};
+$("#skip").onclick=()=>{idx=firstUnanswered();render();};
+document.onkeydown=e=>{
+  if($("#task").classList.contains("hide"))return;
+  if(document.activeElement===$("#note"))return;
+  if(e.key==="e"||e.key==="E")choose("EXACT");
+  if(e.key==="n"||e.key==="N")choose("NARROW");
+  if(e.key==="ArrowLeft"&&idx>0){idx--;render();}
+  if(e.key==="ArrowRight"&&idx<order.length-1){idx++;render();}
+};
+function finish(){
+  $("#task").classList.add("hide");$("#done").classList.remove("hide");
+  const vals=Object.values(ans);
+  $("#nE").textContent=vals.filter(a=>a.label==="EXACT").length;
+  $("#nN").textContent=vals.filter(a=>a.label==="NARROW").length;
+  $("#doneWho").textContent="Annotator: "+who+" — "+vals.length+" labels";
+  $("#submitLead").textContent = CONFIG.SHEETS_WEBAPP_URL
+    ? "Send your answers to the study database, or download a CSV backup."
+    : "No database is configured — download your CSV and send it to the study lead.";
+  $("#submit").style.display = CONFIG.SHEETS_WEBAPP_URL ? "" : "none";
+}
+function rows(){return Object.values(ans).sort((a,b)=>a.item_id<b.item_id?-1:1);}
+$("#dl").onclick=()=>{
+  const hdr=["item_id","benchmark","annotator_label","annotator_notes","rater_id","timestamp"];
+  const csv=[hdr.join(",")].concat(rows().map(a=>[a.item_id,a.benchmark,a.label,
+     '"'+(a.note||"").replace(/"/g,'""')+'"',a.rater_id,a.ts].join(","))).join("\n");
+  const b=new Blob([csv],{type:"text/csv"});const u=URL.createObjectURL(b);
+  const a=document.createElement("a");a.href=u;a.download="annotation_"+who.replace(/\W+/g,"_")+".csv";a.click();
+  toast("CSV downloaded");
+};
+$("#submit").onclick=async()=>{
+  if(!CONFIG.SHEETS_WEBAPP_URL){toast("No database configured");return;}
+  $("#submitMsg").textContent="Submitting…";
+  try{
+    await fetch(CONFIG.SHEETS_WEBAPP_URL,{method:"POST",mode:"no-cors",
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body:JSON.stringify({study:CONFIG.STUDY,rater_id:who,rows:rows()})});
+    $("#submitMsg").textContent="✓ Submitted. (If unsure it arrived, also download the CSV as backup.)";
+    toast("Submitted");
+  }catch(err){$("#submitMsg").textContent="Submit failed — please download the CSV instead. ("+err+")";}
+};
+</script>
+</body>
+</html>

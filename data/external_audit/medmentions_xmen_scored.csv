@@ -1,0 +1,801 @@
+benchmark,candidate_space,system,item_id,semantic_rel,exact,is_a,wup,relation_type,lca_dist,cophe_jaccard,r5,seen,concept_depth,bucket,depth_band,semantic_type_name
+MedMentions,xmen_native,xMEN_sapbert,MM-0001,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0002,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0003,NO_HUMAN_LABEL,0,0,0.5,sibling,0.7777777777777778,0.06976744186046512,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0004,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.041666666666666664,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0005,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0006,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0007,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0008,NO_HUMAN_LABEL,0,0,0.36363636363636365,sibling,0.6111111111111112,0.07692307692307693,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0009,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0010,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7222222222222222,0.1,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0011,NO_HUMAN_LABEL,0,0,0.25,sibling,0.6666666666666667,0.06451612903225806,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0012,NO_HUMAN_LABEL,0,1,0.8888888888888888,ancestor,0.9444444444444444,0.9111111111111111,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0013,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0014,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0015,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0016,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0017,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.8888888888888888,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0018,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0019,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.9555555555555556,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0020,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0021,NO_HUMAN_LABEL,0,1,0.6666666666666666,descendant,0.8888888888888888,0.1875,0.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0022,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0023,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.019230769230769232,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0024,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0025,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0026,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0027,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0028,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0029,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0030,NO_HUMAN_LABEL,0,0,0.6666666666666666,sibling,0.8333333333333334,0.36363636363636365,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0031,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0032,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0033,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7222222222222222,0.07142857142857142,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0034,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0035,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0036,NO_HUMAN_LABEL,0,0,0.6666666666666666,sibling,0.8888888888888888,0.16666666666666666,0.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0037,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0038,NO_HUMAN_LABEL,0,1,0.5714285714285714,ancestor,0.8333333333333334,0.13043478260869565,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0039,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5555555555555556,0.011494252873563218,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0040,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5,0.014492753623188406,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0041,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.09090909090909091,0.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0042,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0043,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0044,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6666666666666667,0.03571428571428571,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0045,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.4,0.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0046,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0047,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0048,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Intellectual Product
+MedMentions,xmen_native,xMEN_sapbert,MM-0049,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0050,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0051,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.5555555555555556,0.06818181818181818,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0052,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.8888888888888888,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0053,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.043478260869565216,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0054,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.18181818181818182,0.0,False,4,2_code_novel,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0055,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0056,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0057,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0058,NO_HUMAN_LABEL,0,0,0.7272727272727273,sibling,0.8333333333333334,0.2608695652173913,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0059,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.08333333333333333,0.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0060,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0061,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0062,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0063,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0064,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0065,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0066,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0067,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0068,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0069,NO_HUMAN_LABEL,0,0,0.5,sibling,0.6666666666666667,0.09523809523809523,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0070,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0071,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0072,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0073,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Intellectual Product
+MedMentions,xmen_native,xMEN_sapbert,MM-0074,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0075,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0076,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0077,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0078,NO_HUMAN_LABEL,0,1,0.9090909090909091,descendant,0.9444444444444444,0.8125,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0079,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.1,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0080,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0081,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6666666666666667,0.02,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0082,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0083,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.7777777777777778,0.5454545454545454,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0084,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0085,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0086,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0087,NO_HUMAN_LABEL,0,0,0.4,sibling,0.6666666666666667,0.125,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0088,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0089,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0090,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0091,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0092,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.25,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0093,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0094,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0095,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0096,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0097,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0098,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0099,NO_HUMAN_LABEL,0,1,0.5714285714285714,ancestor,0.8333333333333334,0.13043478260869565,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0100,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0101,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0102,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0103,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.8888888888888888,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0104,NO_HUMAN_LABEL,0,0,0.5714285714285714,sibling,0.8333333333333334,0.1111111111111111,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0105,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0106,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0107,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0108,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0109,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0110,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.7777777777777778,0.05263157894736842,0.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0111,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.125,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0112,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.09090909090909091,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0113,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.9285714285714286,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0114,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0115,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0116,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0117,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0118,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0119,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0120,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.03333333333333333,0.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0121,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0122,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0123,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0124,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.5555555555555556,0.09333333333333334,0.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0125,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.125,0.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0126,NO_HUMAN_LABEL,0,0,0.3076923076923077,sibling,0.5,0.057971014492753624,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0127,NO_HUMAN_LABEL,0,0,0.4,sibling,0.6666666666666667,0.15,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0128,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0129,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0130,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0131,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0132,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0133,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0134,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0135,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0136,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0137,NO_HUMAN_LABEL,0,0,0.3076923076923077,sibling,0.5,0.08108108108108109,1.0,True,7,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0138,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0139,NO_HUMAN_LABEL,0,1,0.6666666666666666,ancestor,0.8888888888888888,0.13043478260869565,0.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0140,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7222222222222222,0.03333333333333333,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0141,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0142,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0143,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0144,NO_HUMAN_LABEL,0,1,0.8571428571428571,ancestor,0.9444444444444444,0.7,1.0,True,4,1_code_seen,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0145,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0146,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0147,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0148,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0149,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0150,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0151,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0152,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0153,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.07692307692307693,0.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0154,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0155,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0156,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0157,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0158,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.9259259259259259,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0159,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0160,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6666666666666667,0.03571428571428571,0.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0161,NO_HUMAN_LABEL,0,1,0.8,ancestor,0.9444444444444444,0.45454545454545453,0.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0162,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0163,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0164,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0165,NO_HUMAN_LABEL,0,1,0.8,descendant,0.9444444444444444,0.1875,0.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0166,NO_HUMAN_LABEL,0,0,0.2222222222222222,sibling,0.6111111111111112,0.08695652173913043,0.0,True,7,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0167,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0168,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0169,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0170,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,8,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0171,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0172,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,7,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0173,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0174,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.09090909090909091,0.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0175,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0176,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0177,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0178,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0179,NO_HUMAN_LABEL,0,0,0.6666666666666666,sibling,0.7777777777777778,0.15217391304347827,0.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0180,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0181,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0182,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0183,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0184,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0185,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0186,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0187,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.0625,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0188,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0189,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0190,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0191,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0192,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.18181818181818182,0.0,False,4,2_code_novel,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0193,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0194,NO_HUMAN_LABEL,0,0,0.2222222222222222,sibling,0.6111111111111112,0.044444444444444446,1.0,False,5,2_code_novel,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0195,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0196,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0197,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0198,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0199,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0200,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.08333333333333333,0.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0201,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.03225806451612903,0.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0202,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0203,NO_HUMAN_LABEL,0,0,0.36363636363636365,sibling,0.6111111111111112,0.06,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0204,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.04,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0205,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.125,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0206,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0207,NO_HUMAN_LABEL,0,0,0.5,sibling,0.7777777777777778,0.08823529411764706,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0208,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.7777777777777778,0.5555555555555556,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0209,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0210,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0211,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0212,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0213,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0214,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0215,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0216,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0217,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0218,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0219,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0220,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.125,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0221,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.05,0.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0222,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0223,NO_HUMAN_LABEL,0,0,0.4,sibling,0.6666666666666667,0.07692307692307693,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0224,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0225,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0226,NO_HUMAN_LABEL,0,0,0.25,sibling,0.6666666666666667,0.09523809523809523,1.0,False,3,2_code_novel,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0227,NO_HUMAN_LABEL,0,1,0.8888888888888888,ancestor,0.9444444444444444,0.9,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0228,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0229,NO_HUMAN_LABEL,0,0,0.36363636363636365,sibling,0.6111111111111112,0.06666666666666667,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0230,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0231,NO_HUMAN_LABEL,0,0,0.5,sibling,0.7777777777777778,0.05357142857142857,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0232,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0233,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0234,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0235,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0236,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0237,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0238,NO_HUMAN_LABEL,0,0,0.2222222222222222,sibling,0.6111111111111112,0.08695652173913043,0.0,True,7,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0239,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,6,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0240,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0241,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0242,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0243,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0244,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.921875,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0245,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0246,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0247,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0248,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0249,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0250,NO_HUMAN_LABEL,0,0,0.5,sibling,0.7777777777777778,0.25,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0251,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0252,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5,0.05263157894736842,0.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0253,NO_HUMAN_LABEL,0,1,0.8888888888888888,ancestor,0.9444444444444444,0.9111111111111111,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0254,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0255,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0256,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0257,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0258,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0259,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0260,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0261,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0262,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0263,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0264,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0265,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0266,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0267,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.6,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0268,NO_HUMAN_LABEL,0,0,0.36363636363636365,sibling,0.6111111111111112,0.038834951456310676,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0269,NO_HUMAN_LABEL,0,0,0.5714285714285714,sibling,0.8333333333333334,0.2727272727272727,0.0,True,3,1_code_seen,mid(3),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0270,NO_HUMAN_LABEL,0,0,0.2222222222222222,sibling,0.6111111111111112,0.08695652173913043,0.0,True,7,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0271,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0272,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0273,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.5,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0274,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0275,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.42857142857142855,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0276,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0277,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0278,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0279,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0280,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0281,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0282,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0283,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0284,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0285,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.42857142857142855,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0286,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0287,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0288,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0289,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0290,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0291,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0292,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0293,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0294,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0295,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0296,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0297,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0298,NO_HUMAN_LABEL,0,0,0.8,sibling,0.8888888888888888,0.41379310344827586,1.0,False,5,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0299,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0300,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7222222222222222,0.037037037037037035,0.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0301,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0302,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0303,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.6666666666666666,0.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0304,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0305,NO_HUMAN_LABEL,0,1,0.5714285714285714,ancestor,0.8333333333333334,0.13043478260869565,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0306,NO_HUMAN_LABEL,0,0,0.3076923076923077,sibling,0.5,0.057971014492753624,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0307,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.07142857142857142,0.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0308,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,8,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0309,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0310,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0311,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0312,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0313,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0314,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0315,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0316,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0317,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0318,NO_HUMAN_LABEL,0,0,0.4,sibling,0.6666666666666667,0.16666666666666666,0.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0319,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0320,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0321,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0322,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.09523809523809523,0.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0323,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0324,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0325,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.4444444444444444,0.08695652173913043,0.0,True,8,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0326,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0327,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0328,NO_HUMAN_LABEL,0,0,0.36363636363636365,sibling,0.6111111111111112,0.038834951456310676,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0329,NO_HUMAN_LABEL,0,0,0.5,sibling,0.7777777777777778,0.25,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0330,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0331,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0332,NO_HUMAN_LABEL,0,0,0.4,sibling,0.8333333333333334,0.09523809523809523,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0333,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0334,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0335,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0336,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0337,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0338,NO_HUMAN_LABEL,0,1,0.5714285714285714,ancestor,0.8333333333333334,0.2727272727272727,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0339,NO_HUMAN_LABEL,0,0,0.4,sibling,0.8333333333333334,0.25,0.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0340,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.3333333333333333,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0341,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0342,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.8888888888888888,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0343,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6666666666666667,0.047619047619047616,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0344,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0345,NO_HUMAN_LABEL,0,1,0.9090909090909091,descendant,0.9444444444444444,0.5,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0346,NO_HUMAN_LABEL,0,0,0.4444444444444444,sibling,0.7222222222222222,0.08695652173913043,0.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0347,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0348,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0349,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0350,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0351,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.8333333333333334,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0352,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0353,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0354,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0355,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.7777777777777778,0.23076923076923078,1.0,False,2,2_code_novel,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0356,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0357,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0358,NO_HUMAN_LABEL,0,0,0.4444444444444444,sibling,0.7222222222222222,0.38235294117647056,0.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0359,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0360,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0361,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0362,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0363,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0364,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0365,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5,0.02127659574468085,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0366,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.06896551724137931,0.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0367,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0368,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0369,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0370,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0371,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0372,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0373,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6666666666666667,0.030303030303030304,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0374,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0375,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0376,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0377,NO_HUMAN_LABEL,0,0,0.25,sibling,0.6666666666666667,0.05128205128205128,1.0,False,6,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0378,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Spatial Concept
+MedMentions,xmen_native,xMEN_sapbert,MM-0379,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0380,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.16666666666666666,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0381,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0382,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.041666666666666664,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0383,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.8888888888888888,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0384,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0385,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0386,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5,0.029411764705882353,0.0,True,8,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0387,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0388,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5555555555555556,0.018518518518518517,0.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0389,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0390,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0391,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0392,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0393,NO_HUMAN_LABEL,0,1,0.9090909090909091,descendant,0.9444444444444444,0.5,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0394,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0395,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0396,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0397,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0398,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0399,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0400,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0401,NO_HUMAN_LABEL,0,1,0.8,ancestor,0.9444444444444444,0.7,1.0,True,3,1_code_seen,mid(3),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0402,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0403,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0404,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.07407407407407407,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0405,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0406,NO_HUMAN_LABEL,0,1,0.8,ancestor,0.9444444444444444,0.7,1.0,True,3,1_code_seen,mid(3),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0407,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0408,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0409,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0410,NO_HUMAN_LABEL,0,1,0.6666666666666666,ancestor,0.8888888888888888,0.13043478260869565,0.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0411,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0412,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0413,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0414,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5,0.06666666666666667,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0415,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0416,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0417,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0418,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.08571428571428572,0.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0419,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0420,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0421,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7222222222222222,0.03225806451612903,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0422,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0423,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0424,NO_HUMAN_LABEL,0,0,0.5,sibling,0.7777777777777778,0.07317073170731707,0.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0425,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Injury/Poisoning
+MedMentions,xmen_native,xMEN_sapbert,MM-0426,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0427,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0428,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0429,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0430,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0431,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0432,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0433,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0434,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0435,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0436,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0437,NO_HUMAN_LABEL,0,0,0.5714285714285714,sibling,0.8333333333333334,0.2727272727272727,0.0,True,3,1_code_seen,mid(3),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0438,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0439,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7222222222222222,0.03225806451612903,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0440,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.921875,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0441,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.017543859649122806,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0442,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0443,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0444,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0445,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.1111111111111111,0.0,True,1,1_code_seen,shallow(<=2),Clinical Attribute
+MedMentions,xmen_native,xMEN_sapbert,MM-0446,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0447,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.42857142857142855,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0448,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.03125,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0449,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0450,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0451,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0452,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.14285714285714285,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0453,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0454,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0455,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0456,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0457,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0458,NO_HUMAN_LABEL,0,0,0.6666666666666666,sibling,0.8888888888888888,0.7894736842105263,1.0,False,3,2_code_novel,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0459,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.1,0.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0460,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0461,NO_HUMAN_LABEL,0,0,0.6666666666666666,sibling,0.8333333333333334,0.36363636363636365,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0462,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0463,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0464,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.2,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0465,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0466,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0467,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0468,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6666666666666667,0.02,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0469,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.02631578947368421,0.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0470,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0471,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0472,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0473,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Spatial Concept
+MedMentions,xmen_native,xMEN_sapbert,MM-0474,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0475,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0476,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0477,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.09090909090909091,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0478,NO_HUMAN_LABEL,0,0,0.25,sibling,0.6666666666666667,0.05128205128205128,1.0,False,6,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0479,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0480,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0481,NO_HUMAN_LABEL,0,1,0.8571428571428571,ancestor,0.9444444444444444,0.875,0.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0482,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0483,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.125,0.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0484,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0485,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0486,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.2,0.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0487,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.4,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0488,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.42857142857142855,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0489,NO_HUMAN_LABEL,0,1,0.8,ancestor,0.9444444444444444,0.75,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0490,NO_HUMAN_LABEL,0,0,0.4444444444444444,sibling,0.7222222222222222,0.05172413793103448,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0491,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0492,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,7,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0493,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0494,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0495,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0496,NO_HUMAN_LABEL,0,0,0.36363636363636365,sibling,0.6111111111111112,0.038834951456310676,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0497,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0498,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0499,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0500,NO_HUMAN_LABEL,0,0,0.6666666666666666,sibling,0.7777777777777778,0.15217391304347827,0.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0501,NO_HUMAN_LABEL,0,0,0.8,sibling,0.8888888888888888,0.48,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0502,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.4,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0503,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0504,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0505,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0506,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.1,0.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0507,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0508,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.9259259259259259,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0509,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.07692307692307693,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0510,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0511,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,7,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0512,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0513,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0514,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0515,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0516,NO_HUMAN_LABEL,0,0,0.5454545454545454,sibling,0.7222222222222222,0.11764705882352941,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0517,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.09090909090909091,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0518,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.5,0.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0519,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0520,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0521,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.7777777777777778,0.05263157894736842,0.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0522,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0523,NO_HUMAN_LABEL,0,0,0.4,sibling,0.6666666666666667,0.08333333333333333,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0524,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0525,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0526,NO_HUMAN_LABEL,0,0,0.4,sibling,0.6666666666666667,0.125,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0527,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0528,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Spatial Concept
+MedMentions,xmen_native,xMEN_sapbert,MM-0529,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0530,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.09090909090909091,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0531,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0532,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0533,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0534,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0535,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0536,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0537,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0538,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.03571428571428571,0.0,False,5,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0539,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0540,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0541,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0542,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.07142857142857142,0.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0543,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0544,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.08333333333333333,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0545,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.42857142857142855,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0546,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0547,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0548,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.0625,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0549,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0550,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0551,NO_HUMAN_LABEL,0,1,0.5714285714285714,ancestor,0.8333333333333334,0.13043478260869565,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0552,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0553,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0554,NO_HUMAN_LABEL,0,1,0.8888888888888888,ancestor,0.9444444444444444,0.9111111111111111,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0555,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0556,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.125,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0557,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.9285714285714286,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0558,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0559,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0560,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0561,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0562,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0563,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.42857142857142855,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0564,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0565,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0566,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6666666666666667,0.023255813953488372,0.0,False,5,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0567,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6666666666666667,0.03571428571428571,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0568,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0569,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0570,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0571,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0572,NO_HUMAN_LABEL,0,0,0.4,sibling,0.6666666666666667,0.15,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0573,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.7777777777777778,0.16,1.0,False,4,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0574,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0575,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0576,NO_HUMAN_LABEL,0,0,0.3076923076923077,sibling,0.5,0.08064516129032258,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0577,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0578,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0579,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0580,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0581,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0582,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0583,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0584,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.045454545454545456,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0585,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0586,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.9285714285714286,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0587,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0588,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0589,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.921875,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0590,NO_HUMAN_LABEL,0,0,0.5,sibling,0.7777777777777778,0.25,0.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0591,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0592,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0593,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0594,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0595,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0596,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0597,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0598,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0599,NO_HUMAN_LABEL,0,0,0.25,sibling,0.6666666666666667,0.08695652173913043,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0600,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0601,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0602,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0603,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0604,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.42857142857142855,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0605,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5555555555555556,0.043478260869565216,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0606,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0607,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0608,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0609,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0610,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.14285714285714285,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0611,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,7,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0612,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5555555555555556,0.043478260869565216,0.0,True,5,1_code_seen,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0613,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0614,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0615,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0616,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0617,NO_HUMAN_LABEL,0,0,0.3076923076923077,sibling,0.5,0.08108108108108109,1.0,True,7,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0618,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5555555555555556,0.043478260869565216,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0619,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.041666666666666664,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0620,NO_HUMAN_LABEL,0,0,0.0,sibling,0.5,0.024390243902439025,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0621,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0622,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0623,NO_HUMAN_LABEL,0,0,0.5,sibling,0.7777777777777778,0.15,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0624,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0625,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0626,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0627,NO_HUMAN_LABEL,0,1,0.9090909090909091,ancestor,0.9444444444444444,0.78125,0.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0628,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0629,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0630,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0631,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.0625,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0632,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0633,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0634,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0635,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0636,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0637,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0638,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0639,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0640,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0641,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0642,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0643,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0644,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7222222222222222,0.08333333333333333,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0645,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0646,NO_HUMAN_LABEL,0,0,0.36363636363636365,sibling,0.6111111111111112,0.06666666666666667,0.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0647,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0648,NO_HUMAN_LABEL,0,0,0.6666666666666666,sibling,0.7777777777777778,0.15217391304347827,0.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0649,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0650,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.08333333333333333,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0651,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0652,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0653,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0654,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,8,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0655,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.05555555555555555,0.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0656,NO_HUMAN_LABEL,0,1,0.5714285714285714,ancestor,0.8333333333333334,0.13043478260869565,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0657,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.8888888888888888,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0658,NO_HUMAN_LABEL,0,0,0.4444444444444444,sibling,0.7222222222222222,0.05172413793103448,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0659,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0660,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0661,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.8888888888888888,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0662,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0663,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0664,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6666666666666667,0.030303030303030304,0.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0665,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0666,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.921875,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0667,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.125,0.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0668,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0669,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.08571428571428572,0.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0670,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.045454545454545456,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0671,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0672,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0673,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0674,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.35294117647058826,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0675,NO_HUMAN_LABEL,0,1,0.8,descendant,0.9444444444444444,0.7,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0676,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0677,NO_HUMAN_LABEL,0,1,0.75,ancestor,0.8888888888888888,0.4444444444444444,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0678,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.041666666666666664,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0679,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0680,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0681,NO_HUMAN_LABEL,0,0,0.4,sibling,0.8333333333333334,0.2857142857142857,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0682,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0683,NO_HUMAN_LABEL,0,1,0.5714285714285714,ancestor,0.8333333333333334,0.2727272727272727,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0684,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.07692307692307693,0.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0685,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0686,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0687,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0688,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0689,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0690,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.16666666666666666,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0691,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0692,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0693,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0694,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0695,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0696,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0697,NO_HUMAN_LABEL,0,1,0.5714285714285714,ancestor,0.8333333333333334,0.2,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0698,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0699,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0700,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0701,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0702,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.35294117647058826,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0703,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0704,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0705,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0706,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0707,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0708,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0709,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0710,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0711,NO_HUMAN_LABEL,0,0,0.8,sibling,0.8888888888888888,0.48,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0712,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0713,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0714,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0715,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0716,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0717,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0718,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.35294117647058826,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0719,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0720,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0721,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0722,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0723,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0724,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.06666666666666667,0.0,True,1,1_code_seen,shallow(<=2),Spatial Concept
+MedMentions,xmen_native,xMEN_sapbert,MM-0725,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0726,NO_HUMAN_LABEL,0,0,0.5714285714285714,sibling,0.8333333333333334,0.17142857142857143,1.0,False,3,2_code_novel,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0727,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0728,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7222222222222222,0.03225806451612903,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0729,NO_HUMAN_LABEL,0,0,0.36363636363636365,sibling,0.6111111111111112,0.0967741935483871,0.0,False,7,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0730,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8333333333333334,0.05555555555555555,0.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0731,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0732,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0733,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.041666666666666664,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0734,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0735,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0736,NO_HUMAN_LABEL,0,1,0.9090909090909091,descendant,0.9444444444444444,0.9285714285714286,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0737,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0738,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,1,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0739,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0740,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0741,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.42857142857142855,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0742,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.1111111111111111,1.0,False,4,2_code_novel,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0743,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0744,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0745,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0746,NO_HUMAN_LABEL,0,0,0.0,sibling,0.6111111111111112,0.0625,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0747,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0748,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0749,NO_HUMAN_LABEL,0,1,0.9090909090909091,ancestor,0.9444444444444444,0.78125,0.0,False,6,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0750,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0751,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0752,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0753,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.7777777777777778,0.15384615384615385,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0754,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0755,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0756,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.09090909090909091,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0757,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0758,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0759,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0760,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Injury/Poisoning
+MedMentions,xmen_native,xMEN_sapbert,MM-0761,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0762,NO_HUMAN_LABEL,0,1,0.5714285714285714,ancestor,0.8333333333333334,0.2,0.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0763,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0764,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0765,NO_HUMAN_LABEL,0,0,0.4,sibling,0.8333333333333334,0.14285714285714285,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0766,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0767,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0768,NO_HUMAN_LABEL,0,0,0.5,sibling,0.8888888888888888,0.4166666666666667,1.0,False,2,2_code_novel,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0769,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0770,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0771,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0772,NO_HUMAN_LABEL,0,1,0.8888888888888888,descendant,0.9444444444444444,0.8888888888888888,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0773,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0774,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0775,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0776,NO_HUMAN_LABEL,0,0,0.4444444444444444,sibling,0.7222222222222222,0.0967741935483871,0.0,False,5,2_code_novel,deep(>=4),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0777,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,6,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0778,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0779,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0780,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Anatomical Structure
+MedMentions,xmen_native,xMEN_sapbert,MM-0781,NO_HUMAN_LABEL,0,0,0.3333333333333333,sibling,0.7777777777777778,0.16666666666666666,0.0,False,2,2_code_novel,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0782,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0783,NO_HUMAN_LABEL,0,0,0.6666666666666666,sibling,0.8333333333333334,0.36363636363636365,1.0,True,5,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0784,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,4,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0785,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.09090909090909091,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0786,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0787,NO_HUMAN_LABEL,0,1,0.8571428571428571,descendant,0.9444444444444444,0.8888888888888888,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0788,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,3,1_code_seen,mid(3),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0789,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0790,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0791,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,3,2_code_novel,mid(3),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0792,NO_HUMAN_LABEL,0,0,0.4444444444444444,sibling,0.7222222222222222,0.05172413793103448,0.0,True,4,1_code_seen,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0793,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,2,2_code_novel,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0794,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,2,1_code_seen,shallow(<=2),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0795,NO_HUMAN_LABEL,0,0,0.2857142857142857,sibling,0.7222222222222222,0.09523809523809523,0.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0796,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0797,NO_HUMAN_LABEL,0,0,0.0,sibling,0.8888888888888888,0.07692307692307693,0.0,True,1,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0798,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,False,5,2_code_novel,deep(>=4),Biologic Function
+MedMentions,xmen_native,xMEN_sapbert,MM-0799,NO_HUMAN_LABEL,0,0,0.0,sibling,0.7777777777777778,0.07142857142857142,1.0,True,2,1_code_seen,shallow(<=2),Finding
+MedMentions,xmen_native,xMEN_sapbert,MM-0800,NO_HUMAN_LABEL,1,1,1.0,exact,1.0,1.0,1.0,True,1,1_code_seen,shallow(<=2),Biologic Function

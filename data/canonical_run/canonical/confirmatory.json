@@ -1,0 +1,140 @@
+{
+ "oracle_DG_cells": [
+  {
+   "benchmark": "distemist",
+   "system": "lexical",
+   "DG": 0.0568,
+   "lo": 0.005,
+   "hi": 0.109,
+   "excl0": true
+  },
+  {
+   "benchmark": "distemist",
+   "system": "sapbert",
+   "DG": 0.1746,
+   "lo": 0.1216,
+   "hi": 0.2272,
+   "excl0": true
+  },
+  {
+   "benchmark": "distemist",
+   "system": "sapbert_ft",
+   "DG": 0.1889,
+   "lo": 0.1352,
+   "hi": 0.2435,
+   "excl0": true
+  },
+  {
+   "benchmark": "distemist",
+   "system": "llm_rerank",
+   "DG": 0.1552,
+   "lo": 0.1022,
+   "hi": 0.2104,
+   "excl0": true
+  },
+  {
+   "benchmark": "distemist",
+   "system": "llm_gen",
+   "DG": 0.0882,
+   "lo": 0.0411,
+   "hi": 0.1342,
+   "excl0": true
+  },
+  {
+   "benchmark": "medprocner",
+   "system": "lexical",
+   "DG": 0.0971,
+   "lo": 0.0352,
+   "hi": 0.1596,
+   "excl0": true
+  },
+  {
+   "benchmark": "medprocner",
+   "system": "sapbert",
+   "DG": 0.1836,
+   "lo": 0.1252,
+   "hi": 0.2425,
+   "excl0": true
+  },
+  {
+   "benchmark": "medprocner",
+   "system": "llm_rerank",
+   "DG": 0.126,
+   "lo": 0.0646,
+   "hi": 0.1891,
+   "excl0": true
+  },
+  {
+   "benchmark": "medprocner",
+   "system": "llm_gen",
+   "DG": 0.0335,
+   "lo": -0.0193,
+   "hi": 0.0868,
+   "excl0": false
+  },
+  {
+   "benchmark": "symptemist",
+   "system": "lexical",
+   "DG": 0.0888,
+   "lo": 0.0435,
+   "hi": 0.1356,
+   "excl0": true
+  },
+  {
+   "benchmark": "symptemist",
+   "system": "sapbert",
+   "DG": 0.2505,
+   "lo": 0.2013,
+   "hi": 0.2993,
+   "excl0": true
+  },
+  {
+   "benchmark": "symptemist",
+   "system": "sapbert_ft",
+   "DG": 0.1948,
+   "lo": 0.1447,
+   "hi": 0.2454,
+   "excl0": true
+  },
+  {
+   "benchmark": "symptemist",
+   "system": "llm_rerank",
+   "DG": 0.1451,
+   "lo": 0.099,
+   "hi": 0.1932,
+   "excl0": true
+  },
+  {
+   "benchmark": "symptemist",
+   "system": "llm_gen",
+   "DG": 0.0547,
+   "lo": 0.0159,
+   "hi": 0.0936,
+   "excl0": true
+  }
+ ],
+ "oracle_DG_excl0": "13/14",
+ "strength_rho_ratio": 0.789010989010989,
+ "strength_perm_p_ratio": 0.0003,
+ "strength_rho_additive": 0.8681318681318682,
+ "strength_perm_p_additive": "<0.00005 (0 of 20000 permutations)",
+ "mcnemar": {
+  "distemist": {
+   "base": 0.637,
+   "ft": 0.677,
+   "gain": 0.04,
+   "ft_gain": 50,
+   "ft_loss": 23,
+   "mcnemar_p": 0.002118172746400632
+  },
+  "symptemist": {
+   "base": 0.584,
+   "ft": 0.659,
+   "gain": 0.075,
+   "ft_gain": 81,
+   "ft_loss": 21,
+   "mcnemar_p": 1.709865174269227e-09
+  }
+ },
+ "_note_perm_p": "ratio p=0.0003; additive p<0.0001 (<0.00005, 0 of 20000 permutations); the main text summarizes these as p<0.001"
+}

@@ -1,0 +1,19 @@
+{
+  "ft_stratum_gain": {
+    "distemist": {
+      "NARROW_gain_pts": 6.4,
+      "EXACT_gain_pts": 2.7
+    },
+    "symptemist": {
+      "NARROW_gain_pts": 18.8,
+      "EXACT_gain_pts": 3.8
+    }
+  },
+  "per_system_OR": {
+    "lexical": 2.77,
+    "sapbert": 5.54,
+    "sapbert_ft": 3.57,
+    "llm_rerank": 3.39,
+    "llm_gen": 5.42
+  }
+}

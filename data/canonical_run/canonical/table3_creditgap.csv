@@ -1,0 +1,15 @@
+benchmark,system,gap_EXACT,gap_NARROW,ratio
+DisTEMIST,lexical,0.224,0.28,1.254
+DisTEMIST,sapbert,0.128,0.303,2.364
+DisTEMIST,sapbert_ft,0.114,0.303,2.656
+DisTEMIST,llm_rerank,0.136,0.291,2.14
+DisTEMIST,llm_gen,0.227,0.315,1.388
+MedProcNER,lexical,0.297,0.394,1.327
+MedProcNER,sapbert,0.166,0.35,2.105
+MedProcNER,llm_rerank,0.209,0.335,1.603
+MedProcNER,llm_gen,0.345,0.379,1.097
+SympTEMIST,lexical,0.181,0.269,1.492
+SympTEMIST,sapbert,0.095,0.346,3.627
+SympTEMIST,sapbert_ft,0.08,0.274,3.445
+SympTEMIST,llm_rerank,0.113,0.258,2.284
+SympTEMIST,llm_gen,0.195,0.249,1.281

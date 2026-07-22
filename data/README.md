@@ -1,0 +1,64 @@
+# Data dictionary
+
+All public tables are UTF-8 CSV with a header row unless noted otherwise. This release contains
+identifier-free derived metrics and aggregates only.
+
+## `data/canonical_run/per_mention/`
+
+Twenty-eight files named `<benchmark>_<space>_<system>_per_mention.csv` cover 14 system×benchmark
+cells under the primary oracle and training-only candidate spaces.
+
+| column | meaning |
+|---|---|
+| `benchmark` | benchmark display name |
+| `candidate_space` | `oracle` or `train` (`train` is the training-only sensitivity space) |
+| `system` | evaluated system |
+| `item_id` | release-local benchmark item ID, aligned across systems |
+| `semantic_rel` | human granularity stratum, `EXACT` or `NARROW` |
+| `exact` | exact-match indicator, 0 or 1 |
+| `is_a` | exact or ancestor/descendant consistency indicator, 0 or 1 |
+| `wup` | Wu–Palmer credit computed with the private frozen map |
+| `relation_type` | `exact`, `ancestor`, `descendant`, `sibling` or `unresolved` |
+
+The files contain no mention text, prediction/reference identifier or identifier-linked concept description. They
+recalculate the reported Table 2 exact/is-a/Wu–Palmer columns, credit gaps, decomposition, incidence
+results and relation profiles. Recall@5 remains a deposited aggregate rather than a per-item rerun.
+
+## `data/canonical_run/canonical/`
+
+| file | content |
+|---|---|
+| `table2_overall.csv` | overall performance reported in Table 2 |
+| `table3_creditgap.csv` | credit-gap rows reported in Table 4; historical filename retained |
+| `decomposition.csv` | per-cell error-incidence and conditional-proximity decomposition |
+| `pooled_incidence_or.py` | pooled Mantel–Haenszel OR and mention-resampling CI |
+| `reproduce_canonical.py` | identifier-free Table 2, Table 4, decomposition and OR recalculation |
+| `extra_stats.json` | per-system ORs and other canonical statistics |
+| `confirmatory.json` | additive-gap intervals, permutation and McNemar results |
+| `relation_type.csv` | relation-type composition by benchmark, system and stratum |
+| `proximity_creditshare.json` | sibling credit shares and conditional proximity; use `prox_diff_NARROW_minus_EXACT` for the manuscript's NARROW-minus-EXACT convention (`prox_diff` is a retained legacy reverse-sign field) |
+| `metric_robustness.json` | four-metric rank checks |
+| `medmentions_rescore.json` | MedMentions depth-proxy and Table 2 values |
+| `depth_proxy_validation.json` | depth-proxy logistic OR and AUC |
+| `pooled_stats.json` | stored pooled-statistic summary |
+
+Other canonical files provide candidate-space sensitivity, the DisTEMIST seen/ancestor-seen split,
+and the provenance map. `score_modal.py` is a licensed-private re-derivation utility; its raw inputs
+and locally generated ontology objects are not deposited.
+
+## `data/external_audit/`
+
+`xmen_overall.csv` and `xmen_byrel.csv` contain the aggregate Spanish xMEN audit, while the per-item
+`medmentions_xmen_scored.csv` replaces source span and prediction/reference identifiers with
+release-local `MM-####` item IDs while retaining derived metric, depth-band and semantic-type fields.
+For the participant audit, `ieeta_rescored_committed.csv` is the source for the manuscript and
+Supplementary Figure S6 graph-resolvable ratios of 2.84–3.20; `ieeta_medprocner_scored.csv` is an
+auxiliary integral/end-to-end score summary and is not the source of those ratios. DisTEMIST and
+SympTEMIST have no scoreable participant outputs in this release.
+
+## `data/ontology/`
+
+`FROZEN_MAP_HASHES.sha256` records verification digests for the eight private frozen ancestor/depth
+objects. The maps and terminology caches themselves are not distributed and cannot be reconstructed
+from the hashes. Licensed users may build current maps with the utilities under `code/`; see
+`NOTICE_SNOMED.md` at the repository root.

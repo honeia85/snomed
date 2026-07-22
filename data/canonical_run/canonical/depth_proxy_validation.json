@@ -1,0 +1,35 @@
+{
+ "note": "Depth-proxy validation: logistic NARROW ~ gold-concept longest-path depth, per Spanish benchmark. OR per depth level (95% CI) and ROC AUC of depth as a NARROW classifier.",
+ "per_benchmark": {
+  "distemist": {
+   "OR_per_depth": 1.063,
+   "OR_ci": [
+    1.001,
+    1.13
+   ],
+   "AUC": 0.554,
+   "n": 678,
+   "n_narrow": 235
+  },
+  "medprocner": {
+   "OR_per_depth": 0.947,
+   "OR_ci": [
+    0.874,
+    1.027
+   ],
+   "AUC": 0.476,
+   "n": 625,
+   "n_narrow": 134
+  },
+  "symptemist": {
+   "OR_per_depth": 1.067,
+   "OR_ci": [
+    1.008,
+    1.13
+   ],
+   "AUC": 0.557,
+   "n": 800,
+   "n_narrow": 197
+  }
+ }
+}
