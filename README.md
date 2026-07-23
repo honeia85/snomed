@@ -38,7 +38,7 @@ data/canonical_run/canonical/          tables, statistics and core reproduction 
 data/external_audit/                   identifier-free xMEN rows and aggregate external audits
 data/ontology/FROZEN_MAP_HASHES.sha256 verification hashes; no ontology objects
 annotation_kit/                        generic app/rubric, ID-free labels and agreement scorers
-figures/                               six main and seven supplementary figures, 300 dpi
+figures/                               five main and six supplementary figures, 300 dpi or higher
 ```
 
 The 28 canonical CSVs use the schema:

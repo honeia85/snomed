@@ -3,7 +3,7 @@ message: "If you use this software or data, please cite the paper below."
 title: "What exact match hides on fine-grained clinical mentions: a hierarchy-aware evaluation and toolkit for SNOMED CT normalization"
 type: software
 repository-code: "https://github.com/honeia85/snomed"
-version: "1.0.0"
+version: "1.0.1"
 date-released: 2026-07-23
 abstract: "Identifier-free per-item metrics, aggregate audit tables, agreement labels, and code for recalculating the reported tables and core hierarchy-aware statistics. Terminology identifiers, identifier-linked description records, and ontology maps are not redistributed."
 authors:
