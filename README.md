@@ -1,9 +1,9 @@
-# A hierarchy-aware evaluation and toolkit for SNOMED CT concept normalization
+# Normalization systems err more often on fine-grained clinical mentions
 
 Code and identifier-free analysis data for:
 
-> Jo Y, Nam Y, Kim Y, Kim E, Hong P. **What exact match hides on fine-grained clinical mentions: a
-> hierarchy-aware evaluation and toolkit for SNOMED CT normalization.** Manuscript prepared for
+> Jo Y, Nam Y, Kim Y, Kim E, Hong P. **Normalization systems err more often on fine-grained clinical
+> mentions: a granularity-stratified, hierarchy-aware evaluation toolkit for SNOMED CT.** Manuscript prepared for
 > *Database* (Oxford), 2026.
 
 Exact-match accuracy treats a terminology as a flat list of codes. This repository contains
@@ -52,7 +52,9 @@ benchmark,candidate_space,system,item_id,semantic_rel,exact,is_a,wup,relation_ty
 `exact`, `ancestor`, `descendant`, `sibling` or `unresolved`. No mention text, prediction/reference
 identifier, identifier-linked description record or ontology map is included.
 
-These rows support direct recalculation of the reported tables and core statistics. They do not
+These rows support recalculation of the Spanish-benchmark score and relation summaries, the credit-gap
+table, the decomposition and the pooled incidence analysis. Recall@5 remains available only in the
+deposited aggregate tables because ranked candidate lists are not redistributed. The rows do not
 support public re-derivation of Wu–Palmer scores from the original identifier pairs. A licensed user
 may use the map-building and scoring utilities on independently obtained source data; a later live
 terminology build may differ from the private frozen analysis object.
