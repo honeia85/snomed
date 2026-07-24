@@ -1,16 +1,17 @@
-# Normalization systems err more often on fine-grained clinical mentions
+# A Granularity Blind Spot in SNOMED CT Concept Normalization
 
 Code and identifier-free analysis data for:
 
-> Jo Y, Nam Y, Kim Y, Kim E, Hong P. **Normalization systems err more often on fine-grained clinical
-> mentions: a granularity-stratified, hierarchy-aware evaluation toolkit for SNOMED CT.** Manuscript prepared for
+> Jo Y, Nam Y, Kim Y, Kim E, Hong P. **A Granularity Blind Spot in SNOMED CT Concept
+> Normalization.** Manuscript prepared for
 > *Database* (Oxford), 2026.
 
 Exact-match accuracy treats a terminology as a flat list of codes. This repository contains
 identifier-free scored outputs and analysis code behind our finding that the resulting loss is
 concentrated on mentions that human annotators marked as more specific than their assigned target.
 Systems erred more often on those mentions, whereas the estimated conditional-proximity difference
-was small and its confidence interval included zero.
+was small and its confidence interval included zero overall despite different directions across
+benchmarks.
 
 ## Quick start
 
@@ -20,14 +21,22 @@ Python 3.10 or newer is recommended.
 python3 -m pip install -r requirements.txt
 python3 data/canonical_run/canonical/pooled_incidence_or.py
 python3 data/canonical_run/canonical/reproduce_canonical.py
+python3 data/canonical_run/canonical/same_lineage_sensitivity.py
+python3 data/canonical_run/canonical/conditional_proximity_by_benchmark.py
 python3 annotation_kit/score_multi_annotator.py \
   annotation_kit/results/human_labels_deidentified.csv \
   annotation_kit/reference/annotation_answer_key.csv
 ```
 
-The two canonical checks run from the repository root on a CPU and do not rerun model inference or
+The four canonical checks run from the repository root on a CPU and do not rerun model inference or
 need ontology content. They print the pooled Mantel–Haenszel OR 3.886 (95% CI 3.33–4.56), the
-per-system ORs 2.77/5.54/3.57/3.39/5.42, and the geometric-mean decomposition 1.812 × 1.031.
+per-system ORs 2.77/5.54/3.57/3.39/5.42, the geometric-mean decomposition 1.812 × 1.031,
+and the binary same-lineage sensitivity (positive NARROW-minus-EXACT uplift in 9/14 cells;
+bootstrap 95% CI excluding zero in 6/14). They also reproduce the conditional-proximity
+difference—mean Wu–Palmer credit among NARROW errors minus that among EXACT errors—after first
+estimating it within each system×benchmark cell and then weighting cells equally: +0.007 (95% CI
+−0.022 to +0.037) overall, +0.018 (−0.038 to +0.073) for DisTEMIST, −0.086 (−0.131 to −0.041) for
+MedProcNER and +0.071 (+0.024 to +0.119) for SympTEMIST.
 
 ## Release contents
 
@@ -98,18 +107,23 @@ demonstration rows only. The completed study is represented by 150 release-local
 and a three-rater deidentified label matrix. It contains no real mention text, translations, concept
 descriptions, rater names, notes or timestamps. See `annotation_kit/README_START_HERE.md`.
 
-The automated κ = 0.84 reported in the paper is a separate machine re-annotation consistency check;
-its raw inference artifacts are not part of this analysis-level release.
+The automated κ = 0.84 retained in the Supplementary Material is a separate machine
+rubric-consistency check run under the runtime alias `claude-sonnet-5`. Its executed prompt,
+structured-output schema and invocation outline are in
+`annotation_kit/AUTOMATED_REANNOTATION_PROTOCOL.md`. The hosted endpoint did not expose an
+immutable dated build, and raw inference artifacts are not part of this analysis-level release.
 
 ## Selected claim map
 
 | manuscript claim | source |
 |---|---|
-| Table 2 overall scores | `data/canonical_run/canonical/table2_overall.csv` |
-| Table 4 credit gaps | `data/canonical_run/canonical/table3_creditgap.csv` |
+| Table 1 overall scores | `data/canonical_run/canonical/table2_overall.csv` (historical filename) |
+| Table 2 credit gaps | `data/canonical_run/canonical/table3_creditgap.csv` (historical filename) |
 | pooled OR 3.89 (3.33–4.56) | `data/canonical_run/canonical/pooled_incidence_or.py` |
 | per-system ORs | `data/canonical_run/canonical/extra_stats.json` |
 | incidence 1.81 × proximity 1.03 | `data/canonical_run/canonical/decomposition.csv` |
+| equal-cell conditional-proximity differences overall and by benchmark | `data/canonical_run/canonical/conditional_proximity_by_benchmark.py`, `conditional_proximity_by_benchmark.csv` |
+| binary same-lineage sensitivity | `data/canonical_run/canonical/is_a_sensitivity.csv`, `same_lineage_sensitivity.py` |
 | oracle/training-only sensitivity | `data/canonical_run/candidate_space_bootstrap.csv` |
 | relation composition | `data/canonical_run/canonical/relation_type.csv` |
 | metric robustness | `data/canonical_run/canonical/metric_robustness.json` |

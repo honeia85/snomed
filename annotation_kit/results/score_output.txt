@@ -19,5 +19,5 @@ annotators (3): R1, R2, R3
   pairwise Cohen  R1 vs R2: kappa=0.408 [0.282,0.538]
   pairwise Cohen  R1 vs R3: kappa=0.630 [0.502,0.745]
   pairwise Cohen  R2 vs R3: kappa=0.555 [0.421,0.683]
-  Fleiss' kappa (all 3 raters): 0.519
+  Fleiss' kappa (all 3 raters): kappa=0.519 [0.410,0.622]
   majority-vote consensus vs reference: kappa=0.733 [0.613,0.840]  (n=150)

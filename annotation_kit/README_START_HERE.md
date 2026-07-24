@@ -32,6 +32,9 @@ python3 annotation_kit/score_multi_annotator.py \
   annotation_kit/reference/annotation_answer_key.csv
 ```
 
+The fixed-seed item bootstrap (5,000 resamples; seed 42) gives Fleiss kappa 0.519
+(95% CI 0.410–0.622), alongside the Cohen and consensus kappa intervals.
+
 The released labels contain no rater names, notes, timestamps, mention text, translations,
 terminology identifiers or concept descriptions.
 
@@ -41,9 +44,10 @@ terminology identifiers or concept descriptions.
 |---|---|
 | `annotation_app.html` | generic browser template with synthetic rows |
 | `RUBRIC.md` | generic EXACT/NARROW definition |
+| `AUTOMATED_REANNOTATION_PROTOCOL.md` | original 800-item automated-check prompt, model-alias provenance and invocation outline |
 | `reference/annotation_answer_key.csv` | identifier-free native corpus reference labels |
 | `results/` | deidentified three-rater matrix, provenance and frozen output |
 | `score_human_iaa.py` | single-rater reference-agreement scorer |
-| `score_multi_annotator.py` | multi-rater, Fleiss and consensus scorer |
+| `score_multi_annotator.py` | multi-rater, Fleiss and consensus scorer with bootstrap CIs |
 | `google_sheets_collector.gs` | optional unauthenticated demonstration backend; harden before use |
 | `COLLECTION_SETUP.md` | security caveats and setup notes for the demonstration backend |

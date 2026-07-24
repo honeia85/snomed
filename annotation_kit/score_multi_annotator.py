@@ -9,8 +9,8 @@ tool or concatenated from per-rater CSVs. Required columns:
     rater_id, item_id, annotator_label   (benchmark optional; notes/timestamps ignored)
 Legacy `annotator` and `row_id` column names are also accepted.
 
-Reports agreement statistics; Cohen and consensus kappa include bootstrap 95% CIs,
-whereas Fleiss' kappa is a point estimate:
+Reports agreement statistics; Cohen, Fleiss and consensus kappa include item-bootstrap
+95% CIs:
   * per-annotator  human-vs-reference Cohen's kappa (overall + per benchmark)
   * human-human agreement: pairwise Cohen's kappa (each pair) + Fleiss' kappa (all raters)
   * majority-vote consensus label, and consensus-vs-reference kappa
@@ -36,6 +36,17 @@ def fleiss(mat):
     P=((mat**2).sum(axis=1)-N)/(N*(N-1))
     Pbar=P.mean(); Pe=(p**2).sum()
     return (Pbar-Pe)/(1-Pe) if (1-Pe)>0 else float('nan')
+
+def fci(mat,nb=5000,seed=42):
+    """Percentile CI from item-level resampling of the complete rater matrix."""
+    mat=np.asarray(mat); k=fleiss(mat)
+    rng=np.random.default_rng(seed);n=len(mat);boot=[]
+    for _ in range(nb):
+        idx=rng.integers(0,n,n)
+        val=fleiss(mat[idx])
+        if np.isfinite(val): boot.append(val)
+    if not boot: return k,float('nan'),float('nan')
+    lo,hi=np.percentile(boot,[2.5,97.5]);return k,lo,hi
 
 def norm(s): return s.astype(str).str.strip().str.upper()
 
@@ -75,7 +86,8 @@ def main(collected, key_csv):
             kk,lo,hi=kci(W[a],W[b]); print(f"  pairwise Cohen  {a} vs {b}: kappa={kk:.3f} [{lo:.3f},{hi:.3f}]")
         cats=["EXACT","NARROW"]
         mat=np.array([[ (W.loc[i]==c).sum() for c in cats] for i in W.index])
-        print(f"  Fleiss' kappa (all {len(annotators)} raters): {fleiss(mat):.3f}")
+        fk,lo,hi=fci(mat)
+        print(f"  Fleiss' kappa (all {len(annotators)} raters): kappa={fk:.3f} [{lo:.3f},{hi:.3f}]")
         # majority vote consensus
         maj=W.mode(axis=1)[0]
         mm=pd.DataFrame({"h":maj,"r":ref.reindex(W.index)}).dropna()

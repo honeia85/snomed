@@ -15,11 +15,6 @@
    "deep(\u22654)": 0.176,
    "mid(3)": 0.152,
    "shallow(\u22642)": 0.053
-  },
-  "llm_gen": {
-   "deep(\u22654)": 0.0,
-   "mid(3)": 0.0,
-   "shallow(\u22642)": 0.0
   }
  },
  "table2_medmentions_scores": {
@@ -45,5 +40,5 @@
    "n": 800
   }
  },
- "_provenance_note": "MedMentions is a separate depth-proxy cross-check. table2_medmentions_scores are the canonical Table 2 values as reported. The release deposits the canonical aggregate for this cross-check; it does not claim per-example reproduction of the MedMentions LLM reranker value."
+ "_provenance_note": "MedMentions is a separate depth-proxy cross-check. Historical table2 key names are retained for backward compatibility; these values correspond to current manuscript Table 1. The release deposits the canonical aggregate for this cross-check; it does not claim per-example reproduction of the MedMentions LLM reranker value. Generator predictions were not archived, so no generator depth-gap estimate is reported."
 }

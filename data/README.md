@@ -21,24 +21,26 @@ cells under the primary oracle and training-only candidate spaces.
 | `relation_type` | `exact`, `ancestor`, `descendant`, `sibling` or `unresolved` |
 
 The files contain no mention text, prediction/reference identifier or identifier-linked concept description. They
-recalculate the reported Table 2 exact/is-a/Wu–Palmer columns, credit gaps, decomposition, incidence
+recalculate the reported Table 1 exact/is-a/Wu–Palmer columns, credit gaps, decomposition, incidence
 results and relation profiles. Recall@5 remains a deposited aggregate rather than a per-item rerun.
 
 ## `data/canonical_run/canonical/`
 
 | file | content |
 |---|---|
-| `table2_overall.csv` | overall performance reported in Table 2 |
-| `table3_creditgap.csv` | credit-gap rows reported in Table 4; historical filename retained |
+| `table2_overall.csv` | overall performance reported in Table 1; historical filename retained |
+| `table3_creditgap.csv` | credit-gap rows reported in Table 2; historical filename retained |
 | `decomposition.csv` | per-cell error-incidence and conditional-proximity decomposition |
 | `pooled_incidence_or.py` | pooled Mantel–Haenszel OR and mention-resampling CI |
-| `reproduce_canonical.py` | identifier-free Table 2, Table 4, decomposition and OR recalculation |
+| `reproduce_canonical.py` | identifier-free Table 1, Table 2, decomposition and OR recalculation |
+| `conditional_proximity_by_benchmark.py` | equal-cell conditional-proximity estimates and fixed-stratum bootstrap intervals overall and by benchmark |
+| `conditional_proximity_by_benchmark.csv` | frozen overall and benchmark-specific estimates reproduced by the companion script |
 | `extra_stats.json` | per-system ORs and other canonical statistics |
 | `confirmatory.json` | additive-gap intervals, permutation and McNemar results |
 | `relation_type.csv` | relation-type composition by benchmark, system and stratum |
-| `proximity_creditshare.json` | sibling credit shares and conditional proximity; use `prox_diff_NARROW_minus_EXACT` for the manuscript's NARROW-minus-EXACT convention (`prox_diff` is a retained legacy reverse-sign field) |
+| `proximity_creditshare.json` | sibling credit shares and the pooled LLM-only proximity diagnostic; this is not the current all-cell headline estimand |
 | `metric_robustness.json` | four-metric rank checks |
-| `medmentions_rescore.json` | MedMentions depth-proxy and Table 2 values |
+| `medmentions_rescore.json` | MedMentions depth-proxy and Table 1 values |
 | `depth_proxy_validation.json` | depth-proxy logistic OR and AUC |
 | `pooled_stats.json` | stored pooled-statistic summary |
 

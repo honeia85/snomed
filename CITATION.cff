@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite the paper below."
-title: "Normalization systems err more often on fine-grained clinical mentions: a granularity-stratified, hierarchy-aware evaluation toolkit for SNOMED CT"
+title: "A Granularity Blind Spot in SNOMED CT Concept Normalization"
 type: software
 repository-code: "https://github.com/honeia85/snomed"
-version: "1.0.2"
-date-released: 2026-07-23
+version: "1.0.3"
+date-released: 2026-07-24
 abstract: "Identifier-free per-item metrics, aggregate audit tables, agreement labels, and code for recalculating the credit-gap tables and core hierarchy-aware statistics. Recall at 5 is retained as a deposited aggregate. Terminology identifiers, identifier-linked description records, and ontology maps are not redistributed."
 authors:
   - family-names: Jo

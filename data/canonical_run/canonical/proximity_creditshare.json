@@ -20,6 +20,7 @@
   }
  },
  "convention": "conditional Wu-Palmer difference is NARROW minus EXACT (positive = NARROW errors closer to gold)",
+ "proximity_scope": "LLM reranker and LLM generator errors pooled across the three Spanish benchmarks; this is not the equal-cell all-system estimate reported in conditional_proximity_by_benchmark.csv",
  "prox_diff_NARROW_minus_EXACT": 0.0114,
  "prox_ci_NARROW_minus_EXACT": [
   -0.0136,

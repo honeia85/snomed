@@ -1,7 +1,7 @@
 # Canonical numbers and provenance map
 
 This file identifies the single analysis run behind the submitted manuscript. It contains no
-alternate or superseded run. The paper's credit-gap results are in Table 4, although the deposited
+alternate or superseded run. The paper's credit-gap results are in Table 2, although the deposited
 file retains its historical name `canonical/table3_creditgap.csv` for provenance.
 
 ## Run scope
@@ -25,6 +25,8 @@ Run from the repository root:
 ```bash
 python3 data/canonical_run/canonical/pooled_incidence_or.py
 python3 data/canonical_run/canonical/reproduce_canonical.py
+python3 data/canonical_run/canonical/same_lineage_sensitivity.py
+python3 data/canonical_run/canonical/conditional_proximity_by_benchmark.py
 ```
 
 Expected headline results from these commands and the deposited confirmatory output:
@@ -34,9 +36,17 @@ Expected headline results from these commands and the deposited confirmatory out
 - geometric-mean gap decomposition 1.812 × 1.031;
 - NARROW credit gap greater than EXACT in 14/14 cells (recalculated by
   `reproduce_canonical.py`), with the additive-gap interval excluding zero in 13/14 (deposited in
-  `canonical/confirmatory.json`; the bootstrap itself is not rerun by these two commands).
+  `canonical/confirmatory.json`; the bootstrap itself is not rerun by the first two commands);
+- binary same-lineage uplift greater on NARROW in 9/14 cells, with the synchronized
+  fixed-stratum item-bootstrap 95% CI excluding zero in 6/14
+  (`canonical/same_lineage_sensitivity.py`, B = 10,000, seed 42);
+- equal-cell conditional-proximity difference (mean Wu–Palmer among NARROW errors minus mean
+  Wu–Palmer among EXACT errors) +0.007, 95% CI −0.022 to +0.037 across all 14 cells; benchmark
+  estimates were +0.018 (−0.038 to +0.073) for DisTEMIST, −0.086 (−0.131 to −0.041) for
+  MedProcNER and +0.071 (+0.024 to +0.119) for SympTEMIST
+  (`canonical/conditional_proximity_by_benchmark.py`, B = 10,000, seed 42).
 
-## Current Table 2 values
+## Current Table 1 values
 
 | Benchmark | System | Exact | Is-a | Wu–Palmer | Recall@5 |
 |---|---|---:|---:|---:|---:|
@@ -59,13 +69,15 @@ Expected headline results from these commands and the deposited confirmatory out
 
 | claim | canonical source |
 |---|---|
-| Table 2 overall scores | `canonical/table2_overall.csv` |
-| Table 4 credit gaps and intervals | `canonical/table3_creditgap.csv`, `canonical/confirmatory.json` |
+| Table 1 overall scores | `canonical/table2_overall.csv` (historical filename) |
+| Table 2 credit gaps and intervals | `canonical/table3_creditgap.csv`, `canonical/confirmatory.json` (historical filename) |
 | pooled incidence OR and CI | `canonical/pooled_incidence_or.py`, `canonical/pooled_stats.json` |
 | per-system incidence ORs | `canonical/extra_stats.json` |
 | incidence/proximity decomposition | `canonical/decomposition.csv` |
+| equal-cell conditional-proximity differences overall and by benchmark | `canonical/conditional_proximity_by_benchmark.py`, `canonical/conditional_proximity_by_benchmark.csv` |
+| binary same-lineage sensitivity | `canonical/is_a_sensitivity.csv`, `canonical/same_lineage_sensitivity.py` |
 | relation-type profile | `canonical/relation_type.csv` |
-| sibling credit allocation and conditional-proximity difference | `canonical/proximity_creditshare.json` (`prox_diff_NARROW_minus_EXACT` is the current sign convention; `prox_diff` is a retained legacy reverse-sign field) |
+| sibling credit allocation and pooled LLM-only proximity diagnostic | `canonical/proximity_creditshare.json` (`prox_diff_NARROW_minus_EXACT` is the retained NARROW-minus-EXACT field; `prox_diff` is its legacy reverse-sign counterpart) |
 | four-metric ranking robustness | `canonical/metric_robustness.json` |
 | MedMentions depth-proxy check | `canonical/medmentions_rescore.json` |
 | depth-proxy validity | `canonical/depth_proxy_validation.json` |
@@ -76,5 +88,5 @@ External xMEN and ieeta-pt checks are separate modules under `../external_audit/
 treated as independent replications of the canonical run. The three-annotator human reproducibility
 study is documented in `annotation_kit/` and is likewise separate from the system-output run.
 
-If a derived summary conflicts with these files, the canonical per-mention rows and the two
+If a derived summary conflicts with these files, the canonical per-mention rows and the four
 reproduction scripts above take precedence.
