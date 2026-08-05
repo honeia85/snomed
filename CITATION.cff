@@ -4,6 +4,7 @@ title: "A Granularity Blind Spot in the Evaluation of SNOMED CT Concept Normaliz
 type: software
 repository-code: "https://github.com/honeia85/snomed"
 version: "1.0.6"
+doi: "10.5281/zenodo.21803816"
 date-released: 2026-08-05
 abstract: "Identifier-free per-item metrics, aggregate audit tables, agreement labels, and code for recalculating the credit-gap tables and core hierarchy-aware statistics. Recall at 5 is retained as a deposited aggregate. Terminology identifiers, identifier-linked description records, and ontology maps are not redistributed."
 authors:
