@@ -146,10 +146,10 @@ See `CITATION.cff`, `LICENSE` and `THIRD_PARTY_NOTICES.md`. Source code is MIT l
 Author-generated identifier-free data, labels, figures and documentation are CC BY 4.0. No licence
 is granted here to SNOMED CT content or quoted third-party material; `NOTICE_SNOMED.md` defines that
 boundary. Versioned GitHub Releases are archived through Zenodo. The concept DOI
-https://doi.org/10.5281/zenodo.21803815 resolves to the latest release; cite the version-specific DOI
-shown on that record. Version 1.0.8 corrects rater-role terminology, documentation and two mislabeled
-confidence-interval arrays without changing data, analysis behavior or reported results. Earlier tags
-remain available as version history.
+https://doi.org/10.5281/zenodo.21803815 resolves to the latest release. The current version-specific
+DOI is https://doi.org/10.5281/zenodo.21805578 (v1.0.8). Version 1.0.8 corrects rater-role terminology,
+documentation and two mislabeled confidence-interval arrays without changing data, analysis behavior
+or reported results. Earlier tags remain available as version history.
 
 ## Contact
 
