@@ -31,8 +31,10 @@ results and relation profiles. Recall@5 remains a deposited aggregate rather tha
 | `table2_overall.csv` | overall performance reported in Table 1; historical filename retained |
 | `table3_creditgap.csv` | credit-gap rows reported in Table 2; historical filename retained |
 | `decomposition.csv` | per-cell error-incidence and conditional-proximity decomposition |
+| `pooled_incidence_rr.py` | primary panel-weighted Mantel–Haenszel risk ratio and mention-resampling CI |
 | `pooled_incidence_or.py` | pooled Mantel–Haenszel OR and mention-resampling CI |
 | `reproduce_canonical.py` | identifier-free Table 1, Table 2, decomposition and OR recalculation |
+| `same_lineage_sensitivity.py` | binary same-lineage sensitivity with synchronized bootstrap |
 | `conditional_proximity_by_benchmark.py` | equal-cell conditional-proximity estimates and fixed-stratum bootstrap intervals overall and by benchmark |
 | `conditional_proximity_by_benchmark.csv` | frozen overall and benchmark-specific estimates reproduced by the companion script |
 | `extra_stats.json` | per-system ORs and other canonical statistics |
@@ -43,6 +45,10 @@ results and relation profiles. Recall@5 remains a deposited aggregate rather tha
 | `medmentions_rescore.json` | MedMentions depth-proxy and Table 1 values |
 | `depth_proxy_validation.json` | depth-proxy logistic OR and AUC |
 | `pooled_stats.json` | stored pooled-statistic summary |
+
+The five canonical CPU checks are `pooled_incidence_rr.py`, `pooled_incidence_or.py`,
+`reproduce_canonical.py`, `same_lineage_sensitivity.py` and
+`conditional_proximity_by_benchmark.py`.
 
 Other canonical files provide candidate-space sensitivity, the DisTEMIST seen/ancestor-seen split,
 and the provenance map. `score_modal.py` is a licensed-private re-derivation utility; its raw inputs

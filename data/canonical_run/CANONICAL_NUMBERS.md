@@ -23,6 +23,7 @@ scripts below read those fields rather than manuscript text or ontology maps.
 Run from the repository root:
 
 ```bash
+python3 data/canonical_run/canonical/pooled_incidence_rr.py
 python3 data/canonical_run/canonical/pooled_incidence_or.py
 python3 data/canonical_run/canonical/reproduce_canonical.py
 python3 data/canonical_run/canonical/same_lineage_sensitivity.py
@@ -31,6 +32,7 @@ python3 data/canonical_run/canonical/conditional_proximity_by_benchmark.py
 
 Expected headline results from these commands and the deposited confirmatory output:
 
+- panel-weighted Mantel–Haenszel error-incidence risk ratio 1.725, 95% CI 1.63–1.83;
 - pooled Mantel–Haenszel error-incidence OR 3.886, 95% CI 3.33–4.56;
 - per-system ORs 2.77 / 5.54 / 3.57 / 3.39 / 5.42;
 - geometric-mean gap decomposition 1.812 × 1.031;
@@ -71,6 +73,7 @@ Expected headline results from these commands and the deposited confirmatory out
 |---|---|
 | Table 1 overall scores | `canonical/table2_overall.csv` (historical filename) |
 | Table 2 credit gaps and intervals | `canonical/table3_creditgap.csv`, `canonical/confirmatory.json` (historical filename) |
+| pooled incidence risk ratio and CI | `canonical/pooled_incidence_rr.py` |
 | pooled incidence OR and CI | `canonical/pooled_incidence_or.py`, `canonical/pooled_stats.json` |
 | per-system incidence ORs | `canonical/extra_stats.json` |
 | incidence/proximity decomposition | `canonical/decomposition.csv` |
@@ -88,5 +91,5 @@ External xMEN and ieeta-pt checks are separate modules under `../external_audit/
 treated as independent replications of the canonical run. The three-annotator human reproducibility
 study is documented in `annotation_kit/` and is likewise separate from the system-output run.
 
-If a derived summary conflicts with these files, the canonical per-mention rows and the four
+If a derived summary conflicts with these files, the canonical per-mention rows and the five
 reproduction scripts above take precedence.

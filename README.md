@@ -3,17 +3,20 @@
 Code and identifier-free analysis data for:
 
 > Jo Y, Nam Y, Kim Y, Kim E, Hong P. **A Granularity Blind Spot in the Evaluation of
-> SNOMED CT Concept Normalization.** Manuscript under review at
+> SNOMED CT Concept Normalization.** Manuscript prepared for submission to
 > *Journal of Biomedical Semantics*, 2026.
 
 Exact-match accuracy treats a terminology as a flat list of codes. This repository contains
-identifier-free scored outputs and analysis code behind our finding that the resulting loss is
+identifier-free scored outputs and analysis code behind our finding that benchmark mismatch is
 concentrated on mentions that human annotators marked as more specific than their assigned target.
-Systems erred more often on those mentions, whereas the estimated conditional-proximity difference
-was small and its confidence interval included zero overall despite different directions across
-benchmarks.
+Systems failed to reproduce those targets more often, whereas the estimated conditional-proximity
+difference was small and its confidence interval included zero overall despite different directions
+across benchmarks.
 
 ## Quick start
+
+After modifying release files, regenerate and verify the checksum inventory with
+`python3 code/build_manifest.py` and `shasum -a 256 -c MANIFEST.sha256`.
 
 Python 3.10 or newer is recommended.
 
@@ -120,11 +123,12 @@ immutable dated build, and raw inference artifacts are not part of this analysis
 | manuscript claim | source |
 |---|---|
 | Table 1 overall scores (manuscript Table 1) | `data/canonical_run/canonical/table2_overall.csv` (historical filename) |
-| credit gaps (manuscript Table 3) | `data/canonical_run/canonical/table3_creditgap.csv` (historical filename) |
+| credit gaps (manuscript Table 2) | `data/canonical_run/canonical/table3_creditgap.csv` (historical filename) |
 | pooled OR 3.89 (3.33–4.56) | `data/canonical_run/canonical/pooled_incidence_or.py` |
 | pooled MH risk ratio 1.72 (95% CI 1.63–1.83), I² 92.4% | `data/canonical_run/canonical/pooled_incidence_rr.py` |
 | per-system ORs | `data/canonical_run/canonical/extra_stats.json` |
 | incidence 1.81 × proximity 1.03 | `data/canonical_run/canonical/decomposition.csv` |
+| geometric-mean gap ratio 1.87 (95% CI 1.71–2.05) | `data/additional_analyses/robustness_analyses_summary.json` |
 | equal-cell conditional-proximity differences overall and by benchmark | `data/canonical_run/canonical/conditional_proximity_by_benchmark.py`, `conditional_proximity_by_benchmark.csv` |
 | binary same-lineage sensitivity | `data/canonical_run/canonical/is_a_sensitivity.csv`, `same_lineage_sensitivity.py` |
 | oracle/training-only sensitivity | `data/canonical_run/candidate_space_bootstrap.csv` |
@@ -142,9 +146,12 @@ not establish clinical correctness or safety.
 
 ## Citation and licence
 
-See `CITATION.cff` and `LICENSE`. Source code is MIT licensed. Author-generated identifier-free data,
-labels, figures and documentation are CC BY 4.0. No licence is granted here to SNOMED CT content;
-`NOTICE_SNOMED.md` defines that boundary. This tag is the snapshot prepared for peer review; it is being archived on Zenodo, and the resulting DOI will be recorded in `CITATION.cff` and in the paper before review begins.
+See `CITATION.cff`, `LICENSE` and `THIRD_PARTY_NOTICES.md`. Source code is MIT licensed.
+Author-generated identifier-free data, labels, figures and documentation are CC BY 4.0. No licence
+is granted here to SNOMED CT content or quoted third-party material; `NOTICE_SNOMED.md` defines that
+boundary. Versioned GitHub Releases are archived through Zenodo; cite the version-specific DOI shown
+on the corresponding Zenodo record. Version 1.0.5 supersedes the exploratory robustness outputs in
+tag v1.0.4; earlier tags remain immutable for provenance.
 
 ## Contact
 

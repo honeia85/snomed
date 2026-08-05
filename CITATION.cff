@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this software or data, please cite the paper below."
+message: "If you use this software or data, please cite this software release using the metadata below."
 title: "A Granularity Blind Spot in the Evaluation of SNOMED CT Concept Normalization"
 type: software
 repository-code: "https://github.com/honeia85/snomed"
-version: "1.0.4"
+version: "1.0.5"
 date-released: 2026-08-05
 abstract: "Identifier-free per-item metrics, aggregate audit tables, agreement labels, and code for recalculating the credit-gap tables and core hierarchy-aware statistics. Recall at 5 is retained as a deposited aggregate. Terminology identifiers, identifier-linked description records, and ontology maps are not redistributed."
 authors:
@@ -26,7 +26,7 @@ authors:
   - family-names: Hong
     given-names: Pa
     orcid: "https://orcid.org/0000-0001-5495-5230"
-    affiliation: "Department of Radiology, Samsung Changwon Hospital, Sungkyunkwan University School of Medicine; and Department of Digital Health, SAIHST, Sungkyunkwan University"
+    affiliation: "Department of Radiology, Samsung Changwon Hospital, Sungkyunkwan University School of Medicine; and Department of Digital Health, Samsung Advanced Institute for Health Sciences and Technology (SAIHST), Sungkyunkwan University"
 license:
   - MIT
   - CC-BY-4.0

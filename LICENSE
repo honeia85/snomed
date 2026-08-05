@@ -28,6 +28,10 @@ Author-generated identifier-free data and label files under `data/`, `annotation
 `annotation_kit/results/`, together with the figures and documentation in this repository, are
 licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/.
 
+The CC BY 4.0 grant applies only to author-generated content. It excludes quoted source-corpus text
+and terminology descriptions embedded in Figure 1; those remain subject to the rights and licence
+terms of their original sources.
+
 No licence is granted here to SNOMED CT content. The repository does not redistribute terminology
 identifiers, identifier-linked description records or ontology maps. Utilities that query or process
 SNOMED CT require the user to obtain and comply with the applicable terminology licence; see

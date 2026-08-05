@@ -13,6 +13,15 @@ venv/
 env/
 *.egg-info/
 
+# credentials and private keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials*.json
+
 # Internal annotation-study staging; exclude from the audited public clean tree.
 _HOLD_UNTIL_R2_COMPLETE/
 annotation_kit/private_items*
