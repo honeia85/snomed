@@ -8,6 +8,10 @@ Figure 1 contains one worked example already disclosed in the manuscript, withou
 identifiers or release-local row keys. It does not distribute the linked answer-key collection or a
 terminology description table.
 
+The short source-mention and terminology-description quotations in Figure 1 are included only to
+explain that worked example. They are excluded from this repository's CC BY 4.0 grant and remain
+subject to the rights and licence terms of their original sources.
+
 The per-item CSVs contain only release-local item IDs, human granularity strata and already-derived
 numeric or categorical scoring fields. `data/ontology/FROZEN_MAP_HASHES.sha256` records verification
 digests of the private frozen scoring objects without distributing those objects. A digest cannot be
@@ -26,3 +30,6 @@ a later live rebuild will be bit-identical. For the reported paper-level statist
 identifier-free per-item metrics and aggregate tables.
 
 SNOMED CT licensing information: https://www.snomed.org/get-snomed
+
+This is an independent research release and is not an official or endorsed product of SNOMED
+International. SNOMED and SNOMED CT are registered trademarks of SNOMED International.

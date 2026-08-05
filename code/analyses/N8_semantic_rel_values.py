@@ -3,9 +3,8 @@
 did each contribute?
 
 The archived evaluation inputs are already filtered to the two eligible values, so the counts
-have to come from the corpus distributions as released. DisTEMIST and MedProcNER are downloaded
-from the Zenodo records cited in the manuscript; SympTEMIST is read from the copy retained in
-the project archive.
+have to come from the corpus distributions as released. All three releases are downloaded from
+the Zenodo records documented below.
 
 Run:  python3 N8_semantic_rel_values.py [--download-dir DIR]
 
@@ -21,17 +20,10 @@ import json
 import os
 import subprocess
 import sys
+import urllib.parse
 import zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-
-# Inputs that cannot be redistributed (gold concepts, the frozen is-a graph, corpus annotation
-# offsets) live outside this repository. Point CREDITGAP_SOURCE_ROOT at a tree holding them, or
-# edit the default below. Analyses that need only the deposited identifier-free rows resolve
-# against this repository and run without it.
-SOURCE_ROOT = os.environ.get("CREDITGAP_SOURCE_ROOT", os.path.join(HERE, "..", "..", "source"))
-
-ARCHIVE = os.path.join(SOURCE_ROOT, "archive")
 
 # Zenodo *version* records. Note the manuscript cites the concept DOIs (6408476 / 7929830),
 # which always resolve to the newest version; the versions actually read here are recorded so
@@ -55,11 +47,14 @@ SOURCES = {
             "train (subtask 2)": "medprocner_gs_train+test+gazz_230502/medprocner_train/tsv/medprocner_tsv_train_subtask2.tsv",
         },
     },
-}
-
-LOCAL = {
     "SympTEMIST": {
-        "train (subtask 2)": os.path.join(ARCHIVE, "symptemist_tsv_train_subtask2.tsv"),
+        "record": "8413866",
+        "concept_doi": "10.5281/zenodo.8223653",
+        "version_doi": "10.5281/zenodo.8413866",
+        "file": "symptemist-train_all_subtasks+gazetteer+multilingual+test_all_subtasks+bg_231006.zip",
+        "members": {
+            "train (subtask 2)": "symptemist-train_all_subtasks+gazetteer+multilingual+test_all_subtasks+bg_231006/symptemist_train/subtask2-linking/symptemist_tsv_train_subtask2.tsv",
+        },
     },
 }
 
@@ -84,7 +79,8 @@ def fetch(record, filename, dest_dir):
     dest = os.path.join(dest_dir, f"{record}_{filename}")
     if os.path.exists(dest) and os.path.getsize(dest) > 0:
         return dest
-    url = f"https://zenodo.org/records/{record}/files/{filename}?download=1"
+    encoded_filename = urllib.parse.quote(filename, safe="")
+    url = f"https://zenodo.org/records/{record}/files/{encoded_filename}?download=1"
     try:
         subprocess.run(["curl", "-sL", "--max-time", "600", "-o", dest, url],
                        check=True, capture_output=True)
@@ -115,17 +111,6 @@ def main():
         report[corpus] = {"zenodo_record": spec["record"], "concept_doi": spec["concept_doi"],
                           "splits": splits}
 
-    for corpus, files in LOCAL.items():
-        splits = {}
-        for split, path in files.items():
-            if not os.path.exists(path):
-                splits[split] = {"error": f"not found: {path}"}
-                continue
-            with open(path) as fh:
-                col, counts = count_tsv(fh)
-            splits[split] = {"column": col, "counts": dict(counts)} if counts else {"error": "no sem_rel column"}
-        report[corpus] = {"source": "project archive", "splits": splits}
-
     for corpus, data in report.items():
         print(f"\n=== {corpus} ===")
         if "splits" not in data:
@@ -146,8 +131,12 @@ def main():
             if len(other) > 8:
                 print(f"      ... and {len(other) - 8} further composite value(s)")
 
-    json.dump(report, open(os.path.join(HERE, "N8_semantic_rel_values.json"), "w"), indent=2)
-    print("\nwrote N8_semantic_rel_values.json")
+    output = os.path.abspath(os.path.join(HERE, "..", "..", "data", "additional_analyses",
+                                          "N8_semantic_rel_values.json"))
+    os.makedirs(os.path.dirname(output), exist_ok=True)
+    with open(output, "w") as fh:
+        json.dump(report, fh, indent=2)
+    print(f"\nwrote {os.path.relpath(output, os.getcwd())}")
 
 
 if __name__ == "__main__":

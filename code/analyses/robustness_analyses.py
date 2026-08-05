@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
-"""Three analyses requested by the coauthor (Nam, 2026-07-22) that were deferred at the
-Database submission, recomputed here for the JBS resubmission.
+"""Robustness analyses for the JBS submission.
 
-  A (Nam 3-3)  Is the NARROW effect an ontology artefact?  Split NARROW/EXACT mentions by
-               whether a strictly more specific code even exists for the gold concept, and
-               re-estimate the error-incidence contrast inside the "finer code exists" stratum.
-  B (Nam 3-4)  Bootstrap CI for the NARROW/EXACT credit-gap ratio (currently reported as a
-               bare point estimate in Table 4, Figures 2 and 5 and the abstract).
-  C (Nam 3-2)  Heterogeneity of the granularity odds ratio.  Nam asked for Breslow-Day; the
-               Database-stage response declined because pooling five systems scored on the
-               same mentions violates independence.  Held within one system, benchmarks are
-               disjoint mention sets, so the test is legitimate: run it per system across
-               benchmarks, which is what the homogeneity assumption of the reported pooled
-               MH OR actually rests on.
+  A  Restrict the error-incidence contrast to gold concepts that are non-leaves in the
+     frozen candidate-space-plus-ancestor graph. This probes simple leaf-node status only;
+     it does not show that a descendant expresses the mention's missing specificity.
+  B  Bootstrap the NARROW/EXACT credit-gap ratio, preserving repeated mentions across systems
+     for the panel-level geometric mean.
+  C  Assess exploratory within-system heterogeneity across disjoint benchmarks with
+     Breslow-Day tests and a Holm family-wise sensitivity.
 
-Inputs are the canonical Modal 5-system run and the frozen OLS4 ontology objects; nothing is
-re-scored.  Run from anywhere:  python3 nam_reinforcement.py
+Inputs are the canonical five-system run and, for analysis A only, the licensed frozen OLS4
+objects. Nothing is re-scored. Run from the repository root with
+``python3 code/analyses/robustness_analyses.py``.
 """
 
 import csv
@@ -26,24 +22,36 @@ import random
 from collections import defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+REPOSITORY = os.path.abspath(os.path.join(HERE, "..", ".."))
 
 # Inputs that cannot be redistributed (gold concepts, the frozen is-a graph, corpus annotation
 # offsets) live outside this repository. Point CREDITGAP_SOURCE_ROOT at a tree holding them, or
 # edit the default below. Analyses that need only the deposited identifier-free rows resolve
 # against this repository and run without it.
-SOURCE_ROOT = os.environ.get("CREDITGAP_SOURCE_ROOT", os.path.join(HERE, "..", "..", "source"))
-
-SRC = os.path.join(SOURCE_ROOT, "08_rerun_colab")
-PER_MENTION = os.path.join(SRC, "results_modal_5sys", "per_mention")
-CANONICAL = os.path.join(SRC, "results_modal_5sys", "canonical")
-ONTO_CACHE = os.path.join(SRC, "results", "ontology_cache")
-OUT = HERE
+SOURCE_ROOT = os.environ.get("CREDITGAP_SOURCE_ROOT")
+PRIVATE_SRC = os.path.join(SOURCE_ROOT, "08_rerun_colab") if SOURCE_ROOT else None
+if PRIVATE_SRC and os.path.isdir(os.path.join(PRIVATE_SRC, "results_modal_5sys", "per_mention")):
+    PER_MENTION = os.path.join(PRIVATE_SRC, "results_modal_5sys", "per_mention")
+    CANONICAL = os.path.join(PRIVATE_SRC, "results_modal_5sys", "canonical")
+    ONTO_CACHE = os.path.join(PRIVATE_SRC, "results", "ontology_cache")
+else:
+    PER_MENTION = os.path.join(REPOSITORY, "data", "canonical_run", "per_mention")
+    CANONICAL = os.path.join(REPOSITORY, "data", "canonical_run", "canonical")
+    ONTO_CACHE = None
+OUT = os.path.join(REPOSITORY, "data", "additional_analyses")
 
 BENCHMARKS = ["distemist", "medprocner", "symptemist"]
 SYSTEMS = ["lexical", "sapbert", "sapbert_ft", "llm_rerank", "llm_gen"]
 SPACE = "oracle"  # the manuscript's primary candidate space
 B_BOOT = 2000
 SEED = 20260805
+DESCENDANT_RESTRICTION_NOTE = (
+    "A strictly more specific code is counted as existing when the frozen OLS4 parent map "
+    "contains at least one child of the gold concept. This restricted analysis tests only "
+    "whether the gold concept is a leaf in the frozen candidate-space-plus-ancestor map; it "
+    "does not characterize all of SNOMED CT, prove that an appropriate finer code exists, or "
+    "define a system's reachable prediction space."
+)
 
 
 # ---------------------------------------------------------------- data loading
@@ -57,7 +65,7 @@ def load_cell(bench, system):
     with open(path) as fh:
         for r in csv.DictReader(fh):
             rows.append({
-                "gold": r["gold"].strip(),
+                "gold": r.get("gold", "").strip(),
                 "rel": r["semantic_rel"].strip().upper(),
                 "exact": float(r["exact"]),
                 "wup": float(r["wup"]),
@@ -67,6 +75,11 @@ def load_cell(bench, system):
 
 def load_children(bench):
     """child -> parents is stored; invert it to parent -> children over the frozen universe."""
+    if ONTO_CACHE is None:
+        raise RuntimeError(
+            "descendant-availability analysis requires CREDITGAP_SOURCE_ROOT with the licensed "
+            "private ontology cache"
+        )
     with open(os.path.join(ONTO_CACHE, f"{bench}_ols_cache.json")) as fh:
         par = json.load(fh)["par"]
     kids = defaultdict(set)
@@ -312,10 +325,7 @@ def analysis_a():
                       "and seed as the published pooled odds ratio, resampling evaluation "
                       "mentions within each benchmark so that a mention recurs across systems"),
         "n_cells": len(pooled_tables_all),
-        "note": ("A strictly more specific code is counted as existing when the frozen OLS4 "
-                 "parent map contains at least one child of the gold concept. The map covers "
-                 "the candidate space and its ancestors, so this is a lower bound on what full "
-                 "SNOMED CT offers, and the space a system could actually have predicted into."),
+        "note": DESCENDANT_RESTRICTION_NOTE,
     }
     write_csv("A_narrow_vs_ontology_availability.csv", rows_out)
     write_csv("A_narrow_label_coverage.csv", coverage)
@@ -325,16 +335,24 @@ def analysis_a():
 # ---------------------------------------------------------------- B: ratio CI
 
 def analysis_b():
-    """Nam 3-4: the NARROW/EXACT credit-gap ratio carries no interval anywhere in the paper."""
-    rng = random.Random(SEED)
+    """Bootstrap cell ratios and a dependence-preserving geometric-mean ratio.
+
+    A mention is scored by every available system in its benchmark. Per-cell intervals may be
+    obtained by ordinary stratum-wise resampling, but the geometric-mean interval must use the
+    same sampled mention indices across systems. Otherwise the repeated-measure dependence is
+    broken and the interval is too narrow.
+    """
+    cell_rng = random.Random(SEED)
     rows_out = []
-    per_cell_draws = []
+    cells_by_benchmark = {}
 
     for bench in BENCHMARKS:
+        cells_by_benchmark[bench] = {}
         for system in SYSTEMS:
             cell = load_cell(bench, system)
             if cell is None:
                 continue
+            cells_by_benchmark[bench][system] = cell
             ex = [r for r in cell if r["rel"] == "EXACT"]
             na = [r for r in cell if r["rel"] == "NARROW"]
             point_e, point_n = credit_gap(ex), credit_gap(na)
@@ -342,12 +360,11 @@ def analysis_b():
 
             draws = []
             for _ in range(B_BOOT):
-                be = [ex[rng.randrange(len(ex))] for _ in range(len(ex))]
-                bn = [na[rng.randrange(len(na))] for _ in range(len(na))]
+                be = [ex[cell_rng.randrange(len(ex))] for _ in range(len(ex))]
+                bn = [na[cell_rng.randrange(len(na))] for _ in range(len(na))]
                 ge, gn = credit_gap(be), credit_gap(bn)
                 draws.append(gn / ge if ge > 0 else float("nan"))
             lo, hi = boot_ci(draws)
-            per_cell_draws.append(draws)
             rows_out.append({
                 "benchmark": bench, "system": system,
                 "n_EXACT": len(ex), "n_NARROW": len(na),
@@ -357,11 +374,30 @@ def analysis_b():
                 "excludes_1": bool(lo > 1.0),
             })
 
-    # geometric mean across cells, resampling all cells jointly on each draw
+    # Geometric mean across cells. Within each benchmark and stratum, draw mention indices
+    # once and apply them to every system so repeated scoring of the same mention is preserved.
+    joint_rng = random.Random(SEED)
     geo_draws = []
-    for b in range(B_BOOT):
-        vals = [d[b] for d in per_cell_draws if d[b] > 0 and not math.isnan(d[b])]
-        if len(vals) == len(per_cell_draws):
+    for _ in range(B_BOOT):
+        vals = []
+        for bench, cells in cells_by_benchmark.items():
+            reference = next(iter(cells.values()))
+            exact_idx = [i for i, r in enumerate(reference) if r["rel"] == "EXACT"]
+            narrow_idx = [i for i, r in enumerate(reference) if r["rel"] == "NARROW"]
+            sampled_exact = [exact_idx[joint_rng.randrange(len(exact_idx))]
+                             for _ in range(len(exact_idx))]
+            sampled_narrow = [narrow_idx[joint_rng.randrange(len(narrow_idx))]
+                              for _ in range(len(narrow_idx))]
+            reference_labels = [r["rel"] for r in reference]
+            for system, cell in cells.items():
+                assert len(cell) == len(reference), f"unaligned rows for {bench}/{system}"
+                assert [r["rel"] for r in cell] == reference_labels, \
+                    f"unaligned granularity labels for {bench}/{system}"
+                ge = credit_gap([cell[i] for i in sampled_exact])
+                gn = credit_gap([cell[i] for i in sampled_narrow])
+                if ge > 0:
+                    vals.append(gn / ge)
+        if len(vals) == len(rows_out) and all(v > 0 and not math.isnan(v) for v in vals):
             geo_draws.append(math.exp(mean([math.log(v) for v in vals])))
     geo_point = math.exp(mean([math.log(r["ratio"]) for r in rows_out]))
     glo, ghi = boot_ci(geo_draws)
@@ -371,6 +407,9 @@ def analysis_b():
         "cells_with_ci_excluding_1": sum(1 for r in rows_out if r["excludes_1"]),
         "n_cells": len(rows_out),
         "B": B_BOOT, "seed": SEED,
+        "geometric_mean_ci_method": (
+            "stratified mention bootstrap with shared indices across systems within each "
+            "benchmark; document clustering not modelled"),
     }
     write_csv("B_credit_gap_ratio_bootstrap_ci.csv", rows_out)
     return rows_out, summary
@@ -379,7 +418,7 @@ def analysis_b():
 # ---------------------------------------------------------------- C: heterogeneity
 
 def analysis_c():
-    """Nam 3-2, done in the form the data supports: strata = benchmarks, within one system."""
+    """Exploratory within-system Breslow-Day tests, with Holm family-wise sensitivity."""
     rows_out = []
     for system in SYSTEMS:
         tables, benches = [], []
@@ -408,6 +447,16 @@ def analysis_c():
             "p_homogeneity": (f"{p:.4g}" if not math.isnan(p) else "NA"),
             "homogeneity_rejected_at_0.05": bool(not math.isnan(p) and p < 0.05),
         })
+
+    # Family-wise sensitivity over the five exploratory system-level tests.
+    order = sorted(range(len(rows_out)), key=lambda i: float(rows_out[i]["p_homogeneity"]))
+    running_max = 0.0
+    for rank, index in enumerate(order):
+        raw = float(rows_out[index]["p_homogeneity"])
+        adjusted = min(1.0, raw * (len(rows_out) - rank))
+        running_max = max(running_max, adjusted)
+        rows_out[index]["p_holm"] = f"{running_max:.4g}"
+        rows_out[index]["holm_rejected_at_0.05"] = bool(running_max < 0.05)
     write_csv("C_or_heterogeneity_breslow_day.csv", rows_out)
     return rows_out
 
@@ -424,7 +473,7 @@ def write_csv(name, rows):
 
 
 def self_check():
-    """The pipeline must reproduce the published Table 4 gaps from the same per-mention rows."""
+    """The pipeline must reproduce the published Table 2 gaps from the same per-mention rows."""
     published = {}
     with open(os.path.join(CANONICAL, "table3_creditgap.csv")) as fh:
         for r in csv.DictReader(fh):
@@ -446,18 +495,29 @@ def self_check():
 
 if __name__ == "__main__":
     self_check()
-    a_rows, a_cov, a_sum = analysis_a()
+    if ONTO_CACHE is not None:
+        a_rows, a_cov, a_sum = analysis_a()
+    else:
+        previous_path = os.path.join(OUT, "robustness_analyses_summary.json")
+        with open(previous_path) as fh:
+            previous = json.load(fh)
+        a_rows = []
+        a_cov = previous["A_label_coverage"]
+        a_sum = previous["A_ontology_availability"]
+        a_sum["note"] = DESCENDANT_RESTRICTION_NOTE
+        print("descendant-availability analysis: using deposited frozen output; set "
+              "CREDITGAP_SOURCE_ROOT to rerun with licensed inputs")
     b_rows, b_sum = analysis_b()
     c_rows = analysis_c()
-    with open(os.path.join(OUT, "nam_reinforcement_summary.json"), "w") as fh:
+    with open(os.path.join(OUT, "robustness_analyses_summary.json"), "w") as fh:
         json.dump({"A_ontology_availability": a_sum,
                    "A_label_coverage": a_cov,
                    "B_ratio_ci": b_sum,
                    "C_heterogeneity": c_rows}, fh, indent=2)
-    print("\n--- A: does a finer code even exist? ---")
+    print("\n--- A: non-leaf restriction in the frozen graph ---")
     for r in a_cov:
         print(f"  {r['benchmark']:11s} {r['stratum']:6s} n={r['n_mentions']:4d} "
-              f"finer code exists for {r['pct_with_finer_code']}%")
+              f"gold node non-leaf for {r['pct_with_finer_code']}%")
     print(f"  pooled MH OR, all mentions          : {a_sum['pooled_MH_OR_all_mentions']}")
     print(f"  pooled MH OR, finer code exists only: "
           f"{a_sum['pooled_MH_OR_restricted_to_gold_with_finer_code']}")

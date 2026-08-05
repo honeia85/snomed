@@ -14,7 +14,7 @@
     ],
     "ci_method": "mention-clustered bootstrap, B = 10,000, seed 12345 - the same procedure and seed as the published pooled odds ratio, resampling evaluation mentions within each benchmark so that a mention recurs across systems",
     "n_cells": 14,
-    "note": "A strictly more specific code is counted as existing when the frozen OLS4 parent map contains at least one child of the gold concept. The map covers the candidate space and its ancestors, so this is a lower bound on what full SNOMED CT offers, and the space a system could actually have predicted into."
+    "note": "A strictly more specific code is counted as existing when the frozen OLS4 parent map contains at least one child of the gold concept. This restricted analysis tests only whether the gold concept is a leaf in the frozen candidate-space-plus-ancestor map; it does not characterize all of SNOMED CT, prove that an appropriate finer code exists, or define a system's reachable prediction space."
   },
   "A_label_coverage": [
     {
@@ -69,13 +69,14 @@
   "B_ratio_ci": {
     "geometric_mean_ratio": 1.867,
     "geometric_mean_ratio_ci95": [
-      1.763,
-      1.978
+      1.709,
+      2.051
     ],
     "cells_with_ci_excluding_1": 13,
     "n_cells": 14,
     "B": 2000,
-    "seed": 20260805
+    "seed": 20260805,
+    "geometric_mean_ci_method": "stratified mention bootstrap with shared indices across systems within each benchmark; document clustering not modelled"
   },
   "C_heterogeneity": [
     {
@@ -86,7 +87,9 @@
       "breslow_day_chi2": 3.614,
       "df": 2,
       "p_homogeneity": "0.1642",
-      "homogeneity_rejected_at_0.05": false
+      "homogeneity_rejected_at_0.05": false,
+      "p_holm": "0.4926",
+      "holm_rejected_at_0.05": false
     },
     {
       "system": "sapbert",
@@ -96,7 +99,9 @@
       "breslow_day_chi2": 7.964,
       "df": 2,
       "p_homogeneity": "0.01864",
-      "homogeneity_rejected_at_0.05": true
+      "homogeneity_rejected_at_0.05": true,
+      "p_holm": "0.07456",
+      "holm_rejected_at_0.05": false
     },
     {
       "system": "sapbert_ft",
@@ -106,7 +111,9 @@
       "breslow_day_chi2": 0.127,
       "df": 1,
       "p_homogeneity": "0.7212",
-      "homogeneity_rejected_at_0.05": false
+      "homogeneity_rejected_at_0.05": false,
+      "p_holm": "1",
+      "holm_rejected_at_0.05": false
     },
     {
       "system": "llm_rerank",
@@ -116,7 +123,9 @@
       "breslow_day_chi2": 0.476,
       "df": 2,
       "p_homogeneity": "0.7883",
-      "homogeneity_rejected_at_0.05": false
+      "homogeneity_rejected_at_0.05": false,
+      "p_holm": "1",
+      "holm_rejected_at_0.05": false
     },
     {
       "system": "llm_gen",
@@ -126,7 +135,9 @@
       "breslow_day_chi2": 17.08,
       "df": 2,
       "p_homogeneity": "0.0001955",
-      "homogeneity_rejected_at_0.05": true
+      "homogeneity_rejected_at_0.05": true,
+      "p_holm": "0.0009775",
+      "holm_rejected_at_0.05": true
     }
   ]
 }

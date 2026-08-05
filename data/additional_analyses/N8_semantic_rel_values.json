@@ -67,7 +67,8 @@
     }
   },
   "SympTEMIST": {
-    "source": "project archive",
+    "zenodo_record": "8413866",
+    "concept_doi": "10.5281/zenodo.8223653",
     "splits": {
       "train (subtask 2)": {
         "column": "sem_rel",
