@@ -1,0 +1,7 @@
+benchmark,stratum,n_mentions,n_gold_with_finer_code,pct_with_finer_code,n_gold_codes_in_universe
+distemist,EXACT,443,196,44.2,7416
+distemist,NARROW,235,110,46.8,7416
+medprocner,EXACT,491,237,48.3,3876
+medprocner,NARROW,134,65,48.5,3876
+symptemist,EXACT,603,183,30.3,4153
+symptemist,NARROW,197,86,43.7,4153

@@ -1,0 +1,15 @@
+benchmark,system,n_EXACT,n_NARROW,gap_EXACT,gap_NARROW,ratio,ratio_lo95,ratio_hi95,excludes_1
+distemist,lexical,443,235,0.224,0.28,1.254,1.012,1.546,True
+distemist,sapbert,443,235,0.128,0.303,2.364,1.84,3.061,True
+distemist,sapbert_ft,443,235,0.114,0.303,2.656,2.009,3.602,True
+distemist,llm_rerank,443,235,0.136,0.291,2.14,1.679,2.767,True
+distemist,llm_gen,443,235,0.227,0.315,1.388,1.176,1.661,True
+medprocner,lexical,491,134,0.297,0.394,1.327,1.115,1.571,True
+medprocner,sapbert,491,134,0.166,0.35,2.105,1.675,2.624,True
+medprocner,llm_rerank,491,134,0.209,0.335,1.603,1.303,1.981,True
+medprocner,llm_gen,491,134,0.345,0.379,1.097,0.952,1.265,False
+symptemist,lexical,603,197,0.181,0.269,1.492,1.224,1.786,True
+symptemist,sapbert,603,197,0.095,0.346,3.627,2.871,4.658,True
+symptemist,sapbert_ft,603,197,0.08,0.274,3.445,2.624,4.582,True
+symptemist,llm_rerank,603,197,0.113,0.258,2.284,1.763,2.878,True
+symptemist,llm_gen,603,197,0.195,0.249,1.281,1.088,1.519,True

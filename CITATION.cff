@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite the paper below."
-title: "A Granularity Blind Spot in SNOMED CT Concept Normalization"
+title: "A Granularity Blind Spot in the Evaluation of SNOMED CT Concept Normalization"
 type: software
 repository-code: "https://github.com/honeia85/snomed"
-version: "1.0.3"
-date-released: 2026-07-24
+version: "1.0.4"
+date-released: 2026-08-05
 abstract: "Identifier-free per-item metrics, aggregate audit tables, agreement labels, and code for recalculating the credit-gap tables and core hierarchy-aware statistics. Recall at 5 is retained as a deposited aggregate. Terminology identifiers, identifier-linked description records, and ontology maps are not redistributed."
 authors:
   - family-names: Jo
@@ -33,6 +33,10 @@ license:
 keywords:
   - concept normalization
   - medical entity linking
+  - semantic annotation
+  - is-a hierarchy
+  - subsumption
+  - semantic similarity
   - SNOMED CT
+  - biomedical terminology
   - evaluation methodology
-  - clinical natural language processing

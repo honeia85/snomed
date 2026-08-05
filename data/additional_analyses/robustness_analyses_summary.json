@@ -1,0 +1,132 @@
+{
+  "A_ontology_availability": {
+    "pooled_MH_OR_all_mentions": 3.886,
+    "pooled_MH_OR_all_mentions_ci95": [
+      3.886,
+      3.333,
+      4.563
+    ],
+    "pooled_MH_OR_restricted_to_gold_with_finer_code": 6.011,
+    "pooled_MH_OR_restricted_ci95": [
+      6.011,
+      4.787,
+      7.689
+    ],
+    "ci_method": "mention-clustered bootstrap, B = 10,000, seed 12345 - the same procedure and seed as the published pooled odds ratio, resampling evaluation mentions within each benchmark so that a mention recurs across systems",
+    "n_cells": 14,
+    "note": "A strictly more specific code is counted as existing when the frozen OLS4 parent map contains at least one child of the gold concept. The map covers the candidate space and its ancestors, so this is a lower bound on what full SNOMED CT offers, and the space a system could actually have predicted into."
+  },
+  "A_label_coverage": [
+    {
+      "benchmark": "distemist",
+      "stratum": "EXACT",
+      "n_mentions": 443,
+      "n_gold_with_finer_code": 196,
+      "pct_with_finer_code": 44.2,
+      "n_gold_codes_in_universe": 7416
+    },
+    {
+      "benchmark": "distemist",
+      "stratum": "NARROW",
+      "n_mentions": 235,
+      "n_gold_with_finer_code": 110,
+      "pct_with_finer_code": 46.8,
+      "n_gold_codes_in_universe": 7416
+    },
+    {
+      "benchmark": "medprocner",
+      "stratum": "EXACT",
+      "n_mentions": 491,
+      "n_gold_with_finer_code": 237,
+      "pct_with_finer_code": 48.3,
+      "n_gold_codes_in_universe": 3876
+    },
+    {
+      "benchmark": "medprocner",
+      "stratum": "NARROW",
+      "n_mentions": 134,
+      "n_gold_with_finer_code": 65,
+      "pct_with_finer_code": 48.5,
+      "n_gold_codes_in_universe": 3876
+    },
+    {
+      "benchmark": "symptemist",
+      "stratum": "EXACT",
+      "n_mentions": 603,
+      "n_gold_with_finer_code": 183,
+      "pct_with_finer_code": 30.3,
+      "n_gold_codes_in_universe": 4153
+    },
+    {
+      "benchmark": "symptemist",
+      "stratum": "NARROW",
+      "n_mentions": 197,
+      "n_gold_with_finer_code": 86,
+      "pct_with_finer_code": 43.7,
+      "n_gold_codes_in_universe": 4153
+    }
+  ],
+  "B_ratio_ci": {
+    "geometric_mean_ratio": 1.867,
+    "geometric_mean_ratio_ci95": [
+      1.763,
+      1.978
+    ],
+    "cells_with_ci_excluding_1": 13,
+    "n_cells": 14,
+    "B": 2000,
+    "seed": 20260805
+  },
+  "C_heterogeneity": [
+    {
+      "system": "lexical",
+      "benchmarks": "distemist|medprocner|symptemist",
+      "MH_OR": 2.771,
+      "stratum_ORs": "2.2|2.88|3.56",
+      "breslow_day_chi2": 3.614,
+      "df": 2,
+      "p_homogeneity": "0.1642",
+      "homogeneity_rejected_at_0.05": false
+    },
+    {
+      "system": "sapbert",
+      "benchmarks": "distemist|medprocner|symptemist",
+      "MH_OR": 5.545,
+      "stratum_ORs": "3.81|6.84|7.32",
+      "breslow_day_chi2": 7.964,
+      "df": 2,
+      "p_homogeneity": "0.01864",
+      "homogeneity_rejected_at_0.05": true
+    },
+    {
+      "system": "sapbert_ft",
+      "benchmarks": "distemist|symptemist",
+      "MH_OR": 3.567,
+      "stratum_ORs": "3.42|3.72",
+      "breslow_day_chi2": 0.127,
+      "df": 1,
+      "p_homogeneity": "0.7212",
+      "homogeneity_rejected_at_0.05": false
+    },
+    {
+      "system": "llm_rerank",
+      "benchmarks": "distemist|medprocner|symptemist",
+      "MH_OR": 3.394,
+      "stratum_ORs": "3.09|3.61|3.57",
+      "breslow_day_chi2": 0.476,
+      "df": 2,
+      "p_homogeneity": "0.7883",
+      "homogeneity_rejected_at_0.05": false
+    },
+    {
+      "system": "llm_gen",
+      "benchmarks": "distemist|medprocner|symptemist",
+      "MH_OR": 5.424,
+      "stratum_ORs": "5.7|2.34|15.45",
+      "breslow_day_chi2": 17.08,
+      "df": 2,
+      "p_homogeneity": "0.0001955",
+      "homogeneity_rejected_at_0.05": true
+    }
+  ]
+}

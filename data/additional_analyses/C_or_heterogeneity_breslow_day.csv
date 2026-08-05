@@ -1,0 +1,6 @@
+system,benchmarks,MH_OR,stratum_ORs,breslow_day_chi2,df,p_homogeneity,homogeneity_rejected_at_0.05
+lexical,distemist|medprocner|symptemist,2.771,2.2|2.88|3.56,3.614,2,0.1642,False
+sapbert,distemist|medprocner|symptemist,5.545,3.81|6.84|7.32,7.964,2,0.01864,True
+sapbert_ft,distemist|symptemist,3.567,3.42|3.72,0.127,1,0.7212,False
+llm_rerank,distemist|medprocner|symptemist,3.394,3.09|3.61|3.57,0.476,2,0.7883,False
+llm_gen,distemist|medprocner|symptemist,5.424,5.7|2.34|15.45,17.08,2,0.0001955,True

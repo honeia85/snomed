@@ -1,10 +1,10 @@
-# A Granularity Blind Spot in SNOMED CT Concept Normalization
+# A Granularity Blind Spot in the Evaluation of SNOMED CT Concept Normalization
 
 Code and identifier-free analysis data for:
 
-> Jo Y, Nam Y, Kim Y, Kim E, Hong P. **A Granularity Blind Spot in SNOMED CT Concept
-> Normalization.** Manuscript prepared for
-> *Database* (Oxford), 2026.
+> Jo Y, Nam Y, Kim Y, Kim E, Hong P. **A Granularity Blind Spot in the Evaluation of
+> SNOMED CT Concept Normalization.** Manuscript under review at
+> *Journal of Biomedical Semantics*, 2026.
 
 Exact-match accuracy treats a terminology as a flat list of codes. This repository contains
 identifier-free scored outputs and analysis code behind our finding that the resulting loss is
@@ -19,6 +19,7 @@ Python 3.10 or newer is recommended.
 
 ```bash
 python3 -m pip install -r requirements.txt
+python3 data/canonical_run/canonical/pooled_incidence_rr.py   # primary effect measure
 python3 data/canonical_run/canonical/pooled_incidence_or.py
 python3 data/canonical_run/canonical/reproduce_canonical.py
 python3 data/canonical_run/canonical/same_lineage_sensitivity.py
@@ -28,9 +29,10 @@ python3 annotation_kit/score_multi_annotator.py \
   annotation_kit/reference/annotation_answer_key.csv
 ```
 
-The four canonical checks run from the repository root on a CPU and do not rerun model inference or
-need ontology content. They print the pooled Mantel–Haenszel OR 3.886 (95% CI 3.33–4.56), the
-per-system ORs 2.77/5.54/3.57/3.39/5.42, the geometric-mean decomposition 1.812 × 1.031,
+The five canonical checks run from the repository root on a CPU and do not rerun model inference or
+need ontology content. They print the pooled Mantel–Haenszel risk ratio 1.725 (mention-clustered 95% CI 1.63–1.83), which is
+the manuscript's primary effect measure, the pooled Mantel–Haenszel OR 3.886 (95% CI 3.33–4.56) and
+the per-system ORs 2.77/5.54/3.57/3.39/5.42, the geometric-mean decomposition 1.812 × 1.031,
 and the binary same-lineage sensitivity (positive NARROW-minus-EXACT uplift in 9/14 cells;
 bootstrap 95% CI excluding zero in 6/14). They also reproduce the conditional-proximity
 difference—mean Wu–Palmer credit among NARROW errors minus that among EXACT errors—after first
@@ -117,9 +119,10 @@ immutable dated build, and raw inference artifacts are not part of this analysis
 
 | manuscript claim | source |
 |---|---|
-| Table 1 overall scores | `data/canonical_run/canonical/table2_overall.csv` (historical filename) |
-| Table 2 credit gaps | `data/canonical_run/canonical/table3_creditgap.csv` (historical filename) |
+| Table 1 overall scores (manuscript Table 1) | `data/canonical_run/canonical/table2_overall.csv` (historical filename) |
+| credit gaps (manuscript Table 3) | `data/canonical_run/canonical/table3_creditgap.csv` (historical filename) |
 | pooled OR 3.89 (3.33–4.56) | `data/canonical_run/canonical/pooled_incidence_or.py` |
+| pooled MH risk ratio 1.72 (95% CI 1.63–1.83), I² 92.4% | `data/canonical_run/canonical/pooled_incidence_rr.py` |
 | per-system ORs | `data/canonical_run/canonical/extra_stats.json` |
 | incidence 1.81 × proximity 1.03 | `data/canonical_run/canonical/decomposition.csv` |
 | equal-cell conditional-proximity differences overall and by benchmark | `data/canonical_run/canonical/conditional_proximity_by_benchmark.py`, `conditional_proximity_by_benchmark.csv` |
@@ -141,8 +144,7 @@ not establish clinical correctness or safety.
 
 See `CITATION.cff` and `LICENSE`. Source code is MIT licensed. Author-generated identifier-free data,
 labels, figures and documentation are CC BY 4.0. No licence is granted here to SNOMED CT content;
-`NOTICE_SNOMED.md` defines that boundary. After acceptance and before publication, the accepted GitHub
-tag will be archived on Zenodo and its DOI added to the citation metadata.
+`NOTICE_SNOMED.md` defines that boundary. This tag is the snapshot prepared for peer review; it is being archived on Zenodo, and the resulting DOI will be recorded in `CITATION.cff` and in the paper before review begins.
 
 ## Contact
 

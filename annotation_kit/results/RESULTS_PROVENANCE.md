@@ -40,8 +40,8 @@ counts are 53, 72, and 90. Rater-versus-reference Cohen kappa was 0.613 (bootstr
 (0.544–0.785; 83.3%) for R3. Pairwise Cohen kappa was 0.408 for R1–R2, 0.630 for R1–R3, and
 0.555 for R2–R3; Fleiss kappa was 0.519 (item-bootstrap 95% CI 0.410–0.622; 5,000 resamples,
 seed 42). Majority-vote consensus versus the reference was kappa
-0.733 (0.613–0.840). Rater numbering is intentionally not connected to manuscript annotator row
-numbers.
+0.733 (0.613–0.840). Rater numbering R1/R2/R3 corresponds to the annotator rows in the manuscript's
+three-rater table; it is a release pseudonym and carries no rank or role meaning.
 
 `MANIFEST.sha256` records the exact matrix, reference key, scorer, frozen stdout, and this provenance
 document used for the release.

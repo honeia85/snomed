@@ -1,0 +1,82 @@
+{
+  "DisTEMIST": {
+    "zenodo_record": "7614764",
+    "concept_doi": "10.5281/zenodo.6408476",
+    "splits": {
+      "train (subtrack2, part 1)": {
+        "column": "semantic_rel",
+        "counts": {
+          "EXACT": 1174,
+          "NARROW": 284,
+          "COMPOSITE": 54
+        }
+      },
+      "train (subtrack2, part 2)": {
+        "column": "semantic_rel",
+        "counts": {
+          "EXACT": 2629,
+          "NARROW": 837,
+          "COMPOSITE": 157,
+          "NOMAP": 1
+        }
+      },
+      "test (subtrack2)": {
+        "column": "semantic_rel",
+        "counts": {
+          "EXACT": 1771,
+          "NARROW": 736,
+          "COMPOSITE": 91
+        }
+      }
+    }
+  },
+  "MedProcNER": {
+    "zenodo_record": "7929830",
+    "concept_doi": "10.5281/zenodo.7929830",
+    "splits": {
+      "train (subtask 2)": {
+        "column": "sem_rel",
+        "counts": {
+          "EXACT": 3710,
+          "NARROW": 971,
+          "NO_CODE": 51,
+          "EXACT+EXACT": 58,
+          "NARROW+EXACT": 7,
+          "NARROW+NARROW": 10,
+          "EXACT+NO_CODE": 2,
+          "EXACT+NARROW": 15,
+          "EXACT+EXACT+EXACT": 10,
+          "EXACT+NO_CODE+NO_CODE": 1,
+          "NO_CODE+EXACT": 1,
+          "EXACT+NARROW+EXACT": 3,
+          "NARROW+EXACT+EXACT+EXACT": 2,
+          "EXACT+EXACT+EXACT+EXACT+EXACT": 2,
+          "NARROW+EXACT+EXACT": 1,
+          "NARROW+NARROW+NARROW": 4,
+          "EXACT+EXACT+NO_CODE": 1,
+          "EXACT+EXACT+NARROW": 1,
+          "NARROW+EXACT+NARROW": 1,
+          "NARROW+EXACT+NARROW+NARROW": 1,
+          "NARROW+NARROW+NARROW+NARROW": 1,
+          "EXACT+EXACT+EXACT+EXACT": 1,
+          "EXACT+EXACT+EXACT+EXACT+EXACT+EXACT+EXACT": 1,
+          "EXACT+EXACT+EXACT+NARROW+NO_CODE+NARROW": 1,
+          "NARROW+NARROW+EXACT": 1
+        }
+      }
+    }
+  },
+  "SympTEMIST": {
+    "source": "project archive",
+    "splits": {
+      "train (subtask 2)": {
+        "column": "sem_rel",
+        "counts": {
+          "EXACT": 2609,
+          "NARROW": 819,
+          "NO_CODE": 56
+        }
+      }
+    }
+  }
+}

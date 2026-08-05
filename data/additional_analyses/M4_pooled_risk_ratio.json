@@ -1,0 +1,15 @@
+{
+  "mh_pooled_risk_ratio": 1.725,
+  "mh_pooled_risk_ratio_ci95": [
+    1.628,
+    1.827
+  ],
+  "geometric_mean_of_cell_risk_ratios": 1.812,
+  "geometric_mean_ci95": [
+    1.699,
+    1.935
+  ],
+  "B": 10000,
+  "seed": 12345,
+  "note": "The manuscript figure of 1.81 is the geometric mean of the 14 per-cell incidence ratios, not a pooled estimator. Both are reported here so the primary effect measure can be stated with an interval."
+}

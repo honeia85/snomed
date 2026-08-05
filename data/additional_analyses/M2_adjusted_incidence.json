@@ -1,0 +1,23 @@
+{
+  "benchmark": "SympTEMIST",
+  "n_rows": 4000,
+  "n_mentions": 800,
+  "unadjusted_RR": 1.768,
+  "unadjusted_ci95": [
+    1.611,
+    1.94
+  ],
+  "adjusted_RR": 1.552,
+  "adjusted_ci95": [
+    1.399,
+    1.722
+  ],
+  "covariates": [
+    "log mention length (characters)",
+    "log(1 + gold-code training frequency)",
+    "log(1 + candidate-space sibling density)",
+    "gold-code depth"
+  ],
+  "variance": "cluster-robust on source document",
+  "scope_note": "SympTEMIST only. The canonical DisTEMIST and MedProcNER samples were de-duplicated after stratified sampling and no archived artefact records which rows survived, so their mentions cannot be joined to offsets without re-running a version-dependent sampler."
+}

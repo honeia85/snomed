@@ -1,0 +1,15 @@
+benchmark,system,n_all,n_finer_code_exists,pErr_NARROW_all,pErr_EXACT_all,incidence_ratio_all,pErr_NARROW_finerexists,pErr_EXACT_finerexists,incidence_ratio_finerexists
+distemist,lexical,678,306,0.638,0.445,1.435,0.745,0.495,1.506
+distemist,sapbert,678,306,0.566,0.255,2.219,0.745,0.25,2.982
+distemist,sapbert_ft,678,306,0.502,0.228,2.202,0.664,0.235,2.828
+distemist,llm_rerank,678,306,0.54,0.275,1.962,0.691,0.296,2.335
+distemist,llm_gen,678,306,0.894,0.596,1.5,0.927,0.587,1.58
+medprocner,lexical,625,302,0.746,0.505,1.477,0.769,0.468,1.642
+medprocner,sapbert,625,302,0.709,0.263,2.698,0.8,0.257,3.108
+medprocner,llm_rerank,625,302,0.642,0.332,1.933,0.662,0.325,2.036
+medprocner,llm_gen,625,302,0.858,0.721,1.19,0.785,0.692,1.134
+symptemist,lexical,800,269,0.797,0.524,1.521,0.826,0.492,1.679
+symptemist,sapbert,800,269,0.761,0.303,2.509,0.919,0.251,3.654
+symptemist,sapbert_ft,800,269,0.574,0.265,2.162,0.593,0.197,3.015
+symptemist,llm_rerank,800,269,0.68,0.373,1.823,0.721,0.322,2.236
+symptemist,llm_gen,800,269,0.97,0.673,1.44,1.0,0.563,1.777

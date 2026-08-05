@@ -1,0 +1,25 @@
+{
+  "n_items": 150,
+  "confusion_corpus_by_consensus": {
+    "NARROW_NARROW": 64,
+    "NARROW_EXACT": 11,
+    "EXACT_NARROW": 9,
+    "EXACT_EXACT": 66
+  },
+  "raw_agreement": 0.867,
+  "sensitivity_corpus_label": 0.877,
+  "specificity_corpus_label": 0.857,
+  "observed_MH_OR": 3.886,
+  "observed_MH_RR": 1.725,
+  "observed_MH_OR_correctable_cells": 3.6,
+  "observed_MH_RR_correctable_cells": 1.807,
+  "corrected_MH_OR": 6.814,
+  "corrected_MH_RR": 2.327,
+  "cells_corrected": 12,
+  "cells_infeasible": [
+    "distemist/llm_gen",
+    "symptemist/llm_gen"
+  ],
+  "assumption": "Nondifferential exposure misclassification: the probability that the corpus label differs from the three-rater consensus does not depend on whether the system erred. The three raters were blinded to the corpus labels and to system output, which supports it but does not prove it.",
+  "sample_note": "Sensitivity and specificity come from the balanced 150-mention sample (25 EXACT + 25 NARROW per benchmark). That sample does not estimate prevalence, but sensitivity and specificity are prevalence-independent, so they transport to the full evaluation sets."
+}
