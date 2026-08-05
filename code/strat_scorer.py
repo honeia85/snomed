@@ -3,15 +3,18 @@ strat_scorer.py — canonical hierarchy-aware stratified scorer for the SNOMED-C
 normalization project. Shared across ALL benchmarks (DisTEMIST, MedProcNER,
 SympTEMIST, MedMentions, Mantra) so every result table uses identical metric code.
 
-Metrics per (pred, gold): exact, is-a, Wu-Palmer, LCA path-distance, CoPHE Jaccard.
+Metrics per (pred, gold): exact, is-a, Wu-Palmer, normalized inverse LCA path
+distance (legacy field ``lca_dist``), and CoPHE Jaccard.
 Requires an ancestor map {code:[ancestors]} and graph depths {code:int} (longest
 path from root). Codes missing from BOTH maps score 0 credit on non-exact (disclose count).
 """
 import json
 
 def load_maps(ancmap_path, depths_path):
-    with open(ancmap_path) as f: ancmap = json.load(f)
-    with open(depths_path) as f: depths = json.load(f)
+    with open(ancmap_path) as f:
+        ancmap = json.load(f)
+    with open(depths_path) as f:
+        depths = json.load(f)
     depths = {str(k): int(v) for k, v in depths.items()}
     ancmap = {str(k): [str(a) for a in v] for k, v in ancmap.items()}
     return ancmap, depths
@@ -30,9 +33,12 @@ class StratScorer:
 
     def isa(self, pred, gold):
         # pred in ancestors(gold) ∪ descendants(gold) ∪ {gold}
-        if pred == gold: return 1.0
-        if gold in self.ancmap.get(pred, []): return 1.0   # pred is descendant of gold
-        if pred in self.ancmap.get(gold, []): return 1.0   # pred is ancestor of gold
+        if pred == gold:
+            return 1.0
+        if gold in self.ancmap.get(pred, []):
+            return 1.0  # pred is descendant of gold
+        if pred in self.ancmap.get(gold, []):
+            return 1.0  # pred is ancestor of gold
         return 0.0
 
     def lca_depth(self, pred, gold):
@@ -41,7 +47,7 @@ class StratScorer:
         return max(ds) if ds else None
 
     def score_row(self, pred, gold):
-        """returns dict(exact, isa, wup, lca_dist, cophe_jaccard)."""
+        """Return metric scores; ``lca_dist`` stores normalized inverse LCA path distance."""
         pred, gold = str(pred), str(gold)
         if pred == gold:
             return dict(exact=1.0, isa=1.0, wup=1.0, lca_dist=1.0, cophe_jaccard=1.0)
@@ -62,14 +68,18 @@ class StratScorer:
 def bucket(gold, train_codes, ancmap):
     """seen/novel stratification vs a set of training codes."""
     gold = str(gold)
-    if gold in train_codes: return "1_code_seen"
-    if any(a in train_codes for a in ancmap.get(gold, [])): return "2_novel_ancestor_seen"
+    if gold in train_codes:
+        return "1_code_seen"
+    if any(a in train_codes for a in ancmap.get(gold, [])):
+        return "2_novel_ancestor_seen"
     return "3_isolated"
 
 def credit_gap_by_rel(df, rel_col="semantic_rel"):
     """df must have columns: system, <rel_col>, exact, wup. Returns per (system,rel) gap."""
-    import pandas as pd
-    g = df.groupby(["system", rel_col]).agg(n=("exact","size"), exact=("exact","mean"),
-                                            wup=("wup","mean")).reset_index()
+    g = (
+        df.groupby(["system", rel_col])
+        .agg(n=("exact", "size"), exact=("exact", "mean"), wup=("wup", "mean"))
+        .reset_index()
+    )
     g["gap"] = g["wup"] - g["exact"]
     return g
