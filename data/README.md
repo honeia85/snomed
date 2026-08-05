@@ -14,7 +14,7 @@ cells under the primary oracle and training-only candidate spaces.
 | `candidate_space` | `oracle` or `train` (`train` is the training-only sensitivity space) |
 | `system` | evaluated system |
 | `item_id` | release-local benchmark item ID, aligned across systems |
-| `semantic_rel` | human granularity stratum, `EXACT` or `NARROW` |
+| `semantic_rel` | native-corpus granularity stratum, `EXACT` or `NARROW` |
 | `exact` | exact-match indicator, 0 or 1 |
 | `is_a` | exact or ancestor/descendant consistency indicator, 0 or 1 |
 | `wup` | Wu–Palmer credit computed with the private frozen map |

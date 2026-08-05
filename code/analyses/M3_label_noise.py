@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 """Descriptive agreement audit for the corpus granularity labels.
 
-Three study-author annotators, blinded to the corpus label and system outputs, re-labelled a
-fixed 150-mention sample. The sample was selected within benchmark after stratifying on the
-observed corpus label (25 EXACT and 25 NARROW per benchmark). It therefore supports a
-descriptive reproducibility audit, but its unweighted confusion matrix cannot be transported
-as a population sensitivity/specificity matrix. The study-author consensus is also not an
-error-free reference standard. For those reasons this script does not correct the pooled
-incidence estimates for label misclassification.
+Three clinical raters, blinded to the corpus label and system outputs, re-labelled a fixed
+150-mention sample. The sample was selected within benchmark after stratifying on the
+observed corpus label (25 EXACT and 25 NARROW per benchmark). This script reports agreement;
+the balanced design was not intended to estimate population label frequencies.
 
 Run: python3 M3_label_noise.py
 """
@@ -92,9 +89,8 @@ if __name__ == "__main__":
         "consensus_confirmation_within_corpus_EXACT": round(exact_confirmation, 3),
         "population_effect_correction_performed": False,
         "reason_no_correction": (
-            "The sample was balanced on the observed corpus label, so the unweighted matrix "
-            "does not estimate population operating characteristics; study-author consensus "
-            "is also not an error-free reference standard."
+            "The sample was balanced on the observed corpus label and was not designed to "
+            "estimate population label frequencies."
         ),
     }
     with open(OUT, "w") as fh:
