@@ -1,5 +1,7 @@
 # A Granularity Blind Spot in the Evaluation of SNOMED CT Concept Normalization
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21803816.svg)](https://doi.org/10.5281/zenodo.21803816)
+
 Code and identifier-free analysis data for:
 
 > Jo Y, Nam Y, Kim Y, Kim E, Hong P. **A Granularity Blind Spot in the Evaluation of
@@ -150,7 +152,8 @@ See `CITATION.cff`, `LICENSE` and `THIRD_PARTY_NOTICES.md`. Source code is MIT l
 Author-generated identifier-free data, labels, figures and documentation are CC BY 4.0. No licence
 is granted here to SNOMED CT content or quoted third-party material; `NOTICE_SNOMED.md` defines that
 boundary. Versioned GitHub Releases are archived through Zenodo; cite the version-specific DOI shown
-on the corresponding Zenodo record. Version 1.0.6 contains the scientific corrections introduced
+on the corresponding Zenodo record. The current archived release is version 1.0.6,
+https://doi.org/10.5281/zenodo.21803816. It contains the scientific corrections introduced
 in v1.0.5 plus Zenodo-compatible deposit metadata; all earlier tags remain immutable for provenance.
 
 ## Contact
