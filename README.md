@@ -150,8 +150,8 @@ See `CITATION.cff`, `LICENSE` and `THIRD_PARTY_NOTICES.md`. Source code is MIT l
 Author-generated identifier-free data, labels, figures and documentation are CC BY 4.0. No licence
 is granted here to SNOMED CT content or quoted third-party material; `NOTICE_SNOMED.md` defines that
 boundary. Versioned GitHub Releases are archived through Zenodo; cite the version-specific DOI shown
-on the corresponding Zenodo record. Version 1.0.5 supersedes the exploratory robustness outputs in
-tag v1.0.4; earlier tags remain immutable for provenance.
+on the corresponding Zenodo record. Version 1.0.6 contains the scientific corrections introduced
+in v1.0.5 plus Zenodo-compatible deposit metadata; all earlier tags remain immutable for provenance.
 
 ## Contact
 
