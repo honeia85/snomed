@@ -34,8 +34,8 @@ python3 annotation_kit/score_multi_annotator.py \
   annotation_kit/reference/annotation_answer_key.csv
 ```
 
-The frozen run reproduces all reported anchors: each rater answered 150 items; the three NARROW
-counts are 53, 72, and 90. Rater-versus-reference Cohen kappa was 0.613 (bootstrap 95% CI
+The frozen run reproduces all reported anchors: each rater answered 150 items; the NARROW counts for
+R1, R2, and R3 were 90, 53, and 72. Rater-versus-reference Cohen kappa was 0.613 (bootstrap 95% CI
 0.480–0.734; 80.7% raw agreement) for R1, 0.627 (0.501–0.742; 81.3%) for R2, and 0.667
 (0.544–0.785; 83.3%) for R3. Pairwise Cohen kappa was 0.408 for R1–R2, 0.630 for R1–R3, and
 0.555 for R2–R3; Fleiss kappa was 0.519 (item-bootstrap 95% CI 0.410–0.622; 5,000 resamples,

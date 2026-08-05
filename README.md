@@ -1,6 +1,6 @@
 # A Granularity Blind Spot in the Evaluation of SNOMED CT Concept Normalization
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21803816.svg)](https://doi.org/10.5281/zenodo.21803816)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21803815.svg)](https://doi.org/10.5281/zenodo.21803815)
 
 Code and identifier-free analysis data for:
 
@@ -10,7 +10,7 @@ Code and identifier-free analysis data for:
 
 Exact-match accuracy treats a terminology as a flat list of codes. This repository contains
 identifier-free scored outputs and analysis code behind our finding that benchmark mismatch is
-concentrated on mentions that human annotators marked as more specific than their assigned target.
+concentrated on mentions that native corpus annotators marked as more specific than their assigned target.
 Systems failed to reproduce those targets more often, whereas the estimated conditional-proximity
 difference was small and its confidence interval included zero overall despite different directions
 across benchmarks.
@@ -114,12 +114,6 @@ demonstration rows only. The completed study is represented by 150 release-local
 and a three-rater deidentified label matrix. It contains no real mention text, translations, concept
 descriptions, rater names, notes or timestamps. See `annotation_kit/README_START_HERE.md`.
 
-The automated κ = 0.84 retained in the Supplementary Material is a separate machine
-rubric-consistency check run under the runtime alias `claude-sonnet-5`. Its executed prompt,
-structured-output schema and invocation outline are in
-`annotation_kit/AUTOMATED_REANNOTATION_PROTOCOL.md`. The hosted endpoint did not expose an
-immutable dated build, and raw inference artifacts are not part of this analysis-level release.
-
 ## Selected claim map
 
 | manuscript claim | source |
@@ -143,7 +137,7 @@ immutable dated build, and raw inference artifacts are not part of this analysis
 ## Interpretation boundaries
 
 The evaluated systems are baselines, not leaderboard claims. MedMentions uses a depth proxy rather
-than human granularity labels. Hierarchy-aware proximity locates an error in the ontology; it does
+than native-corpus granularity labels. Hierarchy-aware proximity locates an error in the ontology; it does
 not establish clinical correctness or safety.
 
 ## Citation and licence
@@ -151,10 +145,10 @@ not establish clinical correctness or safety.
 See `CITATION.cff`, `LICENSE` and `THIRD_PARTY_NOTICES.md`. Source code is MIT licensed.
 Author-generated identifier-free data, labels, figures and documentation are CC BY 4.0. No licence
 is granted here to SNOMED CT content or quoted third-party material; `NOTICE_SNOMED.md` defines that
-boundary. Versioned GitHub Releases are archived through Zenodo; cite the version-specific DOI shown
-on the corresponding Zenodo record. The current archived release is version 1.0.6,
-https://doi.org/10.5281/zenodo.21803816. It contains the scientific corrections introduced
-in v1.0.5 plus Zenodo-compatible deposit metadata; all earlier tags remain immutable for provenance.
+boundary. Versioned GitHub Releases are archived through Zenodo. The concept DOI
+https://doi.org/10.5281/zenodo.21803815 resolves to the latest release; cite the version-specific DOI
+shown on that record. Version 1.0.7 corrects rater-role terminology and documentation without changing
+data, code behavior or reported results. Earlier tags remain available as version history.
 
 ## Contact
 

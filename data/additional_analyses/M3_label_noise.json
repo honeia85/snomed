@@ -13,5 +13,5 @@
   "consensus_confirmation_within_corpus_NARROW": 0.853,
   "consensus_confirmation_within_corpus_EXACT": 0.88,
   "population_effect_correction_performed": false,
-  "reason_no_correction": "The sample was balanced on the observed corpus label, so the unweighted matrix does not estimate population operating characteristics; study-author consensus is also not an error-free reference standard."
+  "reason_no_correction": "The sample was balanced on the observed corpus label and was not designed to estimate population label frequencies."
 }
