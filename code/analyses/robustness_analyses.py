@@ -47,10 +47,8 @@ B_BOOT = 2000
 SEED = 20260805
 DESCENDANT_RESTRICTION_NOTE = (
     "A strictly more specific code is counted as existing when the frozen OLS4 parent map "
-    "contains at least one child of the gold concept. This restricted analysis tests only "
-    "whether the gold concept is a leaf in the frozen candidate-space-plus-ancestor map; it "
-    "does not characterize all of SNOMED CT, prove that an appropriate finer code exists, or "
-    "define a system's reachable prediction space."
+    "contains at least one child of the gold concept. The restriction therefore identifies "
+    "non-leaf gold concepts within the frozen candidate-space-plus-ancestor map."
 )
 
 
@@ -234,7 +232,6 @@ def clustered_mh_ci(restrict, B=10000, seed=12345):
                 tables.append((a, b, c, d))
         return mh_or(tables)
 
-    point = mh_from(keep)
     draws = []
     for _ in range(B):
         idxmap = {bench: [ix[rng.randrange(len(ix))] for _ in range(len(ix))]
@@ -243,7 +240,7 @@ def clustered_mh_ci(restrict, B=10000, seed=12345):
         if not math.isnan(v) and not math.isinf(v):
             draws.append(v)
     lo, hi = boot_ci(draws)
-    return [round(point, 3), round(lo, 3), round(hi, 3)]
+    return [round(lo, 3), round(hi, 3)]
 
 
 # ---------------------------------------------------------------- A: ontology availability
@@ -504,6 +501,12 @@ if __name__ == "__main__":
         a_rows = []
         a_cov = previous["A_label_coverage"]
         a_sum = previous["A_ontology_availability"]
+        # v1.0.7 and earlier stored [point, lower, upper] under two keys named
+        # ``*_ci95`` even though the point estimate already had its own key.
+        # Normalize that legacy deposited shape when licensed inputs are absent.
+        for key in ("pooled_MH_OR_all_mentions_ci95", "pooled_MH_OR_restricted_ci95"):
+            if len(a_sum[key]) == 3:
+                a_sum[key] = a_sum[key][1:]
         a_sum["note"] = DESCENDANT_RESTRICTION_NOTE
         print("descendant-availability analysis: using deposited frozen output; set "
               "CREDITGAP_SOURCE_ROOT to rerun with licensed inputs")

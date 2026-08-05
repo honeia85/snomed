@@ -2,19 +2,17 @@
   "A_ontology_availability": {
     "pooled_MH_OR_all_mentions": 3.886,
     "pooled_MH_OR_all_mentions_ci95": [
-      3.886,
       3.333,
       4.563
     ],
     "pooled_MH_OR_restricted_to_gold_with_finer_code": 6.011,
     "pooled_MH_OR_restricted_ci95": [
-      6.011,
       4.787,
       7.689
     ],
     "ci_method": "mention-clustered bootstrap, B = 10,000, seed 12345 - the same procedure and seed as the published pooled odds ratio, resampling evaluation mentions within each benchmark so that a mention recurs across systems",
     "n_cells": 14,
-    "note": "A strictly more specific code is counted as existing when the frozen OLS4 parent map contains at least one child of the gold concept. This restricted analysis tests only whether the gold concept is a leaf in the frozen candidate-space-plus-ancestor map; it does not characterize all of SNOMED CT, prove that an appropriate finer code exists, or define a system's reachable prediction space."
+    "note": "A strictly more specific code is counted as existing when the frozen OLS4 parent map contains at least one child of the gold concept. The restriction therefore identifies non-leaf gold concepts within the frozen candidate-space-plus-ancestor map."
   },
   "A_label_coverage": [
     {
