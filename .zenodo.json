@@ -1,0 +1,46 @@
+{
+  "creators": [
+    {
+      "name": "Jo, Yejin",
+      "orcid": "0009-0002-0158-7950",
+      "affiliation": "Regional Emergency Medical Center, Samsung Changwon Hospital, Sungkyunkwan University School of Medicine"
+    },
+    {
+      "name": "Nam, Yoojin",
+      "orcid": "0000-0001-8565-1360",
+      "affiliation": "Department of Radiology and Research Institute of Radiology, Asan Medical Center, University of Ulsan College of Medicine; Department of Convergence Medicine, Asan Medical Center, University of Ulsan College of Medicine"
+    },
+    {
+      "name": "Kim, YangWon",
+      "orcid": "0009-0004-1123-9858",
+      "affiliation": "Department of Radiology, Samsung Changwon Hospital, Sungkyunkwan University School of Medicine"
+    },
+    {
+      "name": "Kim, Eunji",
+      "orcid": "0009-0003-3075-9683",
+      "affiliation": "Department of Radiology, Samsung Changwon Hospital, Sungkyunkwan University School of Medicine"
+    },
+    {
+      "name": "Hong, Pa",
+      "orcid": "0000-0001-5495-5230",
+      "affiliation": "Department of Radiology, Samsung Changwon Hospital, Sungkyunkwan University School of Medicine; Department of Digital Health, Samsung Advanced Institute for Health Sciences and Technology (SAIHST), Sungkyunkwan University"
+    }
+  ],
+  "title": "A Granularity Blind Spot in the Evaluation of SNOMED CT Concept Normalization",
+  "version": "1.0.6",
+  "access_right": "open",
+  "keywords": [
+    "concept normalization",
+    "medical entity linking",
+    "semantic annotation",
+    "is-a hierarchy",
+    "subsumption",
+    "semantic similarity",
+    "SNOMED CT",
+    "biomedical terminology",
+    "evaluation methodology"
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "language": "eng"
+}
