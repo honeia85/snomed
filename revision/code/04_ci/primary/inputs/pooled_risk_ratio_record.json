@@ -1,0 +1,17 @@
+{
+  "mh_pooled_risk_ratio": 1.725,
+  "mh_pooled_risk_ratio_ci95": [
+    1.628,
+    1.827
+  ],
+  "geometric_mean_of_cell_risk_ratios": 1.812,
+  "geometric_mean_ci95": [
+    1.699,
+    1.935
+  ],
+  "B": 10000,
+  "seed": 12345,
+  "sample_family": "fixed_deduplicated_evaluation",
+  "bootstrap_unit": "mention, shared indices across systems within benchmark",
+  "original_CI_reexecuted_here": false
+}

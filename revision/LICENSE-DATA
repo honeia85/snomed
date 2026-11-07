@@ -1,0 +1,15 @@
+Aggregate tables (aggregates/), the per-item score files (code/04_ci/primary/inputs/predictions/), the
+document-cluster panel (code/04_ci/primary/inputs/panel_documents.csv) and the reconstructed-panel matrix
+(code/04_ci/reconstructed/matrix.json) are licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+
+The corpora underlying the panel are:
+- DisTEMIST (Barcelona Supercomputing Center), https://temu.bsc.es/distemist/
+- MedProcNER / ProcTEMIST (Barcelona Supercomputing Center), https://temu.bsc.es/medprocner/
+- SympTEMIST (Barcelona Supercomputing Center), https://temu.bsc.es/symptemist/
+Cite the corpus papers listed in the manuscript when reusing these identifiers.
+
+The underlying corpora (DisTEMIST, MedProcNER/ProcTEMIST, SympTEMIST, MedMentions) remain under
+their own licences and must be obtained from their original distributors.
+SNOMED CT identifiers are used under the SNOMED International affiliate licence.

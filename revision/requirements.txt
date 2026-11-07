@@ -1,0 +1,5 @@
+# Node.js 20 or later for the .mjs scripts (no npm packages required)
+numpy>=1.24
+# only for code/02_analysis/nllb_condition.py
+torch>=2.1
+transformers>=4.40

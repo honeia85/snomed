@@ -1,0 +1,61 @@
+{
+  "status": "completed",
+  "sampleFamily": "reconstructed_800_800_736_not_fixed_2103",
+  "documentUnion": 246,
+  "B": 2000,
+  "seed": 42,
+  "protocolSHA": "9e5bce9c8dc64d8f1ab0cf951742fe248dfba7bb343490486ef7bed1813d9387",
+  "results": [
+    {
+      "benchmark": "distemist",
+      "keyMentions": 800,
+      "validMentions": 800,
+      "rows": 3200,
+      "correctedDocumentRows": 165,
+      "documentsAllKeys": 218,
+      "nE": 2252,
+      "nN": 948,
+      "eE": 942,
+      "eN": 633,
+      "point": 1.5962939073879974,
+      "validReplicates": 2000,
+      "undefined": 0,
+      "lo": 1.4488914520056386,
+      "hi": 1.766502341748474
+    },
+    {
+      "benchmark": "medprocner",
+      "keyMentions": 800,
+      "validMentions": 800,
+      "rows": 3200,
+      "correctedDocumentRows": 0,
+      "documentsAllKeys": 228,
+      "nE": 2664,
+      "nN": 536,
+      "eE": 1185,
+      "eN": 399,
+      "point": 1.6734932930285282,
+      "validReplicates": 2000,
+      "undefined": 0,
+      "lo": 1.5327549705141819,
+      "hi": 1.8260627288648303
+    },
+    {
+      "benchmark": "symptemist",
+      "keyMentions": 800,
+      "validMentions": 736,
+      "rows": 2944,
+      "correctedDocumentRows": 0,
+      "documentsAllKeys": 213,
+      "nE": 2200,
+      "nN": 744,
+      "eE": 915,
+      "eN": 588,
+      "point": 1.900229155649568,
+      "validReplicates": 2000,
+      "undefined": 0,
+      "lo": 1.7227320523850491,
+      "hi": 2.1023635533226765
+    }
+  ]
+}

@@ -27,7 +27,7 @@
     }
   ],
   "title": "A Granularity Blind Spot in the Evaluation of SNOMED CT Concept Normalization",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "access_right": "open",
   "keywords": [
     "concept normalization",
@@ -42,5 +42,7 @@
   ],
   "license": "mit",
   "upload_type": "software",
-  "language": "eng"
+  "language": "eng",
+  "description": "Revision analysis materials for the Journal of Biomedical Semantics revision. This version adds the fixed evaluation panel keyed by public item identifiers, per-item scores for the 28 in-house cells (no mention text and no concept codes), the document-cluster mapping and the scripts that regenerate the reported confidence intervals, together with the aggregate tables for the supplementary analyses. Recomputation from the archived scores and clusters reproduces the reported point estimates and intervals. Terminology identifiers, identifier-linked description records and ontology maps are not redistributed; corpora and the terminology release are obtained from their own distributors.",
+  "notes": "Code is licensed MIT (see LICENSE). Aggregate tables, per-item scores, the document-cluster panel and the reconstructed-panel matrix are licensed CC BY 4.0 (see LICENSE-DATA)."
 }

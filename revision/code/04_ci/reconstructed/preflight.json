@@ -1,0 +1,115 @@
+{
+ "sampleFamily": "reconstructed_800_800_736_not_fixed_2103",
+ "documentUnion": 246,
+ "benchmarks": [
+  {
+   "benchmark": "distemist",
+   "keyMentions": 800,
+   "validMentions": 800,
+   "rows": 3200,
+   "correctedDocumentRows": 165,
+   "documentsAllKeys": 218,
+   "nE": 2252,
+   "nN": 948,
+   "eE": 942,
+   "eN": 633,
+   "point": 1.5962939073879974
+  },
+  {
+   "benchmark": "medprocner",
+   "keyMentions": 800,
+   "validMentions": 800,
+   "rows": 3200,
+   "correctedDocumentRows": 0,
+   "documentsAllKeys": 228,
+   "nE": 2664,
+   "nN": 536,
+   "eE": 1185,
+   "eN": 399,
+   "point": 1.6734932930285282
+  },
+  {
+   "benchmark": "symptemist",
+   "keyMentions": 800,
+   "validMentions": 736,
+   "rows": 2944,
+   "correctedDocumentRows": 0,
+   "documentsAllKeys": 213,
+   "nE": 2200,
+   "nN": 744,
+   "eE": 915,
+   "eN": 588,
+   "point": 1.900229155649568
+  }
+ ],
+ "sources": [
+  {
+   "path": "DATA_ROOT/bundle/mentions_distemist.jsonl",
+   "sha256": "bb8361ece1b1808a5730b72bb4d7f44d28f55ca6a20cc44956db40b215cbb37d"
+  },
+  {
+   "path": "DATA_ROOT/sample_keys/disease_draw_800.csv",
+   "sha256": "921eb3145b252b034be559fccca292e499d6e396bd4e5f1cca7b414aee8d9c3c"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_distemist_published_lexical.csv",
+   "sha256": "c3a441c12ed7e2b88ddf209c89b759bea042aa823aabb2d5bf635e9ae08e3077"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_distemist_published_sapbert.csv",
+   "sha256": "457e31409f93902cc7758ec87d041333c36cc29c4aa975e4e00be07896df6616"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_distemist_published_llm_rerank.csv",
+   "sha256": "bb9d6483ed6e8230fc03846fe90e2b2de7dd7ef5441273941e5dc58bf3aab9a8"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_distemist_published_llm_gen.csv",
+   "sha256": "d6d3f0eb7067742ae846c5ecf00ab5dbf83325c7e118f2a64ca56e66504b56f1"
+  },
+  {
+   "path": "DATA_ROOT/bundle/mentions_medprocner.jsonl",
+   "sha256": "b4832ba3a0c18a527dd52c2dd228e80b29405d39aefad1eaaeeb5dbc88e926d4"
+  },
+  {
+   "path": "DATA_ROOT/sample_keys/procedure_draw_800.csv",
+   "sha256": "d50cd137dbfdd7928f137e354671d5b7c91aff249f8d439cae561e9c89f60fc4"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_medprocner_published_lexical.csv",
+   "sha256": "e352c523391b9e399e0ca1f16691d4329a3cc11a22b353c1cc23d391dc10769a"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_medprocner_published_sapbert.csv",
+   "sha256": "2b25c80a1630f533da41fcecf362b7bb85d416dbcc8069f7bd40cefd8da63d27"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_medprocner_published_llm_rerank.csv",
+   "sha256": "d3ed74402c6924541a905f535ddc8c9a6b74fc4ae508fcd01ab85352caea3a1a"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_medprocner_published_llm_gen.csv",
+   "sha256": "244035566e42ba07f469ae0d3543827daa26a6560b5d91fa2e194732a0d9adde"
+  },
+  {
+   "path": "DATA_ROOT/bundle/mentions_symptemist.jsonl",
+   "sha256": "e048ea9c0e9a19111efc112bfe3f9548f858e470bb60df6494a7b2b7e0e5b6f5"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_symptemist_published_lexical.csv",
+   "sha256": "bf44efadad120939313b345f25ef45a375debe3c4ee79c5173e73a23b113dcee"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_symptemist_published_sapbert.csv",
+   "sha256": "db9b048b3f14d773762e1fd554c0a9ee0e303c4baf1e3df0324e90c36bc7c31f"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_symptemist_published_llm_rerank.csv",
+   "sha256": "8837319c6efb7be512122bed950a813e0755df2eadde8ab8e6befd789af7afef"
+  },
+  {
+   "path": "DATA_ROOT/preds/predictions_symptemist_published_llm_gen.csv",
+   "sha256": "cb5161349e4163a97c638d3db90c5a0aaa05779cceecb9287b8ecf2c5792803a"
+  }
+ ]
+}

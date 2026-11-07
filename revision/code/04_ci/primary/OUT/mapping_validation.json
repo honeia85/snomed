@@ -1,0 +1,342 @@
+{
+ "passed": true,
+ "hashMappingPassed": true,
+ "rehashedItems": 2103,
+ "hashMismatch": 0,
+ "missingOriginalKey": 0,
+ "relationMismatch": 0,
+ "uniqueNormalizedOriginalDocuments": 245,
+ "uniqueHashedDocuments": 245,
+ "sameOriginalDocumentSameHashAcrossBenchmarks": true,
+ "hashCollisions": 0,
+ "raw800SelectionStatus": "passed",
+ "sources": [
+  {
+   "name": "deduplicated_document_keys.csv",
+   "sha256": "0b293b0d216d7f202e395895bc2318cae6a66932d13bd5c2ce355799b38e38e2"
+  },
+  {
+   "name": "fixed_symptom_model_item_keys.csv",
+   "sha256": "e87d5d4fef49daea50afd09435e6debabbf15fdda6408f68a96dce45a1498a6f"
+  },
+  {
+   "name": "build_bundle.py",
+   "sha256": "dd897f1f43fc0163a3bf104f71d68847b11979c0d92bb5091f1101054c5f56f7"
+  },
+  {
+   "name": "build_ledger.json",
+   "sha256": "72cd0cb072d6159a66aa5e0af114e810116bea2e9429784515e3210cb5bbfc07"
+  }
+ ],
+ "secretHandling": "the salt is used in local memory only; its value, content, hash and copies are not written to any output, log or artefact",
+ "selectionValidation": {
+  "rawDedup": [
+   {
+    "benchmark": "DisTEMIST",
+    "nRaw": 800,
+    "nDedup": 678,
+    "nCanonical": 678,
+    "multiDocumentDuplicateKeys": 44,
+    "comparisonFailures": {
+     "n": 0,
+     "text": 0,
+     "gold": 0,
+     "relation": 0,
+     "document": 0,
+     "hist_index": 0,
+     "offset": 0
+    },
+    "passed": true
+   },
+   {
+    "benchmark": "MedProcNER",
+    "nRaw": 800,
+    "nDedup": 625,
+    "nCanonical": 625,
+    "multiDocumentDuplicateKeys": 63,
+    "comparisonFailures": {
+     "n": 0,
+     "text": 0,
+     "gold": 0,
+     "relation": 0,
+     "document": 0,
+     "hist_index": 0,
+     "offset": 0
+    },
+    "passed": true
+   }
+  ],
+  "linkedPredictions": [
+   {
+    "file": "distemist_oracle_lexical_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "distemist_oracle_llm_gen_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "distemist_oracle_llm_rerank_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "distemist_oracle_sapbert_ft_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "distemist_oracle_sapbert_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "distemist_train_lexical_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "distemist_train_llm_gen_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "distemist_train_llm_rerank_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "distemist_train_sapbert_ft_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "distemist_train_sapbert_per_mention.csv",
+    "n": 678,
+    "mismatches": 0
+   },
+   {
+    "file": "medprocner_oracle_lexical_per_mention.csv",
+    "n": 625,
+    "mismatches": 0
+   },
+   {
+    "file": "medprocner_oracle_llm_gen_per_mention.csv",
+    "n": 625,
+    "mismatches": 0
+   },
+   {
+    "file": "medprocner_oracle_llm_rerank_per_mention.csv",
+    "n": 625,
+    "mismatches": 0
+   },
+   {
+    "file": "medprocner_oracle_sapbert_per_mention.csv",
+    "n": 625,
+    "mismatches": 0
+   },
+   {
+    "file": "medprocner_train_lexical_per_mention.csv",
+    "n": 625,
+    "mismatches": 0
+   },
+   {
+    "file": "medprocner_train_llm_gen_per_mention.csv",
+    "n": 625,
+    "mismatches": 0
+   },
+   {
+    "file": "medprocner_train_llm_rerank_per_mention.csv",
+    "n": 625,
+    "mismatches": 0
+   },
+   {
+    "file": "medprocner_train_sapbert_per_mention.csv",
+    "n": 625,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_oracle_lexical_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_oracle_llm_gen_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_oracle_llm_rerank_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_oracle_sapbert_ft_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_oracle_sapbert_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_train_lexical_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_train_llm_gen_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_train_llm_rerank_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_train_sapbert_ft_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   },
+   {
+    "file": "symptemist_train_sapbert_per_mention.csv",
+    "n": 800,
+    "mismatches": 0
+   }
+  ],
+  "symptom": {
+   "fixedLexicalKeys": 800,
+   "uniqueDocumentOffsets": 800,
+   "keyType": "original run item spans (source|start|end); not replaced by the reconstructed symptom draw",
+   "goldAndRelationAssertedAgainstAll10FixedFiles": true
+  },
+  "sources": [
+   {
+    "name": "disease_draw_800.csv",
+    "sha256": "921eb3145b252b034be559fccca292e499d6e396bd4e5f1cca7b414aee8d9c3c"
+   },
+   {
+    "name": "procedure_draw_800.csv",
+    "sha256": "d50cd137dbfdd7928f137e354671d5b7c91aff249f8d439cae561e9c89f60fc4"
+   },
+   {
+    "name": "distemist_oracle_lexical_per_mention.csv",
+    "sha256": "14337ef575f10262ba8b4ac5c3cafb398163ee73f7eecbf5dbba20fabddf94fd"
+   },
+   {
+    "name": "distemist_oracle_llm_gen_per_mention.csv",
+    "sha256": "ff30cf5b8c3dc03793a82f3bbf7ac6e9bae2998e6bf6a2861f5f1948420bc63f"
+   },
+   {
+    "name": "distemist_oracle_llm_rerank_per_mention.csv",
+    "sha256": "82cd176552476c2a6878828ca5939988763813c36021f2df85d5b6e3e1458cb1"
+   },
+   {
+    "name": "distemist_oracle_sapbert_ft_per_mention.csv",
+    "sha256": "bdee50a24f9654cfec79cf5c3de414946e2b511ddc236a66633c06d9585955c5"
+   },
+   {
+    "name": "distemist_oracle_sapbert_per_mention.csv",
+    "sha256": "b314369b92287d7c25cd7f993637278d610b8d5dbd9cf185b5eaacfe9d75be86"
+   },
+   {
+    "name": "distemist_train_lexical_per_mention.csv",
+    "sha256": "b49c55ab2a6ef184bfd7087a2de7ed2775576d30a5f9722f63c90497921b240b"
+   },
+   {
+    "name": "distemist_train_llm_gen_per_mention.csv",
+    "sha256": "84d540e6cd1c25f935ad325985c25c13fd52e5ee8537523df169aa33fbca6546"
+   },
+   {
+    "name": "distemist_train_llm_rerank_per_mention.csv",
+    "sha256": "3ea9a8930905a2e6db7c587d5b6b51f261a7b50c5d04201e9124c672459497c4"
+   },
+   {
+    "name": "distemist_train_sapbert_ft_per_mention.csv",
+    "sha256": "a03f68fae54e24fbf1b310f675ae52e19088570c387637b810a38753d0d0a0f4"
+   },
+   {
+    "name": "distemist_train_sapbert_per_mention.csv",
+    "sha256": "764fd4712d38d9256e28dcf32be9e6ad03dccecac400bc2808cdcacfed6b07ab"
+   },
+   {
+    "name": "medprocner_oracle_lexical_per_mention.csv",
+    "sha256": "3fbce21da8e890e5a2a6435282bcc873e9cf0a475d586c4c1a9a0cbd9c0de2d9"
+   },
+   {
+    "name": "medprocner_oracle_llm_gen_per_mention.csv",
+    "sha256": "32e55995ab34e58b49c27c254c835e01c8e5d0558615bbfafab441f35d218f4c"
+   },
+   {
+    "name": "medprocner_oracle_llm_rerank_per_mention.csv",
+    "sha256": "2db6a39f8dc17082847a602db17f075e0c96a536d6c4351cef183ab74874ade1"
+   },
+   {
+    "name": "medprocner_oracle_sapbert_per_mention.csv",
+    "sha256": "45a6cf93c7d33879cf4bb64bb279b79c63117454a6c52894214487a79c9a63b9"
+   },
+   {
+    "name": "medprocner_train_lexical_per_mention.csv",
+    "sha256": "5a3b19943d71fdacc919cc32ca5072f149eee9f83535966b71afb169ee82d93b"
+   },
+   {
+    "name": "medprocner_train_llm_gen_per_mention.csv",
+    "sha256": "d329219ea0ad4b3da981c9b0cd93a6731943042a851c524c98561066557ecdf1"
+   },
+   {
+    "name": "medprocner_train_llm_rerank_per_mention.csv",
+    "sha256": "f36049f8399f2d9c5b70980dec6cf7a95b73edae79b37f86c5d100eac35d87ca"
+   },
+   {
+    "name": "medprocner_train_sapbert_per_mention.csv",
+    "sha256": "b54365f8ef3ad54fb58b67348d6a5c81381455809ab839f0dfd934c4cf10adcc"
+   },
+   {
+    "name": "symptemist_oracle_lexical_per_mention.csv",
+    "sha256": "e0a24e0b3eac6b8dc6fd47ef933540d93c4c4d6a2020a853cdbcb243c2dd2073"
+   },
+   {
+    "name": "symptemist_oracle_llm_gen_per_mention.csv",
+    "sha256": "3849e68c093d22e272761cb460d9deafb979cf8f2cb9ae21a4a5aa8173f094b4"
+   },
+   {
+    "name": "symptemist_oracle_llm_rerank_per_mention.csv",
+    "sha256": "bf3e62a8e1fb94e7ca4cadec6d2058afc9fdebc8e5786cae7f2f330fea515bf1"
+   },
+   {
+    "name": "symptemist_oracle_sapbert_ft_per_mention.csv",
+    "sha256": "bfa4dadf56a6c4b0eb24910bb59311f6b8a770d27c8747c7186f77a56c407077"
+   },
+   {
+    "name": "symptemist_oracle_sapbert_per_mention.csv",
+    "sha256": "6fda26e0fc5acbbbf8cfd24f1641ca11c9944ac185191820eebb7bbcabf42d6e"
+   },
+   {
+    "name": "symptemist_train_lexical_per_mention.csv",
+    "sha256": "01c2f285807aeb9e114c7916696f40ff8cec9512077e2cbd9ebca60e72cb1b77"
+   },
+   {
+    "name": "symptemist_train_llm_gen_per_mention.csv",
+    "sha256": "ddad2a4d730fd4b6b16649e3c74565f56be3614001bdf8d102dd7bd6c12b2166"
+   },
+   {
+    "name": "symptemist_train_llm_rerank_per_mention.csv",
+    "sha256": "9df0555aca6bae6d1ab53bd218f5d810a8034ea8402fc0c7f932fa3b4dd11a6f"
+   },
+   {
+    "name": "symptemist_train_sapbert_ft_per_mention.csv",
+    "sha256": "76f6fb745470fbbdcd2641a94edc9f877abb3b052e0f15b644dd2af9da0efc1c"
+   },
+   {
+    "name": "symptemist_train_sapbert_per_mention.csv",
+    "sha256": "0c9d042a222fed5614c7602bb386dcd9a0d25f82c78ac52f8cf7c28b67b364dd"
+   }
+  ],
+  "passed": true,
+  "originalSelectionRationale": "verifies that keeping the first retained row of the original 800 under the recorded (string, gold) rule reproduces the text, gold, relation, source document, source offsets and hist_index of the fixed original keys exactly; this is not an arbitrary selection. For symptoms the original selection is identified directly from the original output spans."
+ }
+}

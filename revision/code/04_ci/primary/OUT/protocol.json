@@ -1,0 +1,351 @@
+{
+ "version": "1.0",
+ "status": "ready",
+ "analysis_type": "post-hoc supplementary analysis (Mantel-Haenszel document-cluster interval)",
+ "sample": {
+  "unique_items": 2103,
+  "benchmarks": {
+   "DisTEMIST": 678,
+   "MedProcNER": 625,
+   "SympTEMIST": 800
+  },
+  "oracle_cells": 14,
+  "oracle_rows": 9890,
+  "all_cells": 28,
+  "all_rows": 19780,
+  "document_union_in_supplied_map": 245
+ },
+ "estimand": "Mantel-Haenszel pooled risk ratio of exact-match error for corpus NARROW versus EXACT mentions, over the 14 oracle benchmark x system strata",
+ "formula": "RR_MH = sum_k(a_k*n0_k/(n1_k+n0_k)) / sum_k(c_k*n1_k/(n1_k+n0_k)); a and c are the NARROW and EXACT error counts, n1 and n0 the stratum mention totals",
+ "point_estimate": 1.7246375019947953,
+ "old_ci": [
+  1.628,
+  1.827
+ ],
+ "old_ci_type": "preserved record from the original mention-level bootstrap that shared one index set across systems within each benchmark",
+ "clustering": {
+  "source": "A_fixed_sample/item_documents.csv",
+  "join_key": [
+   "benchmark",
+   "item_id"
+  ],
+  "sampling_unit": "union of the shared source documents",
+  "sampling": "245 draws with replacement from the 245 validated documents",
+  "joint_weight": "one multiplicity per document, applied unchanged to every fixed mention of that document and to every benchmark, system and candidate space; no independent redraw by benchmark or by system",
+  "dedup_rule": "restore the original selected document actually kept by the driver; do not attach a multi-document candidate to an arbitrary first document, do not fractionally weight shared documents, and do not adjust document counts to match"
+ },
+ "repetitions": 10000,
+ "seed": 12345,
+ "setting_provenance": "keeps B = 10,000 and seed 12345 from the original fixed-sample MH analysis (pooled_error_incidence.py and fixed_sample_pooled_risk_ratio_record.json); the B = 2,000 and seed 42 settings of the reconstructed 12-cell analysis are not borrowed",
+ "rng": "MT19937 with CPython integer-seed init_by_array([12345]) and getrandbits rejection sampling for randbelow(245); the same integer-RNG design as random.Random in the original fixed-sample analysis",
+ "CI": {
+  "type": "percentile",
+  "level": 0.95,
+  "quantile_rule": "order statistics at 0-based floor(0.025*B) and floor(0.975*B), as in the original fixed-sample MH code",
+  "undefined_replicates": "the number and reason of undefined replicates are reported separately; no redraw, continuity correction or seed change is applied. If any replicate is undefined, the interval is withheld rather than forced, and the cause is reported"
+ },
+ "zero_cells": {
+  "MH": "strata with n1 or n0 equal to 0 are dropped from the sum, as in the original MH code; if the pooled denominator is 0 the replicate value is undefined; no continuity correction",
+  "decomposition": "the geometric mean requires a positive denominator and a defined positive ratio in all 14 cells; if either fails in any cell, that replicate's secondary value is undefined, with no arbitrary cell deletion or addition"
+ },
+ "secondary_estimands": {
+  "scope": "secondary values reported separately from the primary interval, using the same document multiplicities",
+  "decomposition": "G=mean(WUP)-mean(exact)=error_rate*mean(WUP|exact=0); NARROW/EXACT geometric mean over the 14 cells of the NARROW/EXACT ratio: partial=error_rate_ratio*conditional_WUP_ratio",
+  "uplift": "mean(is_a) minus mean(exact) per relation, as the NARROW-minus-EXACT difference in each of the 14 oracle cells; kept distinct from the conditional ratio among errors",
+  "train": "the same replicates applied to the 14 train-space cells where needed; not a primary effect"
+ },
+ "execution_gate": [
+  "item_id matches the originally selected mention (original gold and string, or original offsets)",
+  "the originally selected file name and the hashing input were checked for identity",
+  "the same source document receives the same hash across benchmarks",
+  "for multi-document candidates, whether the deduplicated originally selected document can be restored was checked"
+ ],
+ "gate_status": "passed: for the 678 and 625 first-retained rows of the original 800 draw, document, offsets, string, gold, relation and hist_index all match; the original 800 symptom spans are unique; all rows of the 28 original outputs match gold, relation, exact and WUP; the salted rehash matches 2,103 of 2,103; 245 source documents",
+ "sources": [
+  {
+   "name": "item_documents.csv",
+   "sha256": "c7241de5683f0608c769c64b9b115b300769b1cbf1b8d28b05192fe3ec489a44"
+  },
+  {
+   "name": "distemist_oracle_lexical_per_mention.csv",
+   "sha256": "8c419fe78c95ae5e0cc189282730489f9fe3a7dd6d96924cabfc1cfb7041a2f1"
+  },
+  {
+   "name": "distemist_oracle_llm_gen_per_mention.csv",
+   "sha256": "a1afd54b09ab9fa54faad073ed9766e9ee721c35cb0d3253b5548ba1b27e3ee2"
+  },
+  {
+   "name": "distemist_oracle_llm_rerank_per_mention.csv",
+   "sha256": "12ebbf197ed0040f9cb8c6b0995b1f49ffb6ffc9d08181f64077d96935005e0f"
+  },
+  {
+   "name": "distemist_oracle_sapbert_ft_per_mention.csv",
+   "sha256": "654602c01775fe1eb2f18df90b192d399251a3b800aa302f7cc6364bb123284f"
+  },
+  {
+   "name": "distemist_oracle_sapbert_per_mention.csv",
+   "sha256": "7da32dee92fea643d21ec5a8d1a91ec7372b434418d9adf0676c9f05e5f63694"
+  },
+  {
+   "name": "distemist_train_lexical_per_mention.csv",
+   "sha256": "c606989a0eab3b46bfbf0e01f2f57d267135b440cea7b2c9581b93a181d84f48"
+  },
+  {
+   "name": "distemist_train_llm_gen_per_mention.csv",
+   "sha256": "17b039b295d1cabeedd9435e5b53b9a77ccb7f3522accc29266c4bfe739aaff6"
+  },
+  {
+   "name": "distemist_train_llm_rerank_per_mention.csv",
+   "sha256": "bec3f0cd364aeda8daa07568d3e97bbfeffe616adf0a75c10daceb6a0230ee53"
+  },
+  {
+   "name": "distemist_train_sapbert_ft_per_mention.csv",
+   "sha256": "1388e0eba65c62b941739e4ae52e49e7cad18ac79c9aff9d8999533e8ffa2d9e"
+  },
+  {
+   "name": "distemist_train_sapbert_per_mention.csv",
+   "sha256": "e35f6ff394418f89281f2219540edc2eacea884e9df93e0dc91bff40a46c8e98"
+  },
+  {
+   "name": "medprocner_oracle_lexical_per_mention.csv",
+   "sha256": "8b12cec1a2e64b86e41f73189ae78b23341122b3465ac8a661444650355d52ff"
+  },
+  {
+   "name": "medprocner_oracle_llm_gen_per_mention.csv",
+   "sha256": "a78e18844cc637445521e10a4403a11574f2e7aa30e2b3b374e624baa6c4a7b3"
+  },
+  {
+   "name": "medprocner_oracle_llm_rerank_per_mention.csv",
+   "sha256": "c681f3362b43c49e42a81521c126958115de3a83533aa00f414ff7eb61e60c9a"
+  },
+  {
+   "name": "medprocner_oracle_sapbert_per_mention.csv",
+   "sha256": "92242b7604e812c4cfa55e5331f42f489aea367f082ef82420869d41f2180b6e"
+  },
+  {
+   "name": "medprocner_train_lexical_per_mention.csv",
+   "sha256": "b9574658ee7e39bdbdfdd817b4845c242d25ea0e5ff7711fff654f86a2c191c3"
+  },
+  {
+   "name": "medprocner_train_llm_gen_per_mention.csv",
+   "sha256": "28fb59c33ef0558f3f1d28956f3173d100839a78d60284c4994a405330cbbf46"
+  },
+  {
+   "name": "medprocner_train_llm_rerank_per_mention.csv",
+   "sha256": "2d3e942b5ce6a080ab4f1d51cf5f05b2756ec3d6ce11ff5a1a6c546b977dfbad"
+  },
+  {
+   "name": "medprocner_train_sapbert_per_mention.csv",
+   "sha256": "d638b1338e56dc0004d42f605cb15fa16597173ae71d714ca859e90eebce8656"
+  },
+  {
+   "name": "symptemist_oracle_lexical_per_mention.csv",
+   "sha256": "03be7a36ed79551e6137c3cbcd4842a5bea02e91ab1e93d313076974d0765452"
+  },
+  {
+   "name": "symptemist_oracle_llm_gen_per_mention.csv",
+   "sha256": "dde4defb228eb1a662a8a371c3009181a211a34bddaca0c0564cdc19eb95106a"
+  },
+  {
+   "name": "symptemist_oracle_llm_rerank_per_mention.csv",
+   "sha256": "b441d93f874e39f800ad0b45c8af8edba52b66c3174c85d922431d5daa8eef34"
+  },
+  {
+   "name": "symptemist_oracle_sapbert_ft_per_mention.csv",
+   "sha256": "f14a26351444272e0b5aeee756ecade6cf126128e83cb0ceb7c61aff987267a9"
+  },
+  {
+   "name": "symptemist_oracle_sapbert_per_mention.csv",
+   "sha256": "c962a674867ea894143f57c37eb49a0b981d52e620cbdb6e24c806d9939c96db"
+  },
+  {
+   "name": "symptemist_train_lexical_per_mention.csv",
+   "sha256": "e07d100f20c5bc9eba704b3b0a8eb586a77ec9cd2acfcb91ac4423c58dde2acf"
+  },
+  {
+   "name": "symptemist_train_llm_gen_per_mention.csv",
+   "sha256": "c97d7df6e65683486b63a5a227b638b9c71737983f7a7264f2367c8c7e73505a"
+  },
+  {
+   "name": "symptemist_train_llm_rerank_per_mention.csv",
+   "sha256": "52620d688a1db688e99f2ca102192e436fa257e00391b7837f406d4c0897b412"
+  },
+  {
+   "name": "symptemist_train_sapbert_ft_per_mention.csv",
+   "sha256": "1960e6ded145ee435269363147642ac72e5ff08c15ce721e003d809b0d2f19a8"
+  },
+  {
+   "name": "symptemist_train_sapbert_per_mention.csv",
+   "sha256": "56cc3ccb61a28c54bb0420116b18adc9823359378344369bbe6e1dbe3849af5e"
+  },
+  {
+   "name": "fixed_sample_pooled_risk_ratio_record.json",
+   "sha256": "fd2dd47ea0852a522762376184e64e1389e3c0dd7616634da90df239528dfb4b"
+  },
+  {
+   "name": "pooled_error_incidence.py",
+   "sha256": "12a28d6737ef2bf310870ca6361a82b14e119b8f47cdf185e4086fe12b6ab2c2"
+  },
+  {
+   "name": "clustered_panel.py",
+   "sha256": "2f0a3859579652dd77806bab188b6e5727b3dfb80046ea410083161a6a7f7822"
+  },
+  {
+   "name": "field_dictionary.md",
+   "sha256": "138c11ed2f07658b84c3641143c704c8f62e972d9d59df4e7d52e8b5598165cb"
+  },
+  {
+   "name": "method_settings.json",
+   "sha256": "98f532c1cf87ef17947d1ccb26cf5f5a40864ed8db95c522b9822bf4069a5f25"
+  },
+  {
+   "name": "deduplicated_document_keys.csv",
+   "sha256": "0b293b0d216d7f202e395895bc2318cae6a66932d13bd5c2ce355799b38e38e2"
+  },
+  {
+   "name": "fixed_symptom_model_item_keys.csv",
+   "sha256": "e87d5d4fef49daea50afd09435e6debabbf15fdda6408f68a96dce45a1498a6f"
+  },
+  {
+   "name": "build_bundle.py",
+   "sha256": "dd897f1f43fc0163a3bf104f71d68847b11979c0d92bb5091f1101054c5f56f7"
+  },
+  {
+   "name": "build_ledger.json",
+   "sha256": "72cd0cb072d6159a66aa5e0af114e810116bea2e9429784515e3210cb5bbfc07"
+  },
+  {
+   "name": "disease_draw_800.csv",
+   "sha256": "921eb3145b252b034be559fccca292e499d6e396bd4e5f1cca7b414aee8d9c3c"
+  },
+  {
+   "name": "procedure_draw_800.csv",
+   "sha256": "d50cd137dbfdd7928f137e354671d5b7c91aff249f8d439cae561e9c89f60fc4"
+  },
+  {
+   "name": "distemist_oracle_lexical_per_mention.csv",
+   "sha256": "14337ef575f10262ba8b4ac5c3cafb398163ee73f7eecbf5dbba20fabddf94fd"
+  },
+  {
+   "name": "distemist_oracle_llm_gen_per_mention.csv",
+   "sha256": "ff30cf5b8c3dc03793a82f3bbf7ac6e9bae2998e6bf6a2861f5f1948420bc63f"
+  },
+  {
+   "name": "distemist_oracle_llm_rerank_per_mention.csv",
+   "sha256": "82cd176552476c2a6878828ca5939988763813c36021f2df85d5b6e3e1458cb1"
+  },
+  {
+   "name": "distemist_oracle_sapbert_ft_per_mention.csv",
+   "sha256": "bdee50a24f9654cfec79cf5c3de414946e2b511ddc236a66633c06d9585955c5"
+  },
+  {
+   "name": "distemist_oracle_sapbert_per_mention.csv",
+   "sha256": "b314369b92287d7c25cd7f993637278d610b8d5dbd9cf185b5eaacfe9d75be86"
+  },
+  {
+   "name": "distemist_train_lexical_per_mention.csv",
+   "sha256": "b49c55ab2a6ef184bfd7087a2de7ed2775576d30a5f9722f63c90497921b240b"
+  },
+  {
+   "name": "distemist_train_llm_gen_per_mention.csv",
+   "sha256": "84d540e6cd1c25f935ad325985c25c13fd52e5ee8537523df169aa33fbca6546"
+  },
+  {
+   "name": "distemist_train_llm_rerank_per_mention.csv",
+   "sha256": "3ea9a8930905a2e6db7c587d5b6b51f261a7b50c5d04201e9124c672459497c4"
+  },
+  {
+   "name": "distemist_train_sapbert_ft_per_mention.csv",
+   "sha256": "a03f68fae54e24fbf1b310f675ae52e19088570c387637b810a38753d0d0a0f4"
+  },
+  {
+   "name": "distemist_train_sapbert_per_mention.csv",
+   "sha256": "764fd4712d38d9256e28dcf32be9e6ad03dccecac400bc2808cdcacfed6b07ab"
+  },
+  {
+   "name": "medprocner_oracle_lexical_per_mention.csv",
+   "sha256": "3fbce21da8e890e5a2a6435282bcc873e9cf0a475d586c4c1a9a0cbd9c0de2d9"
+  },
+  {
+   "name": "medprocner_oracle_llm_gen_per_mention.csv",
+   "sha256": "32e55995ab34e58b49c27c254c835e01c8e5d0558615bbfafab441f35d218f4c"
+  },
+  {
+   "name": "medprocner_oracle_llm_rerank_per_mention.csv",
+   "sha256": "2db6a39f8dc17082847a602db17f075e0c96a536d6c4351cef183ab74874ade1"
+  },
+  {
+   "name": "medprocner_oracle_sapbert_per_mention.csv",
+   "sha256": "45a6cf93c7d33879cf4bb64bb279b79c63117454a6c52894214487a79c9a63b9"
+  },
+  {
+   "name": "medprocner_train_lexical_per_mention.csv",
+   "sha256": "5a3b19943d71fdacc919cc32ca5072f149eee9f83535966b71afb169ee82d93b"
+  },
+  {
+   "name": "medprocner_train_llm_gen_per_mention.csv",
+   "sha256": "d329219ea0ad4b3da981c9b0cd93a6731943042a851c524c98561066557ecdf1"
+  },
+  {
+   "name": "medprocner_train_llm_rerank_per_mention.csv",
+   "sha256": "f36049f8399f2d9c5b70980dec6cf7a95b73edae79b37f86c5d100eac35d87ca"
+  },
+  {
+   "name": "medprocner_train_sapbert_per_mention.csv",
+   "sha256": "b54365f8ef3ad54fb58b67348d6a5c81381455809ab839f0dfd934c4cf10adcc"
+  },
+  {
+   "name": "symptemist_oracle_lexical_per_mention.csv",
+   "sha256": "e0a24e0b3eac6b8dc6fd47ef933540d93c4c4d6a2020a853cdbcb243c2dd2073"
+  },
+  {
+   "name": "symptemist_oracle_llm_gen_per_mention.csv",
+   "sha256": "3849e68c093d22e272761cb460d9deafb979cf8f2cb9ae21a4a5aa8173f094b4"
+  },
+  {
+   "name": "symptemist_oracle_llm_rerank_per_mention.csv",
+   "sha256": "bf3e62a8e1fb94e7ca4cadec6d2058afc9fdebc8e5786cae7f2f330fea515bf1"
+  },
+  {
+   "name": "symptemist_oracle_sapbert_ft_per_mention.csv",
+   "sha256": "bfa4dadf56a6c4b0eb24910bb59311f6b8a770d27c8747c7186f77a56c407077"
+  },
+  {
+   "name": "symptemist_oracle_sapbert_per_mention.csv",
+   "sha256": "6fda26e0fc5acbbbf8cfd24f1641ca11c9944ac185191820eebb7bbcabf42d6e"
+  },
+  {
+   "name": "symptemist_train_lexical_per_mention.csv",
+   "sha256": "01c2f285807aeb9e114c7916696f40ff8cec9512077e2cbd9ebca60e72cb1b77"
+  },
+  {
+   "name": "symptemist_train_llm_gen_per_mention.csv",
+   "sha256": "ddad2a4d730fd4b6b16649e3c74565f56be3614001bdf8d102dd7bd6c12b2166"
+  },
+  {
+   "name": "symptemist_train_llm_rerank_per_mention.csv",
+   "sha256": "9df0555aca6bae6d1ab53bd218f5d810a8034ea8402fc0c7f932fa3b4dd11a6f"
+  },
+  {
+   "name": "symptemist_train_sapbert_ft_per_mention.csv",
+   "sha256": "76f6fb745470fbbdcd2641a94edc9f877abb3b052e0f15b644dd2af9da0efc1c"
+  },
+  {
+   "name": "symptemist_train_sapbert_per_mention.csv",
+   "sha256": "0c9d042a222fed5614c7602bb386dcd9a0d25f82c78ac52f8cf7c28b67b364dd"
+  }
+ ],
+ "mapping_validation_sha256": "51db250c09dcd5ddf9d45df782574309d6d18951a15570b5698fa8a7d82585d1",
+ "execution_code_sha256": "ea63b571267d156b824893d1173da77dbfb2ef565008eaea94afd957aa2ecc50",
+ "english_summary": {
+  "analysis": "Mantel-Haenszel pooled error risk ratio over the 14 oracle benchmark x system strata",
+  "resampling_unit": "shared source-document union (245 validated documents)",
+  "draws": "245 draws with replacement; one multiplicity per document applied to all fixed mentions, benchmarks and systems",
+  "repetitions": 10000,
+  "seed": 12345,
+  "rng": "CPython-compatible MT19937 with integer-seed init_by_array and randbelow rejection sampling",
+  "interval": "95% percentile interval, order statistics at 0-based floor(0.025*B) and floor(0.975*B)",
+  "note": "full field descriptions are in Korean in the remaining fields of this file"
+ },
+ "prepared_at": "2026-11-06T08:44:41.660Z"
+}

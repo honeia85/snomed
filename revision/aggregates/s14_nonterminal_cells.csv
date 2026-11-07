@@ -1,0 +1,15 @@
+cell,narrow_error_all,exact_error_all,narrow_correct_all,exact_correct_all,narrow_error_restricted,exact_error_restricted,narrow_correct_restricted,exact_correct_restricted
+distemist_oracle_lexical_per_mention.csv,150,197,85,246,127,161,72,210
+distemist_oracle_llm_gen_per_mention.csv,210,264,25,179,180,215,19,156
+distemist_oracle_llm_rerank_per_mention.csv,127,122,108,321,113,97,86,274
+distemist_oracle_sapbert_ft_per_mention.csv,118,101,117,342,101,79,98,292
+distemist_oracle_sapbert_per_mention.csv,133,113,102,330,116,89,83,282
+medprocner_oracle_lexical_per_mention.csv,100,248,34,243,86,204,25,206
+medprocner_oracle_llm_gen_per_mention.csv,115,354,19,137,95,292,16,118
+medprocner_oracle_llm_rerank_per_mention.csv,86,163,48,328,70,131,41,279
+medprocner_oracle_sapbert_per_mention.csv,95,129,39,362,84,103,27,307
+symptemist_oracle_lexical_per_mention.csv,157,316,40,287,111,165,33,208
+symptemist_oracle_llm_gen_per_mention.csv,191,406,6,197,141,212,3,161
+symptemist_oracle_llm_rerank_per_mention.csv,134,225,63,378,97,110,47,263
+symptemist_oracle_sapbert_ft_per_mention.csv,113,160,84,443,86,69,58,304
+symptemist_oracle_sapbert_per_mention.csv,150,183,47,420,120,80,24,293

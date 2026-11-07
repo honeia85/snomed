@@ -1,0 +1,342 @@
+{
+  "status": "completed",
+  "B": 10000,
+  "seed": 12345,
+  "rng": "CPython-compatible MT19937 init_by_array integer-seed randbelow rejection",
+  "documents": 245,
+  "cells": 28,
+  "primary": {
+    "point": 1.7246375019947953,
+    "oldCI": [
+      1.628,
+      1.827
+    ],
+    "newCI": [
+      1.6172371751990828,
+      1.839685392245642
+    ],
+    "oldWidth": 0.19900000000000007,
+    "newWidth": 0.22244821704655915,
+    "includesOne": false
+  },
+  "intervals": {
+    "MH_oracle": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 1.6172371751990828,
+      "hi": 1.839685392245642
+    },
+    "G_oracle": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 1.7056896906962025,
+      "hi": 2.049047917869862
+    },
+    "E_oracle": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 1.685080850485309,
+      "hi": 1.9535764258758184
+    },
+    "Q_oracle": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.9641356756252977,
+      "hi": 1.1000817602087156
+    },
+    "MH_train": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 1.4047721345635946,
+      "hi": 1.5460020193119306
+    },
+    "G_train": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 1.3103898719609823,
+      "hi": 1.5017212242876736
+    },
+    "E_train": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 1.4256274129738715,
+      "hi": 1.570704005572457
+    },
+    "Q_train": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.8855547279325203,
+      "hi": 0.9906334237578077
+    },
+    "uplift_diff_0": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": -0.05612421929215823,
+      "hi": 0.047826086956521754
+    },
+    "uplift_E_0": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.08878504672897196,
+      "hi": 0.15384615384615385
+    },
+    "uplift_N_0": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.0752212389380531,
+      "hi": 0.1589958158995816
+    },
+    "uplift_diff_1": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": -0.05176470588235295,
+      "hi": 0.04957030763482377
+    },
+    "uplift_E_1": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.09403669724770643,
+      "hi": 0.15086206896551724
+    },
+    "uplift_N_1": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.07729468599033816,
+      "hi": 0.16666666666666666
+    },
+    "uplift_diff_2": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.03031870126446222,
+      "hi": 0.1327731092436975
+    },
+    "uplift_E_2": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.05747126436781609,
+      "hi": 0.10722100656455143
+    },
+    "uplift_N_2": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.11587982832618025,
+      "hi": 0.21171171171171171
+    },
+    "uplift_diff_3": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.061086226203807395,
+      "hi": 0.1844657660557242
+    },
+    "uplift_E_3": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.0430622009569378,
+      "hi": 0.09045226130653267
+    },
+    "uplift_N_3": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.1318181818181818,
+      "hi": 0.24686192468619247
+    },
+    "uplift_diff_4": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.062254323899371064,
+      "hi": 0.1704164417981226
+    },
+    "uplift_E_4": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.037122969837587005,
+      "hi": 0.08254716981132075
+    },
+    "uplift_N_4": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.12446351931330472,
+      "hi": 0.22745098039215686
+    },
+    "uplift_diff_5": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": -0.019174310069043715,
+      "hi": 0.124768604220659
+    },
+    "uplift_E_5": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.11751662971175167,
+      "hi": 0.18200836820083682
+    },
+    "uplift_N_5": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.13709677419354838,
+      "hi": 0.2671232876712329
+    },
+    "uplift_diff_6": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": -0.09867401128079957,
+      "hi": 0.04305849189570121
+    },
+    "uplift_E_6": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.1532258064516129,
+      "hi": 0.2190082644628099
+    },
+    "uplift_N_6": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.09821428571428571,
+      "hi": 0.21804511278195488
+    },
+    "uplift_diff_7": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": -0.03209549071618037,
+      "hi": 0.1039329685362517
+    },
+    "uplift_E_7": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.10766045548654245,
+      "hi": 0.16632016632016633
+    },
+    "uplift_N_7": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.10869565217391304,
+      "hi": 0.2366412213740458
+    },
+    "uplift_diff_8": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": -0.03862782267451527,
+      "hi": 0.07633053221288515
+    },
+    "uplift_E_8": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.07707910750507099,
+      "hi": 0.126953125
+    },
+    "uplift_N_8": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.0703125,
+      "hi": 0.17293233082706766
+    },
+    "uplift_diff_9": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": -0.05282451280955394,
+      "hi": 0.03543463177718306
+    },
+    "uplift_E_9": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.07248520710059171,
+      "hi": 0.12162162162162163
+    },
+    "uplift_N_9": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.050505050505050504,
+      "hi": 0.12698412698412698
+    },
+    "uplift_diff_10": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": -0.04529738302934179,
+      "hi": 0.04536271808999083
+    },
+    "uplift_E_10": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.06583072100313479,
+      "hi": 0.11092436974789915
+    },
+    "uplift_N_10": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.04736842105263158,
+      "hi": 0.1306532663316583
+    },
+    "uplift_diff_11": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.04843994522691707,
+      "hi": 0.14873938065223347
+    },
+    "uplift_E_11": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.03035413153456998,
+      "hi": 0.06394316163410302
+    },
+    "uplift_N_11": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.09659090909090909,
+      "hi": 0.19469026548672566
+    },
+    "uplift_diff_12": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.049159972632592544,
+      "hi": 0.13760152890587674
+    },
+    "uplift_E_12": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.013740458015267175,
+      "hi": 0.03727714748784441
+    },
+    "uplift_N_12": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.075,
+      "hi": 0.16176470588235295
+    },
+    "uplift_diff_13": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.050371563156482224,
+      "hi": 0.14276031517410828
+    },
+    "uplift_E_13": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.01864406779661017,
+      "hi": 0.0457516339869281
+    },
+    "uplift_N_13": {
+      "valid": 10000,
+      "undefined": 0,
+      "lo": 0.08374384236453201,
+      "hi": 0.17256637168141592
+    }
+  },
+  "oracleCellOrder": [
+    "distemist_oracle_lexical_per_mention.csv",
+    "distemist_oracle_llm_gen_per_mention.csv",
+    "distemist_oracle_llm_rerank_per_mention.csv",
+    "distemist_oracle_sapbert_ft_per_mention.csv",
+    "distemist_oracle_sapbert_per_mention.csv",
+    "medprocner_oracle_lexical_per_mention.csv",
+    "medprocner_oracle_llm_gen_per_mention.csv",
+    "medprocner_oracle_llm_rerank_per_mention.csv",
+    "medprocner_oracle_sapbert_per_mention.csv",
+    "symptemist_oracle_lexical_per_mention.csv",
+    "symptemist_oracle_llm_gen_per_mention.csv",
+    "symptemist_oracle_llm_rerank_per_mention.csv",
+    "symptemist_oracle_sapbert_ft_per_mention.csv",
+    "symptemist_oracle_sapbert_per_mention.csv"
+  ],
+  "seconds": 0.535,
+  "protocol_sha256": "267e68cd1f33684965a29e84e4d40dd787058d67c17fbb7be26112ff6fa26460"
+}

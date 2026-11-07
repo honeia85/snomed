@@ -35,7 +35,8 @@ python3 annotation_kit/score_multi_annotator.py \
 ```
 
 The five canonical checks run from the repository root on a CPU and do not rerun model inference or
-need ontology content. They print the pooled Mantel–Haenszel risk ratio 1.725 (mention-clustered 95% CI 1.63–1.83), which is
+need ontology content. They print the pooled Mantel–Haenszel risk ratio 1.725 (mention-clustered 95% CI 1.63–1.83; the
+revision additionally reports a document-clustered interval, 1.6172-1.8397, see `revision/`), which is
 the manuscript's primary effect measure, the pooled Mantel–Haenszel OR 3.886 (95% CI 3.33–4.56) and
 the per-system ORs 2.77/5.54/3.57/3.39/5.42, the geometric-mean decomposition 1.812 × 1.031,
 and the binary same-lineage sensitivity (positive NARROW-minus-EXACT uplift in 9/14 cells;
@@ -154,3 +155,31 @@ or reported results. Earlier tags remain available as version history.
 ## Contact
 
 Pa Hong (papa.hong@samsung.com), corresponding author.
+
+## Revision analysis materials (v1.1.0)
+
+`revision/` contains the materials added for the Journal of Biomedical Semantics revision:
+
+- `revision/code/04_ci/primary/inputs/predictions/` — per-item scores for the 28 in-house cells
+  (`benchmark`, `candidate_space`, `system`, `item_id`, `semantic_rel`, `exact`, `is_a`, `wup`,
+  `relation_type`). No mention text and no concept codes.
+- `revision/code/04_ci/primary/inputs/panel_documents.csv` — the 2,103-row fixed panel keyed by public
+  `item_id` with a salted document-cluster hash (245 clusters).
+- `revision/code/04_ci/` — the scripts, protocols and expected values that regenerate the reported
+  confidence intervals, plus `run_primary.sh` and `run_reconstructed.sh`.
+- `revision/code/03_verification/verify_cells.py` — recomputes the per-cell statistics reported in
+  Tables 2-5 and supplementary tables S11-S12 from the shipped scores.
+- `revision/aggregates/` — aggregate tables for the supplementary analyses.
+
+Reproduction scope: recomputation from the archived scores and clusters covers the in-house cells of the
+three Spanish benchmarks and the reported point estimates and intervals. Recomputation from the shipped components covers the in-house cells and every aggregate statistic: the
+non-terminal restriction (S14) is recomputed from per-cell counts, the alternative-translation arm (S15) from
+per-benchmark counts, and the external-system, MedMentions, annotation-audit and metric-robustness statistics
+from their component tables, each checked against archived expected values. What is not redistributed is the
+SNOMED CT terminology content itself and the third-party run files, which are not needed to recompute any
+reported number. The anonymous annotation responses and their scoring code are in `annotation_kit/` of this
+repository. See `revision/README.md` for the full description and for the known record limitations.
+
+Licensing: code MIT (`LICENSE`); aggregate tables, per-item scores, the panel and the reconstructed-panel
+matrix CC BY 4.0 (`LICENSE-DATA`). SNOMED CT identifiers are used under the SNOMED International affiliate
+licence and are not redistributed as terminology content.

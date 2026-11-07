@@ -1,0 +1,9 @@
+metric,expected
+s14_or_all,3.8862759757050376
+s14_or_restricted,4.831181905124093
+s14_restricted_rows,7519
+s14_all_rows,9890
+s15_rr_distemist,1.6649902049427368
+s15_rr_medprocner,1.695502421005341
+s15_rr_symptemist,1.980368945447371
+s15_pooled_mh_rr,1.7751899252338699
